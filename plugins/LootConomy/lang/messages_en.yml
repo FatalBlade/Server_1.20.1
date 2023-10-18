@@ -1,0 +1,158 @@
+# Here you can create your own custom placeholders to use it in language config.
+# Key = Placeholder, Value = Replacer.
+Placeholders:
+  '%green%': '#aefd5e'
+  '%gray%': '#d4d9d8'
+  '%red%': '#fd5e5e'
+Command:
+  Stats:
+    Desc: Show [player's] skills stats.
+    Usage: '[player]'
+    Display:
+    - <! prefix:"false" !>
+    - '#d4d9d8'
+    - '#fdba5e%player_name%''s Loot Stats:'
+    - '#d4d9d8'
+    - '#d4d9d8[Hover mouse over elements for details]'
+    - '#d4d9d8'
+    - '#d4d9d8▪ <? show_text:"#fdba5e%skill_description%" ?>#fdba5e[?]</> <? show_text:"#d4d9d8Click to for detailed skill info." run_command:"/lootconomy info %skill_id%" ?>#ffeea2%skill_name%</> <? show_text:"#d4d9d8Level: #aefd5e%skill_level%<newline>#d4d9d8XP: #aefd5e%skill_xp%#d4d9d8/#aefd5e%skill_xp_max%" ?>#aefd5e[XP]</> <? show_text:"#d4d9d8Rank: #ce79f0%skill_rank%<newline>#d4d9d8Next: #ce79f0%skill_next_rank%" ?>#ce79f0[Rank]</>'
+    - '#d4d9d8'
+  Info:
+    Usage: <skill>
+    Desc: View skill info.
+    Display:
+    - <! prefix:"false" !>
+    - '#d4d9d8'
+    - '#fdf35e&l%skill_name% Info: '
+    - '#d4d9d8%skill_description%'
+    - '#d4d9d8'
+    - '#aefd5e&lProgress:'
+    - '#aefd5e▪ #d4d9d8Rank: #aefd5e%skill_rank%#d4d9d8 | Next: #aefd5e%skill_next_rank%#d4d9d8'
+    - '#aefd5e▪ #d4d9d8XP: #aefd5e%skill_xp%#d4d9d8/#aefd5e%skill_xp_max%'
+    - '#aefd5e▪ #d4d9d8Level: #aefd5e%skill_level%#d4d9d8/#aefd5e%skill_level_max%'
+    - '#d4d9d8'
+    - '#fdf35e&lMultipliers:'
+    - '#fdf35e▪ #d4d9d8XP Multiplier: #fdf35ex%xp_multiplier%'
+    - '#fdf35e▪ #d4d9d8%currency_name% Multiplier: #fdf35ex%currency_multiplier%'
+    - '#d4d9d8'
+    - '#ce79f0&lBoosters:'
+    - '#ce79f0▪ #d4d9d8XP Boost: #ce79f0%xp_boost_percent%%'
+    - '#ce79f0▪ #d4d9d8%currency_name% Boost: #ce79f0%currency_boost_percent%%'
+    - '#ce79f0'
+    - '#ce79f0&lBooster Expiration:'
+    - '#ce79f0▪ #d4d9d8Timeleft: #ce79f0%booster_timeleft%'
+    - '#ce79f0'
+  Booster:
+    Desc: Booster management.
+    Usage: ''
+    Create:
+      Desc: Create personal booster.
+      Usage: <player> <booster> <duration> [-s]
+      Done: '#d4d9d8Added #aefd5e%name%#d4d9d8 booster to #aefd5e%player_name%#d4d9d8 for #aefd5e%time%'
+      Notify:
+      - <! prefix:"false" sound:"BLOCK_NOTE_BLOCK_BELL" !>
+      - '#ffeea2'
+      - '#ffeea2You got a Loot Booster:'
+      - '#ffeea2▪ #d4d9d8Skills: #ffeea2%skill_name%'
+      - '#ffeea2▪ #d4d9d8XP Bonus: #ffeea2+%xp_boost_percent%%'
+      - '#ffeea2▪ #d4d9d8%currency_name% Bonus: #ffeea2+%currency_boost_percent%%'
+      - '#fd5e5e▪ #d4d9d8Duration: #fd5e5e%time%'
+      - '#ffeea2'
+    Clear:
+      Desc: Remove personal boosters.
+      Usage: <player> [skill]
+      Done:
+        Skill: '#d4d9d8Removed personal #aefd5e%skill_name%#d4d9d8 booster from #aefd5e%player_name%#d4d9d8.'
+        All: '#d4d9d8Removed #aefd5eAll#d4d9d8 personal boosters from #aefd5e%player_name%#d4d9d8.'
+  XP:
+    Desc: Manage player's skill XP.
+    Usage: <action> <skill> <amount> [player] [-s]
+    Add:
+      Done: '#d4d9d8Added #aefd5e%amount%#d4d9d8 XP to #aefd5e%skill_name%#d4d9d8 skill for #aefd5e%player_name%#d4d9d8.'
+      Notify: '#aefd5e%amount%#d4d9d8 XP has been added to your #aefd5e%skill_name%#d4d9d8 skill!'
+    Remove:
+      Done: '#d4d9d8Removed #fd5e5e%amount%#d4d9d8 XP from #fd5e5e%skill_name%#d4d9d8 skill of #fd5e5e%player_name%#d4d9d8.'
+      Notify: '#fd5e5e%amount%#d4d9d8 XP has been removed from your #fd5e5e%skill_name%#d4d9d8 skill.'
+    Set:
+      Done: '#d4d9d8Set #fdf35e%amount%#d4d9d8 XP for #fdf35e%player_name%#d4d9d8''s %skill_name% skill.'
+      Notify: '#d4d9d8Your #fdf35e%skill_name%#d4d9d8 skill XP has been set to #fdf35e%amount%#d4d9d8.'
+  Level:
+    Desc: Manage player's skill levels.
+    Usage: <action> <skill> <amount> [player] [-s]
+    Add:
+      Done: '#d4d9d8Added #aefd5e%amount%#d4d9d8 level(s) to #aefd5e%skill_name%#d4d9d8 skill for #aefd5e%player_name%#d4d9d8.'
+      Notify: '#aefd5e%amount%#d4d9d8 level(s) has been added to your #aefd5e%skill_name%#d4d9d8 skill!'
+    Remove:
+      Done: '#d4d9d8Removed #fd5e5e%amount%#d4d9d8 level(s) from #fd5e5e%skill_name%#d4d9d8 skill of #fd5e5e%player_name%#d4d9d8.'
+      Notify: '#fd5e5e%amount%#d4d9d8 level(s) has been removed from your #fd5e5e%skill_name%#d4d9d8 skill.'
+    Set:
+      Done: '#d4d9d8Set #fdf35e%amount%#d4d9d8 level for #fdf35e%player_name%#d4d9d8''s %skill_name% skill.'
+      Notify: '#d4d9d8Your #fdf35e%skill_name%#d4d9d8 skill level has been set to #fdf35e%amount%#d4d9d8.'
+  Reset:
+    Desc: Reset [player's] skill progress.
+    Usage: <skill> [player] [-s]
+    Done: '#d4d9d8Successfully reset #aefd5e%skill_name%#d4d9d8 progress for #aefd5e%player_name%#d4d9d8.'
+  Skills:
+    Desc: Open skills menu.
+    Usage: ''
+  Objectives:
+    Usage: <skill>
+    Desc: View skill objectives.
+  Drop:
+    Usage: <currency> <min> <max> <world> <x> <y> <z>
+    Desc: Create and drop currency item.
+    Done: '#d4d9d8Dropped #fdf35e%amount%#d4d9d8 currency item at #fdf35e%location_x%, %location_y%, %location_z%#d4d9d8 in #fdf35e%location_world%#d4d9d8.'
+  Sound:
+    Desc: Switch on/off money pickup sound.
+    Done: '<! sound:"UI_BUTTON_CLICK" !>#d4d9d8Money pickup sound: #fdf35e%state%'
+  Currency:
+    Top:
+      Usage: <skill> [page]
+      Desc: List of players with the most level.
+      List:
+      - <! prefix:"false" !>
+      - '#5edefd'
+      - '#5edefd&l%skill_name% Level Top:'
+      - '#5edefd'
+      - '#5edefd%pos%. #d4d9d8%player_name%: #5edefd%amount%#d4d9d8 Levels'
+      - '#5edefd'
+      - '#d4d9d8Page #5edefd%current%#d4d9d8 of #5edefd%max%#d4d9d8.'
+      - '#5edefd'
+Booster:
+  Error:
+    Invalid: '#fd5e5eInvalid booster!'
+Currency:
+  Error:
+    Invalid: '#fd5e5eInvalid currency!'
+  Pickup: '<! type:"action_bar" !>#d4d9d8You picked up #aefd5e%amount%#d4d9d8! Balance: #aefd5e%balance%'
+  Lost: '<! type:"action_bar" !>#d4d9d8You lost #fd5e5e%amount%#d4d9d8! Balance: #fd5e5e%amount%'
+Skill:
+  Error:
+    Invalid: '#fd5e5eInvalid skill!'
+  Reset:
+    Notify:
+    - <! type:"titles:20:60:20" sound:"ENTITY_ZOMBIE_BREAK_WOODEN_DOOR" !>
+    - '#fd5e5e&lSkill Reset!'
+    - '#d4d9d8All #fd5e5e%skill_name%#d4d9d8 progress have been #fd5e5ereset#d4d9d8!'
+  XP:
+    Gain: '<! type:"action_bar" !>#fdf35e&l%skill_name%: #ffeea2+%amount% XP.'
+    Lose: '#d4d9d8You lost #fd5e5e%amount% XP#d4d9d8 from #fd5e5e%skill_name%#d4d9d8 skill.'
+  Level:
+    Up:
+    - <! type:"titles:20:60:20" sound:"ENTITY_PLAYER_LEVELUP" !>
+    - '#aefd5e&lSkill Level Up!'
+    - '#aefd5e%skill_name%#d4d9d8 is now level #aefd5e%skill_level%#d4d9d8!'
+    Down:
+    - <! type:"titles:20:60:20" sound:"ENTITY_IRON_GOLEM_DEATH" !>
+    - '#fd5e5e&lSkill Level Down!'
+    - '#fd5e5e%skill_name%#d4d9d8 is now level #fd5e5e%skill_level%#d4d9d8!'
+  Limit:
+    XP:
+      Notify: '#d4d9d8You have reached daily XP limit for %skill_name%#d4d9d8 skill. You can''t get more today.'
+    Currency:
+      Notify: '#d4d9d8You have reached daily #fd5e5e%currency_name%#d4d9d8 limit for %skill_name%#d4d9d8 skill. You can''t get more today.'
+SkillType:
+  KILL_MOB: Kill Mob
+  KILL_MYTHIC_MOB: Kill Mythic Mob
+  BLOCK_BREAK: Block Break
+  FISHING: Fishing

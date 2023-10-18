@@ -1,0 +1,63 @@
+# Sets whether or not this currency is enabled.
+Enabled: true
+# Sets currency display name.
+Name: Money
+# Sets currency format.
+# Available placeholders:
+# - %amount%
+# - %currency_name%
+# This option is useless for CoinsEngine (it has own format setting).
+Format: $%amount%
+# Sets whether or not this currnecy will be directly added to player's balance when dropped.
+Instant_Pickup: false
+Effects:
+  # Sets the particle effect to be constantly played when currency item is dropped in the world.
+  # https://github.com/nulli0n/NexEngine-spigot/wiki/Configuration-Tips#particle-sections
+  Particle_On_Ground:
+    Name: REDSTONE
+    Color: 255,255,0
+    Size: 1.0
+  # Sets sound to player when player pickups item of that currency.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+  Pickup_Sound:
+    # Sound name. You can use Spigot sound names, or ones from your resource pack.
+    # Spigot Sounds: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+    Name: BLOCK_NOTE_BLOCK_BELL
+    # Sound volume. From 0.0 to 1.0.
+    Volume: 0.8
+    # Sound speed. From 0.5 to 2.0
+    Pitch: 1.0
+Death_Penalty:
+  # Sets whether or not death penalty is enabled for this currency.
+  # When enabled, players will lose specified % of their balance on death.
+  Enabled: false
+  # Sets whether or not a currency item should NOT be dropped on player's death.
+  # If disabled, this means that player can return to death location and pickup it back.
+  Do_Not_Drop_Item: false
+  # Sets the chance that death penalty will apply on death.
+  Chance: 25.0
+  Percent_Of_Balance:
+    # Sets minimal value (in % of player's balance) to be dropped.
+    Minimal: 1.0
+    # Sets maximal value (in % of player's balance) to be dropped.
+    Maximal: 3.0
+# Here you can define different item layout depends on the currency amount.
+# It will use item of the greatest amount less than or equal to the currency amount.
+# https://github.com/nulli0n/NexEngine-spigot/wiki/Configuration-Tips#item-sections
+# Use '%amount%' placeholer to display formatted currency amount in item name.
+Item_Style_By_Amount:
+  '0':
+    Material: GOLD_NUGGET
+    Name: '#fdf35e%amount%'
+    Enchants:
+      unbreaking: 1
+  '1000':
+    Material: GOLD_BLOCK
+    Name: '#fdf35e%amount%'
+    Enchants:
+      unbreaking: 1
+  '100':
+    Material: GOLD_INGOT
+    Name: '#fdf35e%amount%'
+    Enchants:
+      unbreaking: 1

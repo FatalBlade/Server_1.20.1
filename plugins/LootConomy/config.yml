@@ -1,0 +1,173 @@
+Plugin:
+  # Command names that will be registered as main plugin commands.
+  # Do not leave this empty. Split multiple names with a comma.
+  Command_Aliases: lootconomy,lootcon,lc
+  # Localized plugin name. It's used in messages and with internal placeholders.
+  Name: LootConomy
+  # Plugin prefix. Used in messages.
+  # You can use %plugin_name_localized% placeholder for a plugin name.
+  Prefix: '#fdf35e%plugin_name%#d4d9d8 » '
+  # Sets the plugin language.
+  # It will use language config from the '/lang/' sub-folder for specified language code.
+  # By default uses your system's default locale.
+  Language: en
+
+Database:
+  # Table prefix to use when plugin create tables. Do not leave this empty.
+  Table_Prefix: lootconomy
+  # Sets database type.
+  # Available values: MYSQL,SQLITE
+  Type: SQLITE
+  # Defines how often (in minutes) user data of online players will be saved to the database.
+  # Set -1 to disable.
+  Auto_Save_Interval: 20
+  # Defines how often (in seconds) plugin data will be fetched and loaded from the remote database.
+  Sync_Interval: -1
+  MySQL:
+    # Database user name.
+    Username: root
+    # Database user password.
+    Password: root
+    # Database host address. Like http://127.0.0.1:3306/
+    Host: localhost:3306
+    # MySQL database name, where plugin tables will be created.
+    Database: minecraft
+  SQLite:
+    # File name for the database file.
+    # Actually it's a path to the file, so you can use directories here.
+    FileName: data.db
+  Purge:
+    # Enables/Disables purge feature.
+    # Purge will remove all records from the plugin tables that are 'old' enough.
+    Enabled: false
+    # Sets maximal 'age' for the database records before they will be purged.
+    # This option may have different behavior depends on the plugin.
+    # By default it's days of inactivity for the plugin users.
+    For_Period: 60
+General:
+  # A list of worlds, where no skill XP / currency will be dropped.
+  Disabled_Worlds:
+  - my_world
+  - another_world
+  # Sets whether or not 'skills' command will be registered as default plugin command instead of 'help' one.
+  Default_Skills_Command: false
+  # Sets whether or not loot protection is enabled.
+  # This will prevent players to pickup other player's currency items.
+  Loot_Protection: true
+  # Sets whether or not currency items of the same owner + skill + objective will be merged into one item if nearby.
+  Loot_Merging: true
+  Full_Inventory_Pickup:
+    # Sets whether or not players will be able to pickup currency items even with full inventory.
+    Enabled: true
+    # Sets how often (in ticks) plugin will check each player with full inventory for currency items around to pickup.
+    # 1 second = 20 ticks.
+    # Setting this option to low values may affect server's performance.
+    Check_Interval: 30
+Leveling:
+  # Sets whether or not leveling is enabled.
+  # WARNING: Disabling this option mid-game will result in all player data lost!
+  Enabled: true
+  # Sets whether or not a random firework will be spawned above the player on skill level up.
+  Fireworks: true
+Exploit_Protection:
+  # A list of SpawnReasons that will make mobs spawned by them drop no skill XP / currency.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/entity/CreatureSpawnEvent.SpawnReason.html
+  Ignore_SpawnReasons:
+  - DISPENSE_EGG
+  - BUILD_IRONGOLEM
+  - EGG
+  - SPAWNER_EGG
+  - SPAWNER
+  - BUILD_SNOWMAN
+  - SLIME_SPLIT
+  # A list of player GameModes where no skill XP / currency will be dropped.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/GameMode.html
+  Ignore_GameModes:
+  - CREATIVE
+  # All blocks types listed below, that are generated/formed by the world mechanics will drop no skill XP / currency.
+  Ignore_Block_Generation:
+  - OBSIDIAN
+  - COBBLESTONE
+  - STONE
+  # A list of blocks that will drop no skill XP / currency if been fertilized by bone meal.
+  # To get a valid block name, press F3 and look at a block. Use name wihout 'minecraft:' prefix.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+  Ignore_Fertilized:
+  - POTATOES
+  - WHEAT
+  - BEETROOTS
+  - CARROTS
+Top:
+  # Sets how often (in seconds) top level leaderboard will be fetched and updated.
+  Update_Interval: 600
+  # Sets how many entries per leaderboard page will be displated.
+  Entries_Per_Page: 10
+Boosters:
+  # List of global, automated XP / currency boosters.
+  # You can create as many boosters as you want.
+  # But keep in mind that only one global booster can be active at the same time.
+  # If you have multiple boosters applicable at the same day times, the latest one will override all previous.
+  Global:
+    example:
+      Skills:
+      - '*'
+      Start_Times:
+        SATURDAY:
+        - '16:00:00'
+      Duration: 7200
+      Multiplier:
+        Currency:
+          Vault: 1.25
+        XP: 1.25
+  # List of passive XP / currency boosters based on player permission group(s).
+  # Use the 'Priority' option to define booster's priority to guarantee that players with multiple permission groups will get the best one.
+  Rank:
+    vip:
+      Priority: 10
+      Skills:
+      - '*'
+      Multiplier:
+        Currency:
+          Vault: 1.25
+        XP: 1.25
+    premium:
+      Priority: 10
+      Skills:
+      - '*'
+      Multiplier:
+        Currency:
+          Vault: 1.5
+        XP: 1.5
+  # List of custom XP / currency boosters to be given via booster commands.
+  # You can create as many boosters as you want.
+  # But keep in mind that only one personal booster per skill can be active at the same time.
+  # If player already has a booster for certain skill, it will be replaced with a new one.
+  Custom:
+    money_2:
+      Skills:
+      - '*'
+      Multiplier:
+        Currency:
+          Vault: 2.0
+        XP: 1.0
+    xp_money_1_5:
+      Skills:
+      - '*'
+      Multiplier:
+        Currency:
+          Vault: 1.5
+        XP: 1.5
+    xp_money_1_25:
+      Skills:
+      - '*'
+      Multiplier:
+        Currency:
+          Vault: 1.25
+        XP: 1.25
+    xp_2:
+      Skills:
+      - '*'
+      Multiplier:
+        Currency:
+          Vault: 1.0
+        XP: 2.0
