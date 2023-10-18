@@ -1,0 +1,11 @@
+name: essentials_default
+permissions:
+- essentials.help
+- essentials.helpop
+- essentials.list
+- essentials.motd
+- essentials.rules
+- essentials.spawn
+- essentials.jail.allow.help
+- essentials.jail.allow.helpop
+- essentials.jail.allow.rules

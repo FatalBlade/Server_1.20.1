@@ -1,0 +1,10 @@
+name: bukkit_moderator
+permissions:
+- bukkit.command.ban
+- bukkit.command.ban.ip
+- bukkit.command.ban.player
+- bukkit.command.gamemode
+- bukkit.command.kick
+- bukkit.command.unban
+- bukkit.command.unban.ip
+- bukkit.command.unban.player

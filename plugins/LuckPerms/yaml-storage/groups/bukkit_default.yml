@@ -1,0 +1,5 @@
+name: bukkit_default
+permissions:
+- bukkit.broadcast.user
+- bukkit.command.plugins:
+    value:false

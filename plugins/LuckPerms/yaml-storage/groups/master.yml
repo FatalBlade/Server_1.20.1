@@ -1,0 +1,30 @@
+name: master
+permissions:
+- backpack.size.6
+- backpacksplus.use.large
+- backpacksplus.craft.large
+- dr.master
+- essentials.fly.others
+- essentials.tp
+- essentials.tphere
+- mcmmo.perks.activationtime.eightseconds
+- minetinker.modifiers.channeling.apply
+- minetinker.modifiers.soulbound.apply
+- minetinker.modifiers.selfrepair.apply
+- minetinker.modifiers.experienced.apply
+- minetinker.modifiers.channeling.craft
+- minetinker.modifiers.soulbound.craft
+- minetinker.modifiers.selfrepair.craft
+- minetinker.modifiers.experienced.craft
+- minetinker.modifiers.soulbound.use
+- minetinker.modifiers.selfrepair.use
+- minetinker.modifiers.experienced.use
+- minetinker.modifiers.channeling.use
+- MyPet.petstorage.limit.15
+- prefix.45.&9
+- residence.flag.coords
+- residence.flag.hidden
+- residence.group.Master
+- weight.45
+parents:
+- expert

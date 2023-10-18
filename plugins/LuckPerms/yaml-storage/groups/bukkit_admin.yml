@@ -1,0 +1,36 @@
+name: bukkit_admin
+permissions:
+- bukkit.broadcast
+- bukkit.broadcast.admin
+- bukkit.command.give
+- bukkit.command.help
+- bukkit.command.kill
+- bukkit.command.list
+- bukkit.command.me
+- bukkit.command.op:
+    value: false
+- bukkit.command.op.give:
+    value: false
+- bukkit.command.op.take:
+    value: false
+- bukkit.command.plugins
+- bukkit.command.reload
+- bukkit.command.save
+- bukkit.command.save.disable
+- bukkit.command.save.enable
+- bukkit.command.save.perform
+- bukkit.command.say
+- bukkit.command.stop
+- bukkit.command.teleport
+- bukkit.command.tell
+- bukkit.command.time
+- bukkit.command.time.add
+- bukkit.command.time.set
+- bukkit.command.version
+- bukkit.command.whitelist
+- bukkit.command.whitelist.add
+- bukkit.command.whitelist.disable
+- bukkit.command.whitelist.enable
+- bukkit.command.whitelist.list
+- bukkit.command.whitelist.reload
+- bukkit.command.whitelist.remove

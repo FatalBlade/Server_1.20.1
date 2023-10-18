@@ -1,0 +1,12 @@
+name: Apprentice
+permissions: 
+- dynmap.webregister
+- dr.apprentice
+- essentials.showkit
+- multiverse.access.world_nether
+- residence.group.Apprentice
+- skinsrestorer.command
+- skinsrestorer.command.set
+- group.neophyte
+- weight.15
+- prefix.15.&e

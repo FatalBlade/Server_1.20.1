@@ -1,0 +1,58 @@
+#Customtext
+&6This is the custom text commands file.
+
+&6This file allows you to define custom text commands.
+
+&6You can create a specific file for a user or a group:
+&6Name it custom_username.txt or custom_groupname.txt
+
+&6You can use multiple pages, for example type:
+&c/customtext 2
+
+&6To add a custom command you need to do three things:
+&e-&9 Add a section below in the custom.txt
+&e-&9 Add a line to the commands.yml aliases section
+&e-&9 Give players access to 'essentials.customtext'
+
+To add /vote, add this to commands.yml:
+  vote: 
+  - customtext vote $1-
+
+&6The following commands can also be customized:
+&c/rules /motd /news /help
+
+&6These support chapter customization such as:&c /rules grief
+&6You can use custom aliases with these commands too.
+
+#vote
+If you add the correct alias to commands.yml
+This text here will be shown if you type /vote
+
+#stafflist,onlinestaff ,staff
+&6Online Staff:
+{PLAYERLIST:MODERATOR} {PLAYERLIST:ADMIN} {PLAYERLIST:OWNER}
+
+#ranks
+&dPeasant &fNeophyte &eApprentice &6Novice &aJourneyman &2Craftsman 
+&bAdept &3Expert &9Master &11stDan &52ndDan &73rdDan &84thDan 
+&05thDan &4GrandMaster
+
+#rankperks
+&dPeasant: You can do nothing but move and have not been approved
+&fNeophyte: You’ve been approved and are now a basic builder. Minimal perms, save 1 /home homename | Claim a 10x10x15 Residence at 1.5/block | rent a res
+&eApprentice:+1 res maxsize:15x15x23 | can now use safetrade shift right click a player then /trade accept
+&6Novice: save two /homes | max res size:20x20x30 for 1.3/block | Rent out a res! | use middle click to auto-sort inventory | you can now mine spawners with silk touch or break them to get their egg | hotbar autorefils | use /heal command
+&aJourneyman: +1 res max:25x25x38 | +4 seconds to all skill abilities | use/tv to vote for time of day | /near command | /locate (Case Sensative ex: village wont work Village will) |
+&2Craftsman: save three /homes | max:30x30x45 for 1.1/block | Rent or rent out 2 | hotbar now autofills | you can now craft a spawner with an egg and 8 iron fence
+&bAdept: +1 res max:35x35x53 | /fly | /heal playername
+&3Expert: save four /homes | +1 res max:40x40x60 for 0.9/block | rent or rent out 3 | right clicka  spawner with an egg to change its type
+&9Master: +1 res max: 45x45x68 | rent out 4 | + 4 seconds to all skill abilites |/tphere | /tp | /fly playername 
+&11stDan: save six /homes | +4 res max:60x60x80 for 0.7/block | rent out 5
+&52ndDan:  save seven /homes | +2 res max:70x70x105 | rent out 6
+&73rdDan: save eight /homes | +2 res max:80x80x120 for 0.5/block | rent out 7
+&84thDan: save nine /homes | +2 res max:100x100x150 | rent out 8 | + 4 Seconds to all skill abilites
+&05thDan: save ten /homes | +6 res max:200x200x300 for 0.3/block | rent out 10
+&4GrandMaster: Owner of the server, all perms. 
+
+#ggs
+&p says you need to get good scrub.

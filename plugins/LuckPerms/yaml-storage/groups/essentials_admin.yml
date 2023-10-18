@@ -1,0 +1,13 @@
+name: essentials_admin
+permissions:
+- essentials.backup:
+    value: false
+- essentials.essentials:
+    value: false
+- essentials.setspawn:
+    value: false
+- essentials.reloadall:
+    value: false
+- essentials.plugin:
+    value: false
+- essentials.*

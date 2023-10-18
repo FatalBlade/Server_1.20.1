@@ -1,0 +1,323 @@
+name: neophyte
+permissions:
+- automaticinventory.sortinventory:
+    value: false
+- automaticinventory.sortchests:
+    value: false
+- automaticinventory.refillstacks:
+    value: false
+- automaticinventory.quickdeposit:
+    value: false
+- automaticinventory.depositall:
+    value: false
+- backpack.user:
+    value: false
+- bountyhunters.immunity
+- bountyhunters.leaderboard
+- bountyhunters.list
+- craftbook.mech.bookshelf.use
+- craftbook.mech.map.use
+- dr.claim
+- essentials.build.*
+- essentials.customtext
+- essentials.getpos
+- essentials.kit.starter
+- essentials.kit.color
+- essentials.protect.exemptbreak
+- essentials.protect.exemptplacement
+- essentials.protect.exemptusage
+- essentials.tower
+- essentials.ship
+- group.&dpeasant
+- group.default
+- group.essentials_builder
+- group.towny_builder
+- horsetpwithme.requiretamed
+- horsetpwithme.denycrossworld
+- horsetpwithme.emptycheststo.world
+- inventoryfull.help
+- inventoryfull.toggle
+- item2chat.use:
+    value: false
+- lwc.flag.magnet:
+    value: false
+- lwc.protect
+- minetinker.tool.create:
+    value: false
+- minetinker.tool.upgrade:
+    value: false
+- minetinker.tool.repair:
+    value: false
+- minetinker.modifiers.antiarrowplating.apply:
+    value: false
+- minetinker.modifiers.antiblastplating.apply:
+    value: false
+- minetinker.modifiers.aquaphilic.apply:
+    value: false
+- minetinker.modifiers.autosmelt.apply:
+    value: false
+- minetinker.modifiers.beheading.apply:
+    value: false
+- minetinker.modifiers.channeling.apply:
+    value: false
+- minetinker.modifiers.directing.apply:
+    value: false
+- minetinker.modifiers.ender.apply:
+    value: false
+- minetinker.modifiers.experienced.apply:
+    value: false
+- minetinker.modifiers.extramodifier.apply:
+    value: false
+- minetinker.modifiers.fiery.apply:
+    value: false
+- minetinker.modifiers.freezing.apply:
+    value: false
+- minetinker.modifiers.glowing.apply:
+    value: false
+- minetinker.modifiers.haste.apply:
+    value: false
+- minetinker.modifiers.infinity.apply:
+    value: false
+- minetinker.modifiers.insulating.apply:
+    value: false
+- minetinker.modifiers.knockback.apply:
+    value: false
+- minetinker.modifiers.lifesteal.apply:
+    value: false
+- minetinker.modifiers.lightweight.apply:
+    value: false
+- minetinker.modifiers.luck.apply:
+    value: false
+- minetinker.modifiers.melting.apply:
+    value: false
+- minetinker.modifiers.multishot.apply:
+    value: false
+- minetinker.modifiers.poisonous.apply:
+    value: false
+- minetinker.modifiers.power.apply:
+    value: false
+- minetinker.modifiers.propelling.apply:
+    value: false
+- minetinker.modifiers.protecting.apply:
+    value: false
+- minetinker.modifiers.reinforced.apply:
+    value: false
+- minetinker.modifiers.self-repair.apply:
+    value: false
+- minetinker.modifiers.sharpness.apply:
+    value: false
+- minetinker.modifiers.shukling.apply:
+    value: false
+- minetinker.modifiers.silktouch.apply:
+    value: false
+- minetinker.modifiers.smite.apply:
+    value: false
+- minetinker.modifiers.spidersbane.apply:
+    value: false
+- minetinker.modifiers.soulbound.apply:
+    value: false
+- minetinker.modifiers.sweeping.apply:
+    value: false
+- minetinker.modifiers.tanky.apply:
+    value: false
+- minetinker.modifiers.thorned.apply:
+    value: false
+- minetinker.modifiers.timber.apply:
+    value: false
+- minetinker.modifiers.webbed.apply:
+    value: false
+- minetinker.modifiers.antiarrowplating.craft:
+    value: false
+- minetinker.modifiers.antiblastplating.craft:
+    value: false
+- minetinker.modifiers.aquaphilic.craft:
+    value: false
+- minetinker.modifiers.autosmelt.craft:
+    value: false
+- minetinker.modifiers.beheading.craft:
+    value: false
+- minetinker.modifiers.channeling.craft:
+    value: false
+- minetinker.modifiers.directing.craft:
+    value: false
+- minetinker.modifiers.ender.craft:
+    value: false
+- minetinker.modifiers.experienced.craft:
+    value: false
+- minetinker.modifiers.extramodifier.craft:
+    value: false
+- minetinker.modifiers.fiery.craft:
+    value: false
+- minetinker.modifiers.freezing.craft:
+    value: false
+- minetinker.modifiers.glowing.craft:
+    value: false
+- minetinker.modifiers.haste.craft:
+    value: false
+- minetinker.modifiers.infinity.craft:
+    value: false
+- minetinker.modifiers.insulating.craft:
+    value: false
+- minetinker.modifiers.knockback.craft:
+    value: false
+- minetinker.modifiers.lifesteal.craft:
+    value: false
+- minetinker.modifiers.lightweight.craft:
+    value: false
+- minetinker.modifiers.luck.craft:
+    value: false
+- minetinker.modifiers.melting.craft:
+    value: false
+- minetinker.modifiers.multishot.craft:
+    value: false
+- minetinker.modifiers.poisonous.craft:
+    value: false
+- minetinker.modifiers.power.craft:
+    value: false
+- minetinker.modifiers.propelling.craft:
+    value: false
+- minetinker.modifiers.protecting.craft:
+    value: false
+- minetinker.modifiers.reinforced.craft:
+    value: false
+- minetinker.modifiers.self-repair.craft:
+    value: false
+- minetinker.modifiers.sharpness.craft:
+    value: false
+- minetinker.modifiers.shukling.craft:
+    value: false
+- minetinker.modifiers.silktouch.craft:
+    value: false
+- minetinker.modifiers.smite.craft:
+    value: false
+- minetinker.modifiers.spidersbane.craft:
+    value: false
+- minetinker.modifiers.soulbound.craft:
+    value: false
+- minetinker.modifiers.sweeping.craft:
+    value: false
+- minetinker.modifiers.tanky.craft:
+    value: false
+- minetinker.modifiers.thorned.craft:
+    value: false
+- minetinker.modifiers.timber.craft:
+    value: false
+- minetinker.modifiers.webbed.craft:
+    value: false
+- minetinker.modifiers.antiarrowplating.use:
+    value: false
+- minetinker.modifiers.antiblastplating.use:
+    value: false
+- minetinker.modifiers.aquaphilic.use:
+    value: false
+- minetinker.modifiers.auto-smelt.use:
+    value: false
+- minetinker.modifiers.beheading.use:
+    value: false
+- minetinker.modifiers.channeling.use:
+    value: false
+- minetinker.modifiers.directing.use:
+    value: false
+- minetinker.modifiers.ender.use:
+    value: false
+- minetinker.modifiers.experienced.use:
+    value: false
+- minetinker.modifiers.extramodifier.use:
+    value: false
+- minetinker.modifiers.fiery.use:
+    value: false
+- minetinker.modifiers.freezing.use:
+    value: false
+- minetinker.modifiers.glowing.use:
+    value: false
+- minetinker.modifiers.haste.use:
+    value: false
+- minetinker.modifiers.infinity.use:
+    value: false
+- minetinker.modifiers.insulating.use:
+    value: false
+- minetinker.modifiers.knockback.use:
+    value: false
+- minetinker.modifiers.lifesteal.use:
+    value: false
+- minetinker.modifiers.lightweight.use:
+    value: false
+- minetinker.modifiers.luck.use:
+    value: false
+- minetinker.modifiers.melting.use:
+    value: false
+- minetinker.modifiers.multishot.use:
+    value: false
+- minetinker.modifiers.poisonous.use:
+    value: false
+- minetinker.modifiers.power.use:
+    value: false
+- minetinker.modifiers.propelling.use:
+    value: false
+- minetinker.modifiers.protecting.use:
+    value: false
+- minetinker.modifiers.reinforced.use:
+    value: false
+- minetinker.modifiers.self-repair.use:
+    value: false
+- minetinker.modifiers.sharpness.use:
+    value: false
+- minetinker.modifiers.shukling.use:
+    value: false
+- minetinker.modifiers.silktouch.use:
+    value: false
+- minetinker.modifiers.smite.use:
+    value: false
+- minetinker.modifiers.spidersbane.use:
+    value: false
+- minetinker.modifiers.soulbound.use:
+    value: false
+- minetinker.modifiers.sweeping.use:
+    value: false
+- minetinker.modifiers.tanky.use:
+    value: false
+- minetinker.modifiers.thorned.use:
+    value: false
+- minetinker.modifiers.timber.use:
+    value: false
+- minetinker.modifiers.webbed.use:
+    value: false
+- minetinker.spawners.mine:
+    value: false
+- minetinker.spawners.place:
+    value: false
+- multiverse.access.world
+- Mypet.command.capturehelper
+- Mypet.command.info
+- Mypet.command.info.other
+- Mypet.command.name
+- Mypet.command.name.color
+- Mypet.command.release
+- MyPet.command.store
+- Mypet.command.switch
+- Mypet.leash.*
+- Mypet.petstorage.limit.2
+- Mypet.skilltree.combat
+- Mypet.skilltree.farm
+- Mypet.skilltree.pvp
+- Mypet.skilltree.ride
+- Mypet.skilltree.utility
+- Mypet.trade.offer.*
+- Mypet.trade.receive.*
+- plan.inspect.other
+- plan.inspect.base
+- prefix.10.&f
+- residence.create
+- residence.flag.backup
+- residence.flag.hook
+- residence.group.Neophyte
+- statz.help
+- statz.list.others
+- statz.list.self
+- weathervote.rain:
+    value: false
+- Weathervote.sun:
+    value: false
+- weathervote.vote:
+    value: false
+- weight.10

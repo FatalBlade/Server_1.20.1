@@ -1,0 +1,9 @@
+name: towny_moderator
+permissions:
+- towny.chat.mod
+- towny.wild.switch.64
+- towny.wild.build.83
+- towny.wild.build.86
+- towny.wild.build.103
+- towny.wild.build.111
+- towny.wild.build.115

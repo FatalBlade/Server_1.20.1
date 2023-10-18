@@ -1,0 +1,13 @@
+name: default
+permissions:
+- authme.player.*
+- bukkit.command.kill:
+    value: false
+- essentials.sethome.multiple:
+    value: false
+- group.bukkit_default
+- group.essentials_default
+- group.towny_default
+- prefix.1.&d
+- residence.group.Peasant
+- weight.1

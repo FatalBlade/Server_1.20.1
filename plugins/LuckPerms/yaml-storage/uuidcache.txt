@@ -1,0 +1,2 @@
+# LuckPerms UUID lookup cache
+03dbe9b9-5b99-3b50-b3a3-46f49ed9715d:notarealadmin

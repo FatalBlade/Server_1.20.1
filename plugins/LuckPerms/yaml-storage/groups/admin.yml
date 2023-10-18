@@ -1,0 +1,9 @@
+name: admin
+permissions:
+- rm.multiplier.*:
+    value: false
+- group.moderator
+- group.bukkit_admin
+- group.essentials_admin
+- group.towny_admin
+- group.vanish_admin

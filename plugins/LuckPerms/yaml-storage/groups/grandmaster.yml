@@ -1,0 +1,16 @@
+name: grandmaster
+permissions:
+- vanish.effects.toggle.all
+- vanish.effects.*:
+    value: false
+- us.fihgu.easyinventory.sort:
+    value: false
+- '*'
+- essentials.sethome.multiple.unlimited
+- rm.multiplier.*:
+    value: false
+- group.5thdan
+- group.admin
+- group.owner
+- group.moderator
+- prefix.1001.&4

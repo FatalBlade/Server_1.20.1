@@ -1,0 +1,8 @@
+name: towny_admin
+permissions:
+- towny.admin
+- towny.wild.destroy.119:
+    value: false
+- towny.wild.destroy.120:
+    value: false
+- towny.chat.admin

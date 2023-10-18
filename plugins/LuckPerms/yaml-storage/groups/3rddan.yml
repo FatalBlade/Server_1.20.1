@@ -1,0 +1,7 @@
+name: 3rddan
+permissions:
+- essentials.sethome.multiple.3rdDan
+- residence.group.3rdDan
+- group.2nddan
+- prefix.60.&7
+- weight.60

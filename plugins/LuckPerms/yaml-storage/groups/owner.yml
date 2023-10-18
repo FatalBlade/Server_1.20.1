@@ -1,0 +1,12 @@
+name: owner
+permissions:
+- +vanish.effects.toggle.all
+- vanish.effects.*:
+    value: false
+- us.fihgu.easyinventory.sort:
+    value: false
+- rm.multiplier.*:
+    value: false
+- '*'
+- group.admin
+- prefix.1000.&4

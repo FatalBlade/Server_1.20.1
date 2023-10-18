@@ -1,0 +1,11 @@
+name: ranks
+groups:
+- default
+- neophyte
+- apprentice
+- novice
+- journeyman
+- craftsman
+- adept
+- expert
+- master

@@ -1,0 +1,17 @@
+name: 1stdan
+permissions:
+- backpack.keepOnDeath
+- backpack.noCooldown
+- backpacksplus.use.extralarge
+- backpacksplus.craft.extralarge
+- dr.1stdan
+- essentials.sethome.multiple.1stDan
+- residence.flag.damage
+- residence.flag.day
+- residence.flag.keepexp
+- residence.flag.keepinv
+- residence.flag.night
+- residence.group.1stDan
+- group.master
+- prefix.50.&1
+- weight.50

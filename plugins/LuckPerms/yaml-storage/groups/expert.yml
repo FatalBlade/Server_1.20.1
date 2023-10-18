@@ -1,0 +1,25 @@
+name: expert
+permissions:
+- backpack.size.5
+- dr.expert
+- essentials.sethome.multiple.Expert
+- minetinker.modifiers.luck.apply
+- minetinker.modifiers.lifesteal.apply
+- minetinker.modifiers.shulking.apply
+- minetinker.modifiers.beheading.apply
+- minetinker.modifiers.luck.craft
+- minetinker.modifiers.lifesteal.craft
+- minetinker.modifiers.shulking.craft
+- minetinker.modifiers.beheading.craft
+- minetinker.modifiers.luck.use
+- minetinker.modifiers.lifesteal.use
+- minetinker.modifiers.shulking.use
+- minetinker.modifiers.beheading.use
+- MyPet.petstorage.limit.9
+- residence.flag.nofly
+- residence.flag.nomobs
+- residence.group.Expert
+- shulkerpacks.use
+- group.adept
+- weight.40
+- prefix.40.&3

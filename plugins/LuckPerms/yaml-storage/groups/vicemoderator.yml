@@ -1,0 +1,6 @@
+name: vicemoderator
+permissions:
+- group.bukkit_moderator
+- group.essentials_moderator
+- group.towny_moderator
+- group.vanish_moderator

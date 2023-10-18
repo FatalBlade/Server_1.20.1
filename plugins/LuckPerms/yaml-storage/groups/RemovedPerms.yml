@@ -1,0 +1,42 @@
+name: removedperms
+permissions:
+- neophyte.neophyte
+- rpghealth.hp
+- signurl.use
+- signurls.use
+- clicksort.commands.shiftclick:
+    value: false
+- clicksort.commands.sort:
+    value: false
+- us.fihgu.easyinventory.refill:
+    value: false
+- us.fihgu.easyinventory.sort:
+    value: false
+- apprentice.apprentice
+- safetrade.accept
+- safetrade.deny
+- safetrade.request
+- novice.novice
+- silkspawners.place.*
+- HealingFood.regen
+- silkspawners.silkdrop.*
+- silkspawners.destroydrop.*
+- rpghealth.hp.others
+- silkspawners.explodedrop
+- silkspawners.info
+- silkspawners.viewtype
+- us.fihgu.easyinventory.refill
+- clicksort.commands.shiftclick
+- clicksort.commands.sort
+- journeyman.journeyman
+- autotorch.auto
+- autotorch.listcommands
+- craftsman.craftsman
+- silkspawners.craft.*
+- adept.adept
+- HealingFood.absorb
+- HealingFood.regen
+- signurl.list
+- signurls.list
+- expert.expert
+- silkspawners.changetypewithegg.*
