@@ -37,8 +37,8 @@ database:
     allowPublicKeyRetrieval: false
 protections:
     denyRedstone: false
-    denyHoppers: true
-    autoRegister: false
+    denyHoppers: false
+    autoRegister: true
     ignoreBlockDestruction: false
     ignoreLeftClick: false
     ignoreRightClick: false
