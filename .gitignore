@@ -64,7 +64,7 @@ plugins/dynmap/renderdata/
 plugins/dynmap/export/
 plugins/dynmap/markers/
 plugins/dynmap/ids-by-ip.txt
-plugins/EasyBackup/
+plugins/eBackup/
 plugins/Essentials/userdata/
 plugins/Essentials/usermap.csv
 plugins/EssentialsGeoIP/
