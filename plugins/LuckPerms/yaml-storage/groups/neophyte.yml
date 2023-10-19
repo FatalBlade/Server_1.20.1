@@ -39,11 +39,8 @@ permissions:
 - inventoryfull.toggle
 - item2chat.use:
     value: false
-- lootconomy.command.info
-- lootconomy.command.skills
 - lootconomy.command.sound
-- lootconomy.command.stats
-- lootconomy.command.top
+- lootconomy.skill.fishing
 - lootconomy.skill.hunting
 - lwc.flag.magnet:
     value: false
