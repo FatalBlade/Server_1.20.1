@@ -3,11 +3,11 @@ zombie_villager:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 4.5
+        Max: 9.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -18,11 +18,11 @@ zombie_horse:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 2.0
+        Max: 4.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -33,11 +33,11 @@ giant:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 20.0
+        Max: 30.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -48,11 +48,11 @@ zombified_piglin:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 7.0
+        Max: 15.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -63,11 +63,11 @@ husk:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 15.0
+        Max: 19.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -78,11 +78,11 @@ zombie:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 4.5
+        Max: 9.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0

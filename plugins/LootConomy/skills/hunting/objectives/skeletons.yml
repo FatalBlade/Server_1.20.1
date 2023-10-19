@@ -3,11 +3,11 @@ skeleton:
   Drops:
     Currency:
       vault:
-        Chance: 80.0
-        Min: 9.0
-        Max: 18.0
+        Chance: 100.0
+        Min: 15.0
+        Max: 22.0
     XP:
-      Chance: 80.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -18,11 +18,11 @@ stray:
   Drops:
     Currency:
       vault:
-        Chance: 80.0
-        Min: 9.0
-        Max: 18.0
+        Chance: 100.0
+        Min: 25.0
+        Max: 32.0
     XP:
-      Chance: 80.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -33,11 +33,11 @@ wither_skeleton:
   Drops:
     Currency:
       vault:
-        Chance: 80.0
-        Min: 9.0
-        Max: 18.0
+        Chance: 100.0
+        Min: 35.0
+        Max: 43.0
     XP:
-      Chance: 80.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0

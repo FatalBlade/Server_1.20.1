@@ -4,8 +4,8 @@ wither:
     Currency:
       vault:
         Chance: 100.0
-        Min: 1000.0
-        Max: 5000.0
+        Min: 10000.0
+        Max: 50000.0
     XP:
       Chance: 100.0
       Min: 1.0
@@ -34,8 +34,8 @@ ender_dragon:
     Currency:
       vault:
         Chance: 100.0
-        Min: 1000.0
-        Max: 5000.0
+        Min: 10000.0
+        Max: 50000.0
     XP:
       Chance: 100.0
       Min: 1.0

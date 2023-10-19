@@ -48,7 +48,7 @@ General:
   # A list of worlds, where no skill XP / currency will be dropped.
   Disabled_Worlds:
   - my_world
-  - another_world
+  - eternal
   # Sets whether or not 'skills' command will be registered as default plugin command instead of 'help' one.
   Default_Skills_Command: false
   # Sets whether or not loot protection is enabled.
@@ -62,13 +62,13 @@ General:
     # Sets how often (in ticks) plugin will check each player with full inventory for currency items around to pickup.
     # 1 second = 20 ticks.
     # Setting this option to low values may affect server's performance.
-    Check_Interval: 30
+    Check_Interval: 40
 Leveling:
   # Sets whether or not leveling is enabled.
   # WARNING: Disabling this option mid-game will result in all player data lost!
-  Enabled: true
+  Enabled: false
   # Sets whether or not a random firework will be spawned above the player on skill level up.
-  Fireworks: true
+  Fireworks: false
 Exploit_Protection:
   # A list of SpawnReasons that will make mobs spawned by them drop no skill XP / currency.
   # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/entity/CreatureSpawnEvent.SpawnReason.html

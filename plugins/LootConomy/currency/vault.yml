@@ -1,7 +1,7 @@
 # Sets whether or not this currency is enabled.
 Enabled: true
 # Sets currency display name.
-Name: Money
+Name: Yen
 # Sets currency format.
 # Available placeholders:
 # - %amount%
@@ -30,7 +30,7 @@ Effects:
 Death_Penalty:
   # Sets whether or not death penalty is enabled for this currency.
   # When enabled, players will lose specified % of their balance on death.
-  Enabled: false
+  Enabled: true
   # Sets whether or not a currency item should NOT be dropped on player's death.
   # If disabled, this means that player can return to death location and pickup it back.
   Do_Not_Drop_Item: false

@@ -3,11 +3,11 @@ magma_cube:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
+        Chance: 100.0
         Min: 6.0
-        Max: 16.0
+        Max: 10.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -18,11 +18,11 @@ spider:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 4.5
+        Max: 9.5
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -33,11 +33,11 @@ drowned:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 4.5
+        Max: 9.5
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -48,11 +48,11 @@ phantom:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 10.0
+        Max: 17.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -63,11 +63,11 @@ cave_spider:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 15.0
+        Max: 17.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -78,11 +78,11 @@ zoglin:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 50.0
+        Max: 75.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -93,11 +93,11 @@ endermite:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 3.0
+        Max: 5.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -109,8 +109,8 @@ pig:
     Currency:
       vault:
         Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Min: 1.0
+        Max: 2.0
     XP:
       Chance: 50.0
       Min: 1.0
@@ -123,11 +123,11 @@ creeper:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 25.0
+        Max: 32.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -138,11 +138,11 @@ vex:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 35.0
+        Max: 45.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -153,11 +153,11 @@ slime:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 4.0
+        Max: 8.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -168,11 +168,11 @@ piglin_brute:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 15.0
+        Max: 25.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -183,11 +183,11 @@ hoglin:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 50.0
+        Max: 75.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -198,11 +198,11 @@ ghast:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 50.0
+        Max: 75.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -213,11 +213,11 @@ enderman:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 15.0
+        Max: 22.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0
@@ -228,9 +228,9 @@ silverfish:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 4.0
+        Max: 12.0
     XP:
       Chance: 50.0
       Min: 1.0
@@ -243,11 +243,11 @@ blaze:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
-        Min: 6.0
-        Max: 16.0
+        Chance: 100.0
+        Min: 20.0
+        Max: 27.0
     XP:
-      Chance: 50.0
+      Chance: 100.0
       Min: 1.0
       Max: 5.0
   Unlock_Level: 0

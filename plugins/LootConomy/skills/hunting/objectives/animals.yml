@@ -4,8 +4,8 @@ goat:
     Currency:
       vault:
         Chance: 50.0
-        Min: 4.0
-        Max: 12.0
+        Min: 1.0
+        Max: 2.0
     XP:
       Chance: 50.0
       Min: 1.0
@@ -19,8 +19,8 @@ pig:
     Currency:
       vault:
         Chance: 50.0
-        Min: 4.0
-        Max: 12.0
+        Min: 1.0
+        Max: 2.0
     XP:
       Chance: 50.0
       Min: 1.0
@@ -33,7 +33,7 @@ rabbit:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
+        Chance: 100.0
         Min: 4.0
         Max: 12.0
     XP:
@@ -49,8 +49,8 @@ bee:
     Currency:
       vault:
         Chance: 50.0
-        Min: 4.0
-        Max: 12.0
+        Min: 0.5
+        Max: 1.0
     XP:
       Chance: 50.0
       Min: 1.0
@@ -64,8 +64,8 @@ turtle:
     Currency:
       vault:
         Chance: 50.0
-        Min: 4.0
-        Max: 12.0
+        Min: 1.0
+        Max: 2.0
     XP:
       Chance: 50.0
       Min: 1.0
@@ -79,8 +79,8 @@ camel:
     Currency:
       vault:
         Chance: 50.0
-        Min: 4.0
-        Max: 12.0
+        Min: 1.0
+        Max: 2.0
     XP:
       Chance: 50.0
       Min: 1.0
@@ -94,8 +94,8 @@ bat:
     Currency:
       vault:
         Chance: 50.0
-        Min: 4.0
-        Max: 12.0
+        Min: 1.0
+        Max: 2.0
     XP:
       Chance: 50.0
       Min: 1.0
@@ -109,12 +109,12 @@ ocelot:
     Currency:
       vault:
         Chance: 50.0
-        Min: 4.0
-        Max: 12.0
+        Min: 0.0
+        Max: 0.0
     XP:
       Chance: 50.0
-      Min: 1.0
-      Max: 5.0
+      Min: 0.0
+      Max: 0.0
   Unlock_Level: 0
   Icon:
     Material: OCELOT_SPAWN_EGG
@@ -124,8 +124,8 @@ chicken:
     Currency:
       vault:
         Chance: 50.0
-        Min: 4.0
-        Max: 12.0
+        Min: 1.0
+        Max: 2.0
     XP:
       Chance: 50.0
       Min: 1.0
@@ -139,8 +139,8 @@ donkey:
     Currency:
       vault:
         Chance: 50.0
-        Min: 4.0
-        Max: 12.0
+        Min: 1.0
+        Max: 2.0
     XP:
       Chance: 50.0
       Min: 1.0
@@ -154,8 +154,8 @@ llama:
     Currency:
       vault:
         Chance: 50.0
-        Min: 4.0
-        Max: 12.0
+        Min: 1.0
+        Max: 2.0
     XP:
       Chance: 50.0
       Min: 1.0
@@ -184,8 +184,8 @@ sheep:
     Currency:
       vault:
         Chance: 50.0
-        Min: 4.0
-        Max: 12.0
+        Min: 1.0
+        Max: 2.0
     XP:
       Chance: 50.0
       Min: 1.0
@@ -198,7 +198,7 @@ mushroom_cow:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
+        Chance: 100.0
         Min: 4.0
         Max: 12.0
     XP:
@@ -214,8 +214,8 @@ cow:
     Currency:
       vault:
         Chance: 50.0
-        Min: 4.0
-        Max: 12.0
+        Min: 1.0
+        Max: 2.0
     XP:
       Chance: 50.0
       Min: 1.0
@@ -228,7 +228,7 @@ parrot:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
+        Chance: 100.0
         Min: 4.0
         Max: 12.0
     XP:
@@ -243,7 +243,7 @@ silverfish:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
+        Chance: 100.0
         Min: 4.0
         Max: 12.0
     XP:
@@ -259,8 +259,8 @@ fox:
     Currency:
       vault:
         Chance: 50.0
-        Min: 4.0
-        Max: 12.0
+        Min: 1.0
+        Max: 2.0
     XP:
       Chance: 50.0
       Min: 1.0
@@ -274,8 +274,8 @@ mule:
     Currency:
       vault:
         Chance: 50.0
-        Min: 4.0
-        Max: 12.0
+        Min: 1.0
+        Max: 2.0
     XP:
       Chance: 50.0
       Min: 1.0
@@ -288,7 +288,7 @@ panda:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
+        Chance: 100.0
         Min: 4.0
         Max: 12.0
     XP:
@@ -304,8 +304,8 @@ cat:
     Currency:
       vault:
         Chance: 50.0
-        Min: 4.0
-        Max: 12.0
+        Min: 0.0
+        Max: 0.0
     XP:
       Chance: 50.0
       Min: 1.0
@@ -349,8 +349,8 @@ horse:
     Currency:
       vault:
         Chance: 50.0
-        Min: 4.0
-        Max: 12.0
+        Min: 1.0
+        Max: 2.0
     XP:
       Chance: 50.0
       Min: 1.0
@@ -363,7 +363,7 @@ wolf:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
+        Chance: 100.0
         Min: 4.0
         Max: 12.0
     XP:
@@ -378,7 +378,7 @@ skeleton_horse:
   Drops:
     Currency:
       vault:
-        Chance: 50.0
+        Chance: 100.0
         Min: 4.0
         Max: 12.0
     XP:
