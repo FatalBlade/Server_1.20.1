@@ -3,7 +3,7 @@ task-interval: 50
 # Block types which torches cannot be placed upon
 block-type-blacklist: []
 # Worlds which torches should not be placed in
-world-blacklist: []
+world-blacklist: eternal
 # Whether torches should be taken from the inventory of players
 torches-from-inventory: true
 

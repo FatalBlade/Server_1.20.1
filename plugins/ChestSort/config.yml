@@ -79,11 +79,11 @@ allow-automatic-inventory-sorting: true
 
 # when set to false, new players will have to run /chestsort
 # once to enable automatic chest sorting.
-sorting-enabled-by-default: false
+sorting-enabled-by-default: true
 
 # when set to false, new players will have to run /invsort on
 # once to enable automatic inventory sorting.
-inv-sorting-enabled-by-default: false
+inv-sorting-enabled-by-default: true
 
 # You can prevent players from using the /chestsort and /invsort commands by setting
 # this to false.
@@ -175,7 +175,7 @@ hotkey-cooldown: 0.2
 # When enabled, players can leftclick on chests, barrels etc.
 # to sort them without having to open them.
 # Permission: chestsort.hotkey.outside
-allow-left-click-to-sort: true
+allow-left-click-to-sort: false
 
 # When set to true, sorting a chest by left-clicking it is enabled by default
 left-click-to-sort-enabled-by-default: false
@@ -212,7 +212,7 @@ check-for-updates: true
 
 # When you set "check-for-updates" to true, you can define the amount
 # of hours inbetween each update check.
-check-interval: 4
+check-interval: 12
 
 #########################
 #### Disabled Worlds ####
@@ -243,7 +243,7 @@ disabled-worlds:
 ##### CrackShot ##### -> https://www.spigotmc.org/resources/crackshot-guns.48301/
 # When CrackShot is installed, all CrackShot weapons will be
 # grouped together and sorted by their name
-hook-crackshot: true
+hook-crackshot: false
 
 # You can define a custom name that will be used as prefix
 # for all CrackShot weapon names.
@@ -255,7 +255,7 @@ hook-crackshot-prefix: "crackshot_weapon"
 # When InventoryPages is installed, ChestSort will not sort
 # the "Next Page" and "Prev Page" buttons. You should not
 # disable this behaviour unless you know what you are doing!
-hook-inventorypages: true
+hook-inventorypages: false
 
 ##### Minepacks ##### -> https://www.spigotmc.org/resources/minepacks-backpack-plugin-mc-1-7-1-15.19286/
 # When Minepacks version 2.3.8+ is installed, ChestSort can detect your
