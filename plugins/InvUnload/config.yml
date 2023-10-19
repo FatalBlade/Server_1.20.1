@@ -74,7 +74,7 @@ match-enchantments-on-books: false
 
 # Amount of seconds players have to wait between each unload/dump attempt.
 # Set to 0 to disable.
-cooldown: 0
+cooldown: 15
 
 # When true, InvUnload will consider chests with a block on top to be inaccessible
 ignore-blocked-chests: true
@@ -115,7 +115,7 @@ always-show-summary: true
 
 # When set to true, InvUnload will draw the laser beam everytime you /unload or /dump
 # When set to false, InvUnload only draws the laser beam on /unloadinfo and /search
-laser-animation: false
+laser-animation: true
 
 # You can change the particles used for the laser
 # List of particle types: https://minecraft.gamepedia.com/Particles#Types_of_particles
@@ -153,20 +153,20 @@ use-playerinteractevent: true
 # When enabled, InvUnload will check if you are using PlotSquared.
 # Players will then only be able to unload into chests that are
 # in their own plots and in plots that match the settings below
-use-plotsquared: true
+use-plotsquared: false
 
 # Allows players to unload into chests that are in foreign Plots if
 # the players is a trusted member of that plot
-plotsquared-allow-when-trusted: true
+plotsquared-allow-when-trusted: false
 
 # Allows players to unload into chests that do not belong to any Plot
-plotsquared-allow-outside-plots: true
+plotsquared-allow-outside-plots: false
 
 ##### CoreProtect #####
 # When enabled, InvUnload will tell CoreProtect what items have
 # been put into which chests, or in other words:
 # This makes /unload and /dump loggable by CoreProtect
-use-coreprotect: true
+use-coreprotect: false
 
 ##### ChestSort #####
 # When enabled, InvUnload will automatically use ChestSort
@@ -182,7 +182,7 @@ force-chestsort: false
 
 ##### ItemsAdder #####
 # When enabled, InvUnload will detect custom items from ItemsAdder
-use-itemsadder: true
+use-itemsadder: false
 
 ##########################
 ##### miscellaneous ######
@@ -191,7 +191,7 @@ use-itemsadder: true
 # When using /search or /blacklist, InvUnload tabcompletes the item names.
 # When set to true, entering "oak" will result in suggestions for all items starting with "oak".
 # When set to false, also items beginning with "dark_oak" etc. are suggested.
-strict-tabcomplete: true
+strict-tabcomplete: false
 
 ##########################
 ##### Update Checker #####
@@ -207,7 +207,7 @@ check-for-updates: true
 
 # When you set "check-for-updates" to true, you can define the amount
 # of hours inbetween each update check.
-check-interval: 4
+check-interval: 12
 
 #########################
 ##### localization ######
