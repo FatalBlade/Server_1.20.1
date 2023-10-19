@@ -82,7 +82,7 @@ Items:
     - "msg &eThanks [player] for buying this shovel!"
     - "give [player] wooden_shovel 1"
   LureEnchantBook:
-    pointPrice: 100.0
+    pointPrice: 100000.0
     Icon:
       Id: enchanted_book
       Name: "&eEnchant book"
@@ -101,7 +101,7 @@ Items:
         Enchants:
         - LURE=3
   Elytra:
-    pointPrice: 100000.0
+    pointPrice: 1000000.0
     Icon:
       Id: elytra
       Name: "&eAngel wings"
