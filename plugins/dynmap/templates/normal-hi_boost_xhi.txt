@@ -11,7 +11,7 @@ templates:
   normal-hi_boost_xhi:
     enabled: true
     # Number of extra zoom-out levels for world (each level is twice as big as the previous one)
-    extrazoomout: 2
+    extrazoomout: 3
     maps:
       - class: org.dynmap.hdmap.HDMap
         name: flat
@@ -30,11 +30,11 @@ templates:
         lighting: shadows
         mapzoomin: 3
         boostzoom: 2
-      - class: org.dynmap.hdmap.HDMap
-        name: cave
-        title: "Cave"
-        prefix: ct
-        perspective: iso_SE_60_lowres
-        shader: cave
-        lighting: default
-        mapzoomin: 5
+      #- class: org.dynmap.hdmap.HDMap
+        #name: cave
+        #title: "Cave"
+        #prefix: ct
+        #perspective: iso_SE_60_lowres
+        #shader: cave
+        #lighting: default
+        #mapzoomin: 5

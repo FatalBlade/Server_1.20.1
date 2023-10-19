@@ -11,7 +11,7 @@ templates:
   the_end-hi_boost_xhi:
     enabled: true
     # Number of extra zoom-out levels for world (each level is twice as big as the previous one)
-    extrazoomout: 3
+    extrazoomout: 2
     maps:
       - class: org.dynmap.hdmap.HDMap
         name: flat
