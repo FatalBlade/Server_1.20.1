@@ -1,0 +1,4 @@
+# Set how often (in seconds) all the plugin stats will be updated.
+# This will update all stats signs and holograms.
+# Set -1 to disable.
+Update_Interval: 900

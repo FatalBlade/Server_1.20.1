@@ -1,0 +1,32 @@
+#Name: TheCore
+#Description: An effective way to develop plugins. Save time, do more!
+#Author: SobkySK | Discord: Sobky#5528
+#Maintained by INNOUNIQ | Website: https://plugin.innouniq.com | Discord: https://discord.gg/vPHWEapDGR
+
+ApplicationDirectory: ".INNOUNIQ"
+
+#Space where to save profile data!
+#Supported storage: MySQL, SQLite
+Storage:
+  Type: "SQLite"
+  Host: "IP"
+  Port: 3306
+  Database: "db"
+  User: "name"
+  Password: "*****"
+
+ProfileStorage:
+  Active: true
+  #SimpleCache memory to store ProfileData loaded from Storage.
+  #Prevents before massive requests on Storage.
+  CacheSize: 128
+
+  #Default(Predefined) data is used if an error at loading player's real data occurs.
+  DefaultData:
+    Texture: "ewogICJ0aW1lc3RhbXAiIDogMTYwMjUzMzgzNjA0NywKICAicHJvZmlsZUlkIiA6ICI4NjY3YmE3MWI4NWE0MDA0YWY1NDQ1N2E5NzM0ZWVkNyIsCiAgInByb2ZpbGVOYW1lIiA6ICJTdGV2ZSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL25vdmFzay5pbi80Njc1MDk3LnBuZyIKICAgIH0sCiAgICAiQ0FQRSIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTUzY2FjOGI3NzlmZTQxMzgzZTY3NWVlMmI4NjA3MWE3MTY1OGYyMTgwZjU2ZmJjZThhYTMxNWVhNzBlMmVkNiIKICAgIH0KICB9Cn0="
+    Signature: "Ri+gD6opLkTsZQuGpSzm3mT8K7s7n1fylC+3Opt/4CW+VTaBhRV8swJVVkqzvAW5N+FxRVLqjM2LYyKNoNfOHTg5UOTmO+Iel5B6mEZWTxRedUETj/M399GPwlv/Kn75KzN/SAMIQJ/2JLUF9Rr4iwQUaFkeT2aCK+4GHGsTKwQhE0GNRCZeKbiQQDBHg94CM+yFpG30IRcgZipBIYiYsLlFyDJXOU28tb+v99Io51QKPKa4uaSTx/M5FeVEBBBAFOG5VPnSy6Y7PLZRPUk7FkXFKsBjrrZnWTLNzevPjwvTT0W7BEdglXaNAYqx9EH1PpnEbu/HI4wz71V7BDwMKs6RAOAfCJm57gAz31yobCr6MhAcdrIvKqC7GQ9vL6qZms1+cZtLvSBtmXtKt69zSeC4lT2FyTiPFN1o69cWNa0atOz1QDRtU+MsOx9sQevtdJM9344+AcKPoxKZC0tXTJ4exP+Hud+eml7PyNPh5hQJ1KeKlALY9hTeeqHLlPlaUOtOOVOV7d54i4rVgAlOj7wloZ2Gt7k5WvPSExzFPN5P7P0lmTjhrwJvhBfV54w4jKe+l24GlsJrDYwqA2JooYGr+NA8D9UsCWk+LFWJ0lGKcYqdF1nBMqfnvwXE9wOqn0udJN3U7tcgrEE1/KM4fFByqIBas9778TzgiIyTgOU="
+    Locale: "EN"
+
+#Feature management if TheCore runs on Bedrock edition server.
+BedrockEdition:
+  Active: false

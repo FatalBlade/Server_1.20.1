@@ -1,0 +1,10 @@
+Allowed: true
+Color: '%YELLOW%'
+MaxLevel: 1
+SlotCost: 5
+EnchantCost: 10
+Enchantable: true
+MinimumToolLevelRequirement: 1
+DisableAttacks: true
+Recipe:
+  Enabled: false

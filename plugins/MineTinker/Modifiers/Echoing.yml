@@ -1,0 +1,11 @@
+Allowed: true
+Color: '%YELLOW%'
+MaxLevel: 3
+SlotCost: 2
+TickTime: 20
+EnchantCost: 20
+Enchantable: true
+MinimumToolLevelRequirement: 1
+RadiusPerLevel: 10
+Recipe:
+  Enabled: false

@@ -1,0 +1,1859 @@
+# Here you can create your own custom placeholders to use it in language config.
+# Key = Placeholder, Value = Replacer.
+Placeholders:
+  '%gray%': '#d4d9d8'
+  '%red%': '#fd5e5e'
+  '%green%': '#aefd5e'
+Help:
+  Score:
+  - <! prefix:"false" !>
+  - '&a/ama score add <player> <amount> &7- Add score to a player.'
+  - '&a/ama score take <player> <amount> &7- Take score from a player.'
+  - '&a/ama score set <player> <amount> &7- Set score for a player.'
+Command:
+  Coins:
+    Desc: Arena coins management.
+    Usage: '[help]'
+    Balance:
+      Desc: View [player's] coins balance.
+      Usage: '[player]'
+      Done:
+        Self: '#ffeea2Your have: #fdba5e%amount%#ffeea2.'
+        Others: '#fdba5e%player_name%#ffeea2''s balance: #fdba5e%amount%#ffeea2.'
+    Add:
+      Desc: Add coins to a player.
+      Usage: <player> <amount>
+      Done: '#ffeea2Added #aefd5e%amount% #ffeea2 to #aefd5e%player_name%#ffeea2''s balance.'
+    Remove:
+      Desc: Remove coins off a player.
+      Usage: <player> <amount>
+      Done: '#ffeea2Removed #fd5e5e%amount% #ffeea2 from #fd5e5e%player_name%#ffeea2''s balance.'
+    Set:
+      Desc: Set player's coins amount.
+      Usage: <player> <amount>
+      Done: '#ffeea2Set #fdba5e%player_name%#ffeea2''s coins balance to #fdba5e%amount%#ffeea2.'
+  Editor:
+    Desc: Open AMA Editor
+  ForceEnd:
+    Desc: Force stop an arena.
+    Usage: <arena>
+    Done: '#ffeea2Forced arena #fd5e5e%arena_name%#ffeea2 to end.'
+    Error:
+      NotInGame: '#ffeea2There is no activity in the #fd5e5e%arena_name%#ffeea2 arena.'
+  ForceStart:
+    Desc: Force start an arena.
+    Usage: <arena>
+    Done: '#ffeea2Forced arena #aefd5e%arena_name%#ffeea2 to start.'
+    Error:
+      NotReady: '#ffeea2Arena #fd5e5e%arena_name%#ffeea2 currently can not be forced to start.'
+  Hologram:
+    Desc: Arena hologram management.
+    Usage: '[help]'
+    Remove:
+      Desc: Removes nearest stats hologram.
+      Usage: <HologramType> [args]
+      Done: '&7Removed all &a%type%&7 holograms!'
+    Add:
+      Desc: Creates a hologram for specified object.
+      Usage: <HologramType> [args]
+      Done: '&7Successfully created &a%type%&7 hologram!'
+    Error: '&cCould not perform operation! (Invalid arguments)'
+  Join:
+    Desc: Join the arena.
+    Usage: '[arena] [player]'
+    Nothing: '#fd5e5eThere is no available arenas to join right now.'
+  Region:
+    Desc: Manage in-game arena regions.
+    Usage: <lock|unlock>
+    State:
+      Done: Region &a%region%'s &7lock state to &a%state%&7!
+      Error:
+        NotInGame: '&cYou must be in-game to do that!'
+        InvalidRegion: '&cInvalid region id!'
+  SetActive:
+    Desc: Set arena active state.
+    Usage: <arena> <true/false>
+    Done: 'Arena &a%arena_id%&7 active state: &f%state%&7.'
+  Score:
+    Desc: Manage player's game score.
+    Usage: <add|take|set>
+    Add:
+      Usage: '&cUsage: &f/ama score add <player> <amount>'
+      Done: '&aAdded &f%points% points to &a%player%''s &fscore!'
+    Take:
+      Usage: '&cUsage: &f/ama score take <player> <amount>'
+      Done: '&aTaken &f%points% points from &a%player%''s &fscore!'
+    Set:
+      Usage: '&cUsage: &f/ama score set <player> <amount>'
+      Done: '&aSet &a%player%''s &fscore to &a%score%&f!'
+    Error:
+      NotInGame: '&cThis player is not in game!'
+  Spot:
+    Desc: Manage in-game arena spots.
+    Usage: '[state]'
+    State:
+      Done: Changed &a%spot%'s &7state to &a%state%&7!
+      Error:
+        NotInGame: '&cYou must be in-game to do that!'
+        InvalidSpot: '&cInvalid spot id!'
+        InvalidState: '&cInvalid spot state id!'
+  Leave:
+    Desc: Leave the arena.
+  List:
+    Desc: Shows arenas list.
+  SkipRound:
+    Desc: Skips arena round(s).
+    Usage: '[arena] [amount]'
+    Done: '#ffeea2Set #fdba5e%amount%#ffeea2 rounds to skip for #fdba5e%arena_name%#ffeea2.'
+    Error:
+      NotInGame: '#fd5e5eCan not skip rounds: #ffeea2Arena is not in game or is about to end.'
+  Spectate:
+    Desc: Spectate an arena.
+    Usage: <arena>
+  Shop:
+    Desc: Open arena shop.
+  Stats:
+    Desc: View your current stats.
+Error:
+  Currency:
+    Invalid: '&cInvalid currency!'
+Arena:
+  Error:
+    Disabled: Arena &c%arena_name% &7is disabled.
+    Invalid: '#fd5e5eArena does not exists.'
+  Join:
+    Error:
+      Permission: '&cYou don''t have permission to join this arena!'
+      Payment: '&cYou must have &e%arena_requirement_payment% &cto join the arena!'
+      Level: '&cYour level is not suitable to join the arena!'
+      InGame: '&cYou are already in game!'
+      Maximum: '&cThere is maximum players on the arena.'
+      Started: Arena &a%arena_name% &7is already in game. You can not join now.
+      Ending: 'Arena #fd5e5e%arena_name%#d4d9d8 is about to end. Try again in a few seconds.'
+      NoKit: You don't have any kit to play on this arena.
+      NoRegion: No regions are available to play on.
+    Spectate:
+      Success: Now you are spectating arena &a%arena_name%
+      Error:
+        Disabled: Spectating is disabled on this arena.
+  Spectate:
+    Error:
+      Nothing: There is nothing to spectate for at the moment.
+  Scheduler:
+    Open:
+      Announce: '&7Arena &a%arena_name%&7 is opened for play!'
+    Close:
+      Announce: '&7Arena &c%arena_name%&7 have been closed!'
+  Game:
+    Notify:
+      Start:
+      - '<! type:"titles:10:50:10" sound:"ENTITY_ENDERMAN_TELEPORT" !>&a&lYou have joined the arena! '
+      - ' &2&lPickup your weapons and fight!'
+      Reward: 'You recieved reward: &a%reward_name%'
+    Announce:
+      End: Game on the arena &a%arena_name% &7has ended. Type &a/ama join &a%arena_id% &7to play!
+      Start: Arena &a%arena_name% &7will start in &2%time% &7seconds. Type &a/ama join &a%arena_id% &7to join!
+    Restrict:
+      Commands: External commands are disabled on this arena. Type &c/ama leave&7 to leave.
+      Kits: Kits are disabled on this arena.
+      NoPets: Pets are not allowed on this arena. Your pet has gone.
+    Error:
+      NotInGame: You are not in game!
+    Leave:
+      Info: You has left the arena.
+    Lobby:
+      Enter:
+      - '<! type:"titles:10:50:10" !>&a&lWelcome to Mob Arena! '
+      - ' &2&lPlease, choose your kit'
+      Timer:
+      - '<! type:"titles:10:50:10" sound:"BLOCK_NOTE_BLOCK_PLING" !>&e&lThe game will start in '
+      - ' &a&l%time% seconds!'
+      MinPlayers: 'Minimum players to start: &c%min%'
+      Joined: '&a%player_name% &7has joined the arena.'
+    Death:
+      WithLifes:
+      - <! type:"titles:10:60:10" sound:"ENTITY_ZOMBIE_DEATH" !>
+      - '#fd5e5e&lYou Died!'
+      - '#d4d9d8You have #fd5e5e%player_lives%❤#d4d9d8 extra lifes!'
+      NoLifes:
+      - <! type:"titles:10:60:10" sound:"ENTITY_ZOMBIE_DEATH" !>
+      - '#fd5e5e&lYou Died!'
+      - '#d4d9d8You don''t have extra lifes. Leave: #fd5e5e/ama leave'
+    Revive:
+      WithLifes:
+      - <! type:"titles:10:60:10" sound:"ITEM_TOTEM_USE" !>
+      - '#aefd5e&lYou''ve been revived!'
+      - '#d4d9d8You have #aefd5e%player_lives%❤#d4d9d8 extra lifes!'
+      NoLifes:
+      - <! type:"titles:10:60:10" sound:"ITEM_TOTEM_USE" !>
+      - '#aefd5e&lYou''ve been revived!'
+      - '#d4d9d8This is your #fd5e5elast#d4d9d8 chance!'
+    Info:
+      Player:
+        Ready: '#aefd5e%player_name%#d4d9d8 is ready to play!'
+        NotReady: '#fd5e5e%player_name%#d4d9d8 is not ready to play.'
+        Death: '#fd5e5e%player_name% #d4d9d8died!'
+    End:
+      AllDead:
+      - <! type:"titles:10:100:10" sound:"ENTITY_BLAZE_DEATH" !>
+      - '#fd5e5e&lDefeat'
+      - '#d4d9d8All players died...'
+      Timeout:
+      - <! type:"titles:10:100:10" sound:"ENTITY_BLAZE_DEATH" !>
+      - '#fd5e5e&lTime Out'
+      - '#d4d9d8You were unable to beat them in a time...'
+      Completed:
+      - <! type:"titles:10:100:10" sound:"ENTITY_PLAYER_LEVELUP" !>
+      - '#aefd5e&lVictory!'
+      - '#d4d9d8You''ve passed all the waves!'
+    Status:
+      Spectate: '<! type:"action_bar" !>#d4d9d8You''re spectating the arena. Type #b3ff5d/ama leave#d4d9d8 to leave.'
+      Dead:
+        WithLifes: <! type:"action_bar" !>#fd5e5eYou're dead. You will be revived at the round end.
+        NoLifes: <! type:"action_bar" !>#fd5e5eYou're dead. You don't have extra lifes and can spectate only.
+      Round:
+        Prepare: '<! type:"action_bar" !>&6&lNew round in: &e&l%arena_wave_next_in% &6&lseconds!'
+        Active: '<! type:"action_bar" !>&b[Mobs] &aAlive: &2%arena_mobs_alive% &7| &eLeft: &6%arena_mobs_left%'
+      Ending: '<! type:"action_bar" !>#5edefdGame ends in #d4d9d8%arena_end_countdown%#5edefd seconds.'
+    Wave:
+      Start:
+      - '<! type:"titles:10:50:10" !>&6&lWave &e&l#%arena_wave_number% '
+      - ' &4&lPrepare to fight!'
+  Region:
+    Unlocked:
+      Notify:
+      - '<! type:"titles:0:30:10" sound: BLOCK_NOTE_BLOCK_BELL!>&a&lRegion Unlocked!'
+      - '&f%region_name%'
+    Locked:
+      Notify:
+      - <! type:"titles:0:30:10" !>&c&lNew Region!
+      - '&4&lFollow to the next arena region!'
+Kit:
+  Buy:
+    Error:
+      NoMoney: You can't afford &c%kit_name% &7kit!
+      NoPermission: '&cYou don''t have permission to purchase this kit!'
+    Success: You successfully bought the &a%kit_name% &7kit for &a%kit_cost%&7!
+  Select:
+    Error:
+      NoPermission: '&cYou don''t have permission to use this kit!'
+      Disabled: This kit is disabled in this arena.
+      NotObtained: You don't have this kit!
+      Limit: You can not use this kit, because there is already enough players with it.
+    Success: You choosen &a%kit_name%&7 as your kit.
+Shop:
+  Open:
+    Error:
+      Locked: '&cShop is not available yet!'
+      Disabled: '&cShop is disabled on this arena.'
+  Category:
+    Open:
+      Error:
+        Locked: '&cSorry, but this category is still locked!'
+        Unavailable: '&cSorry, but you can''t use this category!'
+  Product:
+    Purchase: You purchased &a%shop_product_name% &7for &a%shop_product_price%&7!
+    Error:
+      Locked: '&cSorry, but this product is still locked!'
+      Unavailable: '&cSorry, but you can''t use this product!'
+      NotEnoughFunds: '&cYou need &e%shop_product_price%&c to purchase %shop_product_name%&c!'
+Editor:
+  Generic:
+    Enter:
+      Currency: '&7Enter &a[Currency]'
+      Name: '&7Enter &a[Display Name]'
+      Description: '&7Enter &a[Description]'
+      Command: '&7Enter &a[Command]'
+      Number: '&7Enter &a[Number]'
+      Percent: '&7Enter &a[Percent Amount]'
+      Seconds: '&7Enter &a[Seconds Amount]'
+  Arena:
+    Enter:
+      Id: '&7Enter &a[Arena Identifier]'
+      SchedulerTime: '&7Enter &a[Day] [Time] &7| &aMonday 15:30'
+      JoinPayment: '&7Enter &a[Currency] [Amount] &7| &acoins 500'
+      JoinLevel: '&7Enter &a[Plugin] [Value] &7| &aMMOCore 10'
+    Error:
+      Exists: '&cArena is already exists!'
+      Level_Provider: '&cSuch plugin is not supported!'
+      SchedulerTime: '&cInvalid day/time!'
+    Gameplay:
+      Enter:
+        ScoreboardId: '&7Enter &a[Scoreboard Id]'
+        BannedItem: '&7Enter &a[Material Name]'
+        AllowedSpawnReason: '&7Enter &a[Spawn Reason]'
+        KitLimit: '&7Enter [Kit Id] [Limit] &7| &awarrior 3'
+      Timeleft:
+        Name: '#ead931&lTimeleft'
+        Lore:
+        - '#aaa8a8Amount of time players have to'
+        - '#aaa8a8finish the arena until it'
+        - '#aaa8a8auto-ends as lose.'
+        - ''
+        - '#ead931&lCurrent:'
+        - '#ead931▪ #aaa8a8Timeleft: #ead931%gameplay_timeleft% min.'
+        - ''
+        - '#74ea31&lActions:'
+        - '#74ea31▪ #aaa8a8Left-Click: #74ea31Edit'
+        - '#74ea31▪ #aaa8a8[Q/Drop] Key: #74ea31Disable'
+      BannedItems:
+        Name: '#ead931&lBanned Items'
+        Lore:
+        - '#aaa8a8A list of items that can not'
+        - '#aaa8a8be used on the arena.'
+        - ''
+        - '#ead931&lCurrent:'
+        - '#aaa8a8%gameplay_banned_items%'
+        - ''
+        - '#ea9631&lNotes:'
+        - '#aaa8a8This option is only useful'
+        - '#aaa8a8when kits are disabled.'
+        - ''
+        - '#74ea31&lActions:'
+        - '#74ea31▪ #aaa8a8Left-Click: #74ea31Add Item'
+        - '#74ea31▪ #aaa8a8[Q/Drop] Key: #74ea31Clear List'
+      SpawnReasons:
+        Name: '#ead931&lAllowed Spawn Reasons'
+        Lore:
+        - '#aaa8a8A list of spawn reasons that are'
+        - '#aaa8a8allowed to spawn mobs inside arena.'
+        - '#aaa8a8'
+        - '#aaa8a8This might be useful for'
+        - '#aaa8a8integration with other plugins.'
+        - ''
+        - '#ead931&lCurrent:'
+        - '#aaa8a8%gameplay_allowed_spawn_reasons%'
+        - ''
+        - '#74ea31&lActions:'
+        - '#74ea31▪ #aaa8a8Left-Click: #74ea31Add Reason'
+        - '#74ea31▪ #aaa8a8[Q/Drop] Key: #74ea31Clear List'
+      PlayerLifes:
+        Name: '#ead931&lPlayer Lifes'
+        Lore:
+        - '#aaa8a8Sets how many lifes players'
+        - '#aaa8a8will have on game start.'
+        - '#aaa8a8And how many time player'
+        - '#aaa8a8will have to wait until'
+        - '#aaa8a8being auto-revived.'
+        - ''
+        - '#ead931&lCurrent:'
+        - '#ead931▪ #aaa8a8Lifes: #ead931%gameplay_player_lifes_amount%'
+        - '#ead931▪ #aaa8a8Auto-Revive: #ead931%gameplay_player_revive_time%'
+        - ''
+        - '#ea9631&lNotes:'
+        - '#ea9631▪ #aaa8a8Set #fdba5eLifes#d4d9d8 to #fdba5e1#d4d9d8 to disable.'
+        - '#ea9631▪ #aaa8a8Set #fdba5eAuto-Revive#d4d9d8 to #fdba5e-1#d4d9d8 to revive on round end.'
+        - '#74ea31&lActions:'
+        - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change Lifes'
+        - '#74ea31▪ #aaa8a8Right-Click: #74ea31Change Time'
+      KeepInventory:
+        Name: '#ead931&lKeep Inventory'
+        Lore:
+        - '#aaa8a8Sets whether or not'
+        - '#aaa8a8players will drop items'
+        - '#aaa8a8on death.'
+        - ''
+        - '#ead931&lCurrent:'
+        - '#ead931▪ #aaa8a8Enabled: #ead931%gameplay_keep_inventory%'
+        - ''
+        - '#74ea31&lActions:'
+        - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+      Commands:
+        Name: '#ead931&lCommands Allowed'
+        Lore:
+        - '#aaa8a8Sets whether or not'
+        - '#aaa8a8non-arena commands are allowed.'
+        - ''
+        - '#ead931&lCurrent:'
+        - '#ead931▪ #aaa8a8Enabled: #ead931%gameplay_command_usage_enabled%'
+        - '#ead931▪ #aaa8a8Whitelist: #ead931'
+        - '#aaa8a8%gameplay_command_usage_whitelist%'
+        - ''
+        - '#74ea31&lActions:'
+        - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+        - '#74ea31▪ #aaa8a8Right-Click: #74ea31Add Whitelisted'
+        - '#74ea31▪ #aaa8a8[Q/Drop] Key: #74ea31Clear List'
+      Kits:
+        Name: '#ead931&lKits Allowed'
+        Lore:
+        - '#aaa8a8Sets whether or not'
+        - '#aaa8a8kits are allowed to use.'
+        - ''
+        - '#ead931&lCurrent:'
+        - '#ead931▪ #aaa8a8Enabled: #ead931%gameplay_kits_enabled%'
+        - '#ead931▪ #aaa8a8Allowed: #ead931'
+        - '#aaa8a8%gameplay_kits_allowed%'
+        - ''
+        - '#74ea31&lActions:'
+        - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+        - '#74ea31▪ #aaa8a8Right-Click: #74ea31Add Allowed'
+        - '#74ea31▪ #aaa8a8[Q/Drop] Key: #74ea31Clear List'
+    Waves:
+      Enter:
+        WaveId: '&7Enter &a[Wave Identifier]'
+        MobId: '&7Enter &a[Mob Identifier]'
+      Error:
+        Wave_Exists: '&сWave is already exists!'
+        InvalidMob: '&cMob not found! Wrong Mob Provider?'
+    Shop:
+      Enter:
+        ProductId: '&7Enter &a[Product Identifier]'
+        CategoryId: '&7Enter &a[Category Identifier]'
+        Price: '&7Enter &a[Price]'
+      Error:
+        Product_Exists: '&cProduct is already exists!'
+        Category_Exists: '&cCategory is already exists!'
+    Script:
+      Enter:
+        Category: '&7Enter &a[Category Name]'
+        Script: '&7Enter &a[Script Name]'
+        Action:
+          Name: '&7Enter &a[Action Name]'
+          Parameter: '&7Enter &a[Parameter] [Value]'
+        Condition:
+          Section: '&7Enter &a[Section Name]'
+          Value: '&7Enter &a[Condition] [Operator] [Value]'
+      Error:
+        InvalidAction: '&cInvalid action!'
+        InvalidParameter: '&cInvalid parameter!'
+        InvalidCondition: '&cInvalid condition!'
+        InvalidInput: '&cInvalid input!'
+  Region:
+    Enter:
+      Id: '&7Enter &a[Region Identifier]'
+    Error:
+      Exists: '&cRegion is already exists!'
+  SupplyChest:
+    Enter:
+      Id: '&7Enter &a[Chest Identifier]'
+    SetContainer: '&7Click on &a[Container]'
+    Error:
+      Exists: '&cSupply chest is already exists!'
+  Reward:
+    Enter:
+      Id: '&7Enter &a[Reward Identifier]'
+    Error:
+      Exist: '&cReward is already exists!'
+  Spot:
+    Enter:
+      Id: '&7Enter &a[Spot Identifier]'
+    Error:
+      Exists: '&cSpot is already exists!'
+    State:
+      Enter:
+        Id: '&7Enter &a[State Identifier]'
+      Error:
+        Exists: '&cState is already exists!'
+        NoCuboid: '&cYou must set a spot cuboid!'
+  Kit:
+    Enter:
+      Create: '&7Enter &aunique &7kit &aidentifier&7...'
+      Effect: '#d4d9d8Enter #aefd5e[Effect] [Level] #d4d9d8|#aefd5e SPEED 1'
+      Cost: '&7Enter &acost&7...'
+    Error:
+      Exist: '&cKit already exists!'
+  Mob:
+    Enter:
+      Create: '&7Enter &aunique &7mob &aidentifier&7...'
+      Type: '&7Enter &aentity type&7...'
+      Level: '&7Enter &alevel&7 value...'
+      BossBar:
+        Title: '&7Enter bossbar &atitle&7...'
+      Attribute: '&7Enter &aattribute &7and &avalue&7...'
+      Style: '&7Enter &avalue&7...'
+    Error:
+      Exist: '&cMob already exists!'
+  ArenaEditorType:
+    EDITOR_ARENA:
+      Name: '#ead931&lArena Editor'
+      Lore:
+      - '#aaa8a8Create and manage your arenas here!'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    EDITOR_KITS:
+      Name: '#ead931&lKit Editor'
+      Lore:
+      - '#aaa8a8Create and manage your kits here!'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    EDITOR_MOBS:
+      Name: '#ead931&lMob Editor'
+      Lore:
+      - '#aaa8a8Create and manage your mobs here!'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    ARENA_OBJECT:
+      Name: '#ead931&l%arena_name%#d4d9d8 (ID: &f%arena_id%#d4d9d8)'
+      Lore:
+      - '#ead931▪ #aaa8a8Enabled: #ead931%arena_active%'
+      - ''
+      - '%problems%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Edit'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Delete #fd5e5e(No Undo)'
+    ARENA_CREATE:
+      Name: '#ead931&lCreate Arena'
+      Lore: []
+    ARENA_CHANGE_ACTIVE:
+      Name: '#ead931&lIs Active'
+      Lore:
+      - '#aaa8a8Sets whether or nor arena'
+      - '#aaa8a8is enabled for players.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%arena_active%'
+      - ''
+      - '%problems%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+    ARENA_CHANGE_NAME:
+      Name: '#ead931&lArena Display Name'
+      Lore:
+      - '#aaa8a8Sets the arena display name.'
+      - '#aaa8a8It''s used in messages, GUIs, holograms, etc.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Name: #ead931%arena_name%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    ARENA_SETUP_KIT:
+      Name: '#ead931&lSetup Kit'
+      Lore:
+      - '#aaa8a8A set of tools to setup arena location.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Get'
+    ARENA_AUTO_STATE_SCHEDULERS:
+      Name: '#ead931&lAuto State Schedulers'
+      Lore:
+      - '#aaa8a8This setting allows you to setup'
+      - '#aaa8a8automatic arena opening/closing'
+      - '#aaa8a8at certain day times.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Open Times: #ead931'
+      - '#aaa8a8%arena_auto_state_open_times%'
+      - '#ead931▪ #aaa8a8Close Times: #ead931'
+      - '#aaa8a8%arena_auto_state_close_times%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Add Open Time'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Add Close Time'
+      - '#74ea31▪ #aaa8a8Shift-Left: #74ea31Clear Open Times'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Clear Close Times'
+    ARENA_OPEN_GAMEPLAY_MANAGER:
+      Name: '#ead931&lGameplay Manager'
+      Lore:
+      - '#aaa8a8A set of various gameplay features and options.'
+      - ''
+      - '%problems%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    ARENA_OPEN_WAVE_MANAGER:
+      Name: '#ead931&lWave Manager'
+      Lore:
+      - '#aaa8a8Here you predefine mob groups'
+      - '#aaa8a8to be spawned during the game.'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#aaa8a8You have to create #fdba5escript(s)#d4d9d8 to'
+      - '#aaa8a8spawn your mobs!'
+      - ''
+      - '%problems%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    ARENA_OPEN_REGION_MANAGER:
+      Name: '#ead931&lRegion Manager'
+      Lore:
+      - '#aaa8a8Here you predefine arena regions where'
+      - '#aaa8a8players will fight against mobs.'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#aaa8a8You have to create #fdba5escript(s)#d4d9d8 to'
+      - '#aaa8a8lock or unlock regions!'
+      - ''
+      - '%problems%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    ARENA_OPEN_REWARD_MANAGER:
+      Name: '#ead931&lReward Manager'
+      Lore:
+      - '#aaa8a8Here you predefine arena rewards that'
+      - '#aaa8a8can be given during the game to players.'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#aaa8a8You have to create #fdba5escript(s)#d4d9d8 to'
+      - '#aaa8a8give rewards to players!'
+      - ''
+      - '%problems%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    ARENA_OPEN_SUPPLY_MANAGER:
+      Name: '#ead931&lSupply Manager'
+      Lore:
+      - '#aaa8a8Here you predefine arena chests that'
+      - '#aaa8a8can be used to generate items in.'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#aaa8a8You have to create #fdba5escript(s)#d4d9d8 to'
+      - '#aaa8a8refill supply chests!'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    ARENA_OPEN_SCRIPT_MANAGER:
+      Name: '#ead931&lScript Manager'
+      Lore:
+      - '#aaa8a8Here you create scripts for all'
+      - '#aaa8a8the arena aspects and mechanics.'
+      - '#aaa8a8Without them you arena will be unplayable.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    ARENA_OPEN_SHOP_MANAGER:
+      Name: '#ead931&lShop Manager'
+      Lore:
+      - '#aaa8a8Arena in-game shop.'
+      - '#aaa8a8Allows players to purchase items'
+      - '#aaa8a8during the game.'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#aaa8a8You have to create #fdba5escript(s)#d4d9d8 to'
+      - '#aaa8a8lock or unlock shop items!'
+      - ''
+      - '%problems%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    ARENA_OPEN_SPOT_MANAGER:
+      Name: '#ead931&lSpot Manager'
+      Lore:
+      - '#aaa8a8Here you can create special zones,'
+      - '#aaa8a8that will be changed during the game'
+      - '#aaa8a8It could be openable doors or gates,'
+      - '#aaa8a8landscape changing, etc.'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#aaa8a8You have to create #fdba5escript(s)#d4d9d8 to'
+      - '#aaa8a8activate your spots!'
+      - ''
+      - '%problems%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    ARENA_CHANGE_REQUIREMENT_PERMISSION:
+      Name: '#ead931&lPermission Requirement(s)'
+      Lore:
+      - '#aaa8a8Sets whether or not permission'
+      - '#aaa8a8is required to join the arena.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%arena_requirement_permission%'
+      - '#ead931▪ #aaa8a8Node: #ead931%arena_permission%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+    ARENA_CHANGE_REQUIREMENT_PAYMENT:
+      Name: '#ead931&lPayment Requirement'
+      Lore:
+      - '#aaa8a8Makes players to pay'
+      - '#aaa8a8in order to join the arena.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#aaa8a8%arena_requirement_payment%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Add/Change'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Clear/Disable'
+    ARENA_CHANGE_REQUIREMENT_LEVEL:
+      Name: '#ead931&lLevel Requirement(s)'
+      Lore:
+      - '#aaa8a8Sets level requirements to join the arena.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#aaa8a8%arena_requirement_level%'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#ea9631▪ #aaa8a8Supported plugins:'
+      - '#ea9631▪ #aaa8a8&fMMOCore'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Add/Change'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Clear/Disable'
+    REGION_OBJECT:
+      Name: '#ead931&l%region_name%#d4d9d8 (&f%region_id%#d4d9d8)'
+      Lore:
+      - '#aaa8a8Enabled: &f%region_active%'
+      - '#aaa8a8Is Default: &f%region_default%'
+      - ''
+      - '%problems%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Edit'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Delete #fd5e5e(No Undo)'
+    REGION_CREATE:
+      Name: '#ead931&lCreate Region'
+      Lore: []
+    REGION_SETUP_KIT:
+      Name: '#ead931&lSetup Kit'
+      Lore:
+      - '#aaa8a8A set of tools to setup'
+      - '#aaa8a8region playground.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Get'
+    REGION_CHANGE_ACTIVE:
+      Name: '#ead931&lIs Active'
+      Lore:
+      - '#aaa8a8Enable/Disable region.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%region_active%'
+      - ''
+      - '%problems%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+    REGION_CHANGE_DEFAULT:
+      Name: '#ead931&lIs Default'
+      Lore:
+      - '#aaa8a8Sets whether or not this region'
+      - '#aaa8a8is default arena region.'
+      - '#aaa8a8'
+      - '#aaa8a8Default region is the first place,'
+      - '#aaa8a8where players will be spawned.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Default: #ead931%region_default%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+    REGION_CHANGE_NAME:
+      Name: '#ead931&lDisplay Name'
+      Lore:
+      - '#aaa8a8Sets region display name.'
+      - '#aaa8a8It''s used in messages, GUIs and holograms.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    GAMEPLAY_CHANGE_LOBBY_TIME:
+      Name: '#ead931&lLobby Countdown'
+      Lore:
+      - '#aaa8a8Amount of time players have to'
+      - '#aaa8a8prepare before arena game starts.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Countdown: #ead931%gameplay_lobby_time% sec.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    GAMEPLAY_CHANGE_ANNOUNCES:
+      Name: '#ead931&lStart/End Announcements'
+      Lore:
+      - '#aaa8a8Enables server-wide announcements when'
+      - '#aaa8a8arena is about to start/end.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%gameplay_announcements%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+    GAMEPLAY_CHANGE_SCOREBOARD:
+      Name: '#ead931&lScoreboard'
+      Lore:
+      - '#aaa8a8Sets whether or not'
+      - '#aaa8a8scoreboard is enabled.'
+      - '#aaa8a8'
+      - '#aaa8a8You can create multiple scoreboards'
+      - '#aaa8a8in the main config.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%gameplay_scoreboard_enabled%'
+      - '#ead931▪ #aaa8a8Scoreboard: #ead931%gameplay_scoreboard_id%'
+      - ''
+      - '#ea3131&lWarning:'
+      - '#ea3131▪ #aaa8a8ProtocolLib required!'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Change Scorebaord'
+    GAMEPLAY_CHANGE_HUNGER:
+      Name: '#ead931&lNatural Hunger'
+      Lore:
+      - '#aaa8a8Sets whether or not'
+      - '#aaa8a8natural hunger is enabled.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%gameplay_hunger_enabled%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+    GAMEPLAY_CHANGE_REGENERATION:
+      Name: '#ead931&lNatural Regeneration'
+      Lore:
+      - '#aaa8a8Sets whether or not'
+      - '#aaa8a8natural regeneration is enabled'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%gameplay_regeneration_enabled%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+    GAMEPLAY_CHANGE_ITEM:
+      Name: '#ead931&lItem Settings'
+      Lore:
+      - '#aaa8a8Sets whether or not:'
+      - '#aaa8a8- Item pickup is enabled'
+      - '#aaa8a8- Item drop is enabled'
+      - '#aaa8a8- Item durability is enabled.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Pickup Enabled: #ead931%gameplay_item_pickup_enabled%'
+      - '#ead931▪ #aaa8a8Drop Enabled: #ead931%gameplay_item_drop_enabled%'
+      - '#ead931▪ #aaa8a8Durability Enabled: #ead931%gameplay_item_durability_enabled%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle Drop'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Toggle Pickup'
+      - '#74ea31▪ #aaa8a8Shift-Left: #74ea31Toggle Durability'
+    GAMEPLAY_CHANGE_MOB_HIGHLIGHT:
+      Name: '#ead931&lMob Highlighting'
+      Lore:
+      - '#aaa8a8Sets whether or not'
+      - '#aaa8a8mob highlighting is enabled when'
+      - '#aaa8a8amount (%) of mobs is less or equal'
+      - '#aaa8a8to specified value.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%gameplay_mob_highlight_enabled%'
+      - '#ead931▪ #aaa8a8Amount: #ead931<= %gameplay_mob_highlight_amount%%'
+      - '#ead931▪ #aaa8a8Color: #ead931%gameplay_mob_highlight_color%'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#aaa8a8Due to game limitations,'
+      - '#aaa8a8set of colors is limited and'
+      - '#aaa8a8can not be really customized.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Change Amount'
+      - '#74ea31▪ #aaa8a8Shift-Left: #74ea31Toggle Color'
+    GAMEPLAY_CHANGE_MOB_DROP:
+      Name: '#ead931&lMob Loot'
+      Lore:
+      - '#aaa8a8Sets whether or not'
+      - '#aaa8a8mobs will drop items & xp.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Drop Items: #ead931%gameplay_mob_drop_items%'
+      - '#ead931▪ #aaa8a8Drop XP: #ead931%gameplay_mob_drop_exp%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle Items'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Toggle XP'
+    GAMEPLAY_CHANGE_PLAYERS_AMOUNT:
+      Name: '#ead931&lPlayer Amount'
+      Lore:
+      - '#aaa8a8Sets how many players can'
+      - '#aaa8a8join arena at the same time.'
+      - '#aaa8a8And how many players required'
+      - '#aaa8a8for the game start.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Min: #ead931%gameplay_players_amount_min%'
+      - '#ead931▪ #aaa8a8Max: #ead931%gameplay_players_amount_max%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change Min'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Change Max'
+    GAMEPLAY_CHANGE_SPECTATE:
+      Name: '#ead931&lSpectate Allowed'
+      Lore:
+      - '#aaa8a8Sets whether or not'
+      - '#aaa8a8non-arena players can spectate'
+      - '#aaa8a8this arena.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%gameplay_spectate_enabled%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+    GAMEPLAY_CHANGE_KITS_LIMITS:
+      Name: '#ead931&lKits Limits'
+      Lore:
+      - '#aaa8a8Sets how many players'
+      - '#aaa8a8can use certain kit(s)'
+      - '#aaa8a8at the same time.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#aaa8a8%gameplay_kits_limits%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Add Limit'
+      - '#74ea31▪ #aaa8a8[Q/Drop] Key: #74ea31Clear List'
+    GAMEPLAY_CHANGE_PETS_ALLOWED:
+      Name: '#ead931&lPets Allowed'
+      Lore:
+      - '#aaa8a8Sets whether or not'
+      - '#aaa8a8player pets are allowed.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%gameplay_pets_allowed%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+    GAMEPLAY_CHANGE_MCMMO_ALLOWED:
+      Name: '#ead931&lmcMMO Allowed'
+      Lore:
+      - '#aaa8a8Sets whether or not'
+      - '#aaa8a8players can use mcMMO abilities.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%gameplay_mcmmo_allowed%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+    WAVES_CHANGE_DELAY:
+      Name: '#ead931&lRound Interval'
+      Lore:
+      - '#aaa8a8Sets the countdown before new round.'
+      - '#aaa8a8'
+      - '#aaa8a8Countdown will start only when'
+      - '#aaa8a8all mobs from current round are killed.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8First Round: #ead931%arena_waves_delay_first% sec.'
+      - '#ead931▪ #aaa8a8All Other: #ead931%arena_waves_delay_default% sec.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change First'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Change Other'
+    WAVES_CHANGE_FINAL_WAVE:
+      Name: '#ead931&lFinal Round'
+      Lore:
+      - '#aaa8a8Sets which round will be final.'
+      - '#aaa8a8'
+      - '#aaa8a8When final round is completed,'
+      - '#aaa8a8game ends as victory.'
+      - '#aaa8a8'
+      - '#aaa8a8If final round is disabled,'
+      - '#aaa8a8game will continue until'
+      - '#aaa8a8all players are dead.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Final Round: #ead931%arena_waves_final_wave%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    WAVES_CHANGE_WAVES:
+      Name: '#ead931&lWaves'
+      Lore:
+      - '#aaa8a8Here you predefine waves'
+      - '#aaa8a8aka mob groups that will be'
+      - '#aaa8a8spawned during the game by'
+      - '#aaa8a8arena scripts'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    WAVES_CHANGE_GRADUAL:
+      Name: '#ead931&lGradual Spawning'
+      Lore:
+      - '#aaa8a8This features allows you to configure'
+      - '#aaa8a8mobs spawn that way so they will'
+      - '#aaa8a8spawn by small groups'
+      - '#aaa8a8during the round instead of'
+      - '#aaa8a8spawn all together at round start.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%arena_waves_gradual_enabled%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    WAVES_CHANGE_GRADUAL_ENABLED:
+      Name: '#ead931&lEnabled'
+      Lore:
+      - '#aaa8a8Sets whether or not'
+      - '#aaa8a8gradual spawning feature is enabled.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%arena_waves_gradual_enabled%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+    WAVES_CHANGE_GRADUAL_FIRST_PERCENT:
+      Name: '#ead931&lFirst Group Amount (%)'
+      Lore:
+      - '#aaa8a8Sets how many mobs (%) of total'
+      - '#aaa8a8amount will be spawned on'
+      - '#aaa8a8round start.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Amount: #ead931%arena_waves_gradual_first_percent%%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    WAVES_CHANGE_GRADUAL_NEXT_PERCENT:
+      Name: '#ead931&lNext Group Amount (%)'
+      Lore:
+      - '#aaa8a8Sets how many mobs (%) of total'
+      - '#aaa8a8amount will be spawned during'
+      - '#aaa8a8the round.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Amount: #ead931%arena_waves_gradual_next_percent%%'
+      - ''
+      - '#ea3131&lWarning:'
+      - '#ea3131▪ #aaa8a8Can not exceed #fd5e5eFirst Group Amount'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    WAVES_CHANGE_GRADUAL_NEXT_INTERVAL:
+      Name: '#ead931&lNext Group Interval'
+      Lore:
+      - '#aaa8a8Sets how often (in seconds)'
+      - '#aaa8a8arena will attempt to spawn another'
+      - '#aaa8a8group of mobs.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Interval: #ead931%arena_waves_gradual_next_interval% sec.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    WAVES_CHANGE_GRADUAL_NEXT_KILL_PERCENT:
+      Name: '#ead931&lNext Group for Killed Amount'
+      Lore:
+      - '#aaa8a8Sets how many mobs (%) of total'
+      - '#aaa8a8amount must be killed to prepare'
+      - '#aaa8a8new mob group to spawn.'
+      - '#aaa8a8'
+      - '#aaa8a8Set this to 0 to spawn mobs'
+      - '#aaa8a8using the #fdf35eNext Group Interval#d4d9d8 only.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Amount: #ead931%arena_waves_gradual_next_kill_percent%%'
+      - ''
+      - '#ea3131&lWarning:'
+      - '#ea3131▪ #aaa8a8Can not exceed #fd5e5eNext Group Amount'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+      - ''
+    WAVES_WAVE_OBJECT:
+      Name: '#ead931&lWave: #5e9dfd%arena_wave_id%'
+      Lore:
+      - '#aaa8a8Mobs:'
+      - '#aaa8a8%arena_wave_mobs%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Edit'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Delete#fd5e5e (No Undo)'
+    WAVES_WAVE_CREATE:
+      Name: '#ead931&lCreate Wave'
+      Lore: []
+    WAVES_WAVE_MOB_OBJECT:
+      Name: '#ead931&lMob: #5e9dfd%arena_wave_mob_id%'
+      Lore:
+      - '#ead931▪ #aaa8a8Provider: #ead931%arena_wave_mob_provider%'
+      - '#ead931▪ #aaa8a8Start Amount: #ead931%arena_wave_mob_amount%'
+      - '#ead931▪ #aaa8a8Start Level: #ead931%arena_wave_mob_level%'
+      - '#ead931▪ #aaa8a8Spawn Chance: #ead931%arena_wave_mob_chance%'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#ea9631▪ #aaa8a8Level & amount can be adjusted with scripts.'
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change Mob Type'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Change Amount'
+      - '#74ea31▪ #aaa8a8[Q/Drop] Key: #74ea31Change Chance'
+      - '#74ea31▪ #aaa8a8[F/Swap] Key: #74ea31Change Provider'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Delete#fd5e5e (No Undo)'
+    WAVES_WAVE_MOB_CREATE:
+      Name: '#ead931&lAdd Mob'
+      Lore:
+      - '#aaa8a8Adds an empty mob configuration.'
+    SUPPLY_CHEST_CREATE:
+      Name: '#ead931&lCreate Supply Chest'
+      Lore: []
+    SUPPLY_CHEST_OBJECT:
+      Name: '#ead931&lSupply Chest &7(ID: &f%supply_chest_id&7)'
+      Lore:
+      - '#ead931▪ #aaa8a8Location: #ead931%supply_chest_location_x%, %supply_chest_location_y%, %supply_chest_location_z%#d4d9d8 in #fdf35e%supply_chest_location_world%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Edit'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Teleport'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Delete #fd5e5e(No Undo)'
+    SUPPLY_CHEST_CHANGE_ITEMS:
+      Name: '#ead931&lContent'
+      Lore:
+      - '#aaa8a8Here you can add items that'
+      - '#aaa8a8will be used to (re)fill this chest.'
+      - '#aaa8a8'
+      - '#aaa8a8Put items in opened menu and close it'
+      - '#aaa8a8to return back here.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Open'
+    SUPPLY_CHEST_CHANGE_REFILL_AMOUNT:
+      Name: '#ead931&lItem Refill Amount'
+      Lore:
+      - '#aaa8a8Sets how many items will be'
+      - '#aaa8a8added to the chest on refill.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Min: #ead931%supply_chest_refill_items_min%'
+      - '#ead931▪ #aaa8a8Max: #ead931%supply_chest_refill_items_max%'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#aaa8a8On each refill previous items'
+      - '#aaa8a8are removed!'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change Min'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Change Max'
+    SUPPLY_CHEST_CHANGE_LOCATION:
+      Name: '#ead931&lLocation'
+      Lore:
+      - '#aaa8a8Sets the supply chest location.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Location: #ead931%supply_chest_location_x%, %supply_chest_location_y%, %supply_chest_location_z% in %supply_chest_location_world%'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#aaa8a8Left click a chest/container to'
+      - '#aaa8a8assign it with supply chest.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    REWARDS_CHANGE_RETAIN:
+      Name: '#ead931&lRetain Settings'
+      Lore:
+      - '#aaa8a8Sets whether or not rewards obtained during'
+      - '#aaa8a8the game will be saved when player'
+      - '#aaa8a8dies or leaves the arena before'
+      - '#aaa8a8final round.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8On Death: #ead931%reward_manager_retain_on_death%'
+      - '#ead931▪ #aaa8a8On Leave: #ead931%reward_manager_retain_on_leave%'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#aaa8a8This setting will have effect on ''Late'' rewards only.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle Death'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Toggle Leave'
+    REWARD_OBJECT:
+      Name: '#ead931&l%reward_name%#d4d9d8 (ID: &f%reward_id%#d4d9d8)'
+      Lore:
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Edit'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Delete #fd5e5e(No Undo)'
+    REWARD_CREATE:
+      Name: '#ead931&lCreate Reward'
+      Lore: []
+    REWARD_CHANGE_NAME:
+      Name: '#ead931&lDisplay Name'
+      Lore:
+      - '#aaa8a8Name used in messages, GUIs, holograms.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Name: #ead931%reward_name%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    REWARD_CHANGE_LATE:
+      Name: '#ead931&lIs Late'
+      Lore:
+      - '#aaa8a8Sets whether or not'
+      - '#aaa8a8reward will be given on game end'
+      - '#aaa8a8or immediately.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%reward_is_late%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+    REWARD_CHANGE_COMMANDS:
+      Name: '#ead931&lCommands'
+      Lore:
+      - '#aaa8a8Commands to execute when player'
+      - '#aaa8a8obtains this reward.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#aaa8a8%reward_commands%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Add Command'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Clear List'
+    REWARD_CHANGE_ITEMS:
+      Name: '#ead931&lItems'
+      Lore:
+      - '#aaa8a8Items to give when player'
+      - '#aaa8a8obtains this reward.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Open'
+    SHOP_OPEN_CATEGORIES:
+      Name: '#ead931&lCategories'
+      Lore:
+      - '#aaa8a8Here you can create and'
+      - '#aaa8a8manage shop categories'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    SHOP_CHANGE_ACTIVE:
+      Name: '#ead931&lActive'
+      Lore:
+      - '#aaa8a8Sets whether or not'
+      - '#aaa8a8shop is enabled for arena.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%shop_manager_is_active%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+    SHOP_CHANGE_HIDE_OTHER_KIT_ITEMS:
+      Name: '#ead931&lHide Other Kit Items'
+      Lore:
+      - '#aaa8a8Sets whether or not'
+      - '#aaa8a8items requires certain kit(s)'
+      - '#aaa8a8will be hidden for players'
+      - '#aaa8a8without that kits.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%shop_manager_hide_other_kit_items%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+    SHOP_CATEGORY_OBJECT:
+      Name: '#ead931&l%shop_category_name%#d4d9d8 (ID: &f%shop_category_id%#d4d9d8)'
+      Lore:
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Delete #fd5e5e(No Undo)'
+    SHOP_CATEGORY_CREATE:
+      Name: '#ead931&lCreate Category'
+      Lore: []
+    SHOP_CATEGORY_CHANGE_NAME:
+      Name: '#ead931&lDisplay Name'
+      Lore:
+      - '#aaa8a8Sets category display name.'
+      - '#aaa8a8It''s used in messages, GUIs, holograms, etc.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Name: #ead931%shop_category_name%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    SHOP_CATEGORY_CHANGE_DESCRIPTION:
+      Name: '#ead931&lCategory Description'
+      Lore:
+      - '#aaa8a8Sets category description.'
+      - '#aaa8a8It''s used in GUIs, holograms, etc.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#aaa8a8%shop_category_description%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Add Line'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Clear'
+    SHOP_CATEGORY_CHANGE_ICON:
+      Name: '#ead931&lIcon'
+      Lore:
+      - '#aaa8a8Sets icon for the category'
+      - '#aaa8a8to be displayed in shop GUIs.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Drag & Drop: #74ea31Replace'
+    SHOP_CATEGORY_CHANGE_ALLOWED_KITS:
+      Name: '#ead931&lAllowed Kits'
+      Lore:
+      - '#aaa8a8A list of kits which can'
+      - '#aaa8a8access the category.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#aaa8a8%shop_category_allowed_kits%'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#aaa8a8If no kits are set, then anyone can access the category.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Add Kit'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Clear List'
+    SHOP_CATEGORY_CHANGE_PRODUCTS:
+      Name: '#ead931&lProducts'
+      Lore:
+      - '#aaa8a8Here you can create and configure'
+      - '#aaa8a8category products.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    SHOP_PRODUCT_OBJECT:
+      Name: '#ead931&l%shop_product_name%#d4d9d8 (ID: &f%shop_product_id%#d4d9d8)'
+      Lore:
+      - '#ead931▪ #aaa8a8Price: #ead931%shop_product_price%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Edit'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Delete #fd5e5e(No Undo)'
+    SHOP_PRODUCT_CREATE:
+      Name: '#ead931&lCreate Product'
+      Lore: []
+    SHOP_PRODUCT_CHANGE_NAME:
+      Name: '#ead931&lDisplay Name'
+      Lore:
+      - '#aaa8a8Sets product display name.'
+      - '#aaa8a8It''s used in messages, GUIs, holograms, etc.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Name: #ead931%shop_product_name%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    SHOP_PRODUCT_CHANGE_DESCRIPTION:
+      Name: '#ead931&lDescription'
+      Lore:
+      - '#aaa8a8Sets product description.'
+      - '#aaa8a8It''s used in GUIs, holograms, etc.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#aaa8a8%shop_product_description%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Add Line'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Clear'
+    SHOP_PRODUCT_CHANGE_CURRENCY:
+      Name: '#ead931&lCurrency'
+      Lore:
+      - '#aaa8a8Sets product currency.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Currency: #ead931%shop_product_currency%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    SHOP_PRODUCT_CHANGE_PRICE:
+      Name: '#ead931&lPrice'
+      Lore:
+      - '#aaa8a8Sets product price.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Price: #ead931%shop_product_price%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    SHOP_PRODUCT_CHANGE_ICON:
+      Name: '#ead931&lIcon'
+      Lore:
+      - '#aaa8a8Sets product icon.'
+      - '#aaa8a8It''s displayed in GUIs.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Drag & Drop: #74ea31Replace'
+    SHOP_PRODUCT_CHANGE_REQUIRED_KITS:
+      Name: '#ead931&lAllowed Kits'
+      Lore:
+      - '#aaa8a8A list of kits which can'
+      - '#aaa8a8access this product.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#aaa8a8%shop_product_allowed_kits%'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#aaa8a8If no kits are set, then anyone can access the product.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Add Kit'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Clear List'
+    SHOP_PRODUCT_CHANGE_ITEMS:
+      Name: '#ead931&lItems'
+      Lore:
+      - '#aaa8a8Items to give when'
+      - '#aaa8a8player purchases this product.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    SHOP_PRODUCT_CHANGE_COMMANDS:
+      Name: '#ead931&lCommands'
+      Lore:
+      - '#aaa8a8Commands to execute when'
+      - '#aaa8a8player purchases this product.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#aaa8a8%shop_product_commands%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Add Command'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Clear List'
+    SPOT_OBJECT:
+      Name: '#ead931&l%spot_name%#d4d9d8 (ID: &f%spot_id%#d4d9d8)'
+      Lore:
+      - '#ead931▪ #aaa8a8Active: #ead931%spot_active%'
+      - ''
+      - '%problems%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Edit'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Delete #fd5e5e(No Undo)'
+    SPOT_CREATE:
+      Name: '#ead931&lCreate Spot'
+      Lore: []
+    SPOT_SETUP_KIT:
+      Name: '#ead931&lSetup Kit'
+      Lore:
+      - '#aaa8a8A set of tools to setup a spot.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Get'
+    SPOT_CHANGE_ACTIVE:
+      Name: '#ead931&lActive'
+      Lore:
+      - '#aaa8a8Sets whether or not'
+      - '#aaa8a8spot is enabled and active.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%spot_active%'
+      - ''
+      - '%problems%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+    SPOT_CHANGE_NAME:
+      Name: '#ead931&lDisplay Name'
+      Lore:
+      - '#aaa8a8Sets spot display name.'
+      - '#aaa8a8It''s used in messages, GUIs, etc.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Name: #ead931%spot_name%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    SPOT_CHANGE_STATES:
+      Name: '#ead931&lStates'
+      Lore:
+      - '#aaa8a8Here you can create and setup'
+      - '#aaa8a8different spot states.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    SPOT_STATE_OBJECT:
+      Name: '#ead931&lState: #aefd5e%spot_state_id%'
+      Lore:
+      - '#aaa8a8Simply build something inside'
+      - '#aaa8a8the spot area and save it.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Build/Edit'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Delete #fd5e5e(No Undo)'
+    SPOT_STATE_CREATE:
+      Name: '#ead931&lCreate State'
+      Lore: []
+    SCRIPT_CATEGORY_OBJECT:
+      Name: '#ead931&lCategory: #aefd5e%script_category_id%'
+      Lore:
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Edit'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Delete #fd5e5e(No Undo)'
+    SCRIPT_CATEGORY_CREATE:
+      Name: '#ead931&lCreate Category'
+      Lore: []
+    SCRIPT_OBJECTv2:
+      Name: '#ead931&lScript: &6%script_id%'
+      Lore:
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Event: #ead931%script_event_type%'
+      - '#ead931▪ #aaa8a8In Game Only: #ead931%script_in_game_only%'
+      - '#ead931▪ #aaa8a8Conditions: #ead931'
+      - '#aaa8a8%script_condition_section_conditions%'
+      - '#ead931▪ #aaa8a8Actions: #ead931'
+      - '#aaa8a8%script_action_parameters%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Edit Actions'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Edit Conditions'
+      - '#74ea31▪ #aaa8a8[Q/Drop] Key: #74ea31Toggle Event'
+      - '#74ea31▪ #aaa8a8Shift-Left: #74ea31Toggle In Game'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Delete #fd5e5e(No Undo)'
+    SCRIPT_CREATE:
+      Name: '#ead931&lCreate Script'
+      Lore: []
+    SCRIPT_ACTION_OBJECT:
+      Name: '#ead931&lAction: #aefd5e%script_action_name%'
+      Lore:
+      - '#ead931&lCurrent:'
+      - '#aaa8a8%script_action_parameters%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Add Parameter'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Clear Parameters'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Delete #fd5e5e(No Undo)'
+    SCRIPT_ACTION_CREATE:
+      Name: '#ead931&lCreate Action'
+      Lore: []
+    SCRIPT_CONDITION_SECTION_OBJECT:
+      Name: '#ead931&lConditions Section: #aefd5e%script_condition_section_id%'
+      Lore:
+      - '#ead931&lCurrent:'
+      - '#aaa8a8%script_condition_section_conditions%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Add Condition'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Clear Conditions'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Delete #fd5e5e(No Undo)'
+    SCRIPT_CONDITION_SECTION_CREATE:
+      Name: '#ead931&lCreate Conditions Section'
+      Lore: []
+    KIT_OBJECT:
+      Name: '#ead931&l%kit_name%#d4d9d8 (ID: &f%kit_id%#d4d9d8)'
+      Lore:
+      - '#ead931▪ #aaa8a8Is Default: #ead931%kit_is_default%'
+      - ''
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Edit'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Delete #fd5e5e(No Undo)'
+    KIT_CREATE:
+      Name: '#ead931&lCreate Kit'
+      Lore: []
+    KIT_CHANGE_NAME:
+      Name: '#ead931&lDisplay Name'
+      Lore:
+      - '#aaa8a8Sets kit display name.'
+      - '#aaa8a8It''s used in messages, GUIs, signs, holograms, etc.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Name: #ead931%kit_name%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    KIT_CHANGE_DESCRIPTION:
+      Name: '#ead931&lDescription'
+      Lore:
+      - '#aaa8a8Sets kit description.'
+      - '#aaa8a8It''s used in GUIs, holograms, etc.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#aaa8a8%kit_description%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Add Line'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Clear'
+    KIT_CHANGE_ICON:
+      Name: '#ead931&lIcon'
+      Lore:
+      - '#aaa8a8Represents a kit icon used'
+      - '#aaa8a8in Kit Selector and Kit Shop GUIs.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Drag & Drop: #74ea31Replace'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Get Copy'
+    KIT_CHANGE_COMMANDS:
+      Name: '#ead931&lCommands'
+      Lore:
+      - '#aaa8a8Commands to execute on game start'
+      - '#aaa8a8for players selected this kit.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#aaa8a8%kit_commands%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Add Command'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Clear List'
+    KIT_CHANGE_POTIONS:
+      Name: '#ead931&lPotion Effects'
+      Lore:
+      - '#aaa8a8Potion effects, that will be permanently'
+      - '#aaa8a8applied to a player.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#aaa8a8%kit_potion_effects%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Add Effect'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Clear List'
+    KIT_CHANGE_ARMOR:
+      Name: '#ead931&lArmor'
+      Lore:
+      - '#aaa8a8A set of armors that will be'
+      - '#aaa8a8equipped to a player.'
+      - ''
+      - '#ea3131&lWarning:'
+      - '#ea3131▪ #aaa8a8Boots → Legs → Chest → Head → OffHand'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    KIT_CHANGE_INVENTORY:
+      Name: '#ead931&lInventory'
+      Lore:
+      - '#aaa8a8A list of items that will be'
+      - '#aaa8a8added to a player''s inventory.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    KIT_CHANGE_PERMISSION:
+      Name: '#ead931&lPermission Requirement'
+      Lore:
+      - '#aaa8a8Sets whether or not permission'
+      - '#aaa8a8is required to use this kit.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%kit_is_permission%'
+      - '#ead931▪ #aaa8a8Node: #ead931%kit_permission%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+    KIT_CHANGE_COST:
+      Name: '#ead931&lKit Cost'
+      Lore:
+      - '#aaa8a8Sets kit cost.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Cost: #ead931%kit_cost%'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#aaa8a8Set this to 0 to make kit'
+      - '#aaa8a8available without purchase.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    KIT_CHANGE_DEFAULT:
+      Name: '#ead931&lIs Default'
+      Lore:
+      - '#aaa8a8Sets whether or not this kit'
+      - '#aaa8a8is default kit.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Is Default: #ead931%kit_is_default%'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#aaa8a8Default kit is used when'
+      - '#aaa8a8player didn''t select kit in lobby.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+    KIT_CHANGE_CURRENCY:
+      Name: '#ead931&lCurrency'
+      Lore:
+      - '#aaa8a8Sets the currency used to'
+      - '#aaa8a8purchase this kit.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Currency: #ead931%kit_currency%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    MOB_OBJECT:
+      Name: '#ead931&l%mob_name%#d4d9d8 (&f%mob_id%#d4d9d8)'
+      Lore:
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Edit'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Delete #fd5e5e(No Undo)'
+    MOB_CREATE:
+      Name: '#ead931&lCreate Mob'
+      Lore: []
+    MOB_CHANGE_NAME:
+      Name: '#ead931&lDisplay Name'
+      Lore:
+      - '#aaa8a8Sets mob display name and'
+      - '#aaa8a8whether or not this name is'
+      - '#aaa8a8always visible.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Name: #ead931%mob_name%'
+      - '#ead931▪ #aaa8a8Is Visible: #ead931%mob_name_visible%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change Name'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Toggle Visibility'
+    MOB_CHANGE_ENTITY_TYPE:
+      Name: '#ead931&lEntity Type'
+      Lore:
+      - '#aaa8a8Sets mob entity type.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Type: #ead931%mob_entity_type%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+    MOB_CHANGE_LEVEL:
+      Name: '#ead931&lMob Levels'
+      Lore:
+      - '#aaa8a8Sets mob min. and max. levels.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Min: #ead931%mob_level_min%'
+      - '#ead931▪ #aaa8a8Max: #ead931%mob_level_max%'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#aaa8a8Mob level can be adjusted during'
+      - '#aaa8a8the game with Arena Scripts.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Edit Min'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Edit Max'
+    MOB_CHANGE_BOSSBAR:
+      Name: '#ead931&lBoss Bar'
+      Lore:
+      - '#aaa8a8Mob health bossbar settings.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Enabled: #ead931%mob_bossbar_enabled%'
+      - '#ead931▪ #aaa8a8Color: #ead931%mob_bossbar_color%'
+      - '#ead931▪ #aaa8a8Style: #ead931%mob_bossbar_style%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Toggle'
+      - '#74ea31▪ #aaa8a8Shift-Left: #74ea31Change Color'
+      - '#74ea31▪ #aaa8a8Shift-Right: #74ea31Change Style'
+    MOB_CHANGE_ATTRIBUTES:
+      Name: '#ead931&lMob Attributes'
+      Lore:
+      - '#aaa8a8Sets mob default and per-level attributes.'
+      - ''
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Base: #ead931'
+      - '#aaa8a8%mob_attributes_base%'
+      - '#ead931▪ #aaa8a8Per Level: #ead931'
+      - '#aaa8a8%mob_attributes_level%'
+      - ''
+      - '#ea9631&lNotes:'
+      - '#aaa8a8Base attribute with zero value means'
+      - '#aaa8a8that default mob''s attribute value'
+      - '#aaa8a8won''t be changed.'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change Base'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Change Per-Level'
+      - '#74ea31▪ #aaa8a8Shift-Left: #74ea31Clear All'
+    MOB_CHANGE_EQUIPMENT:
+      Name: '#ead931&lMob Equipment'
+      Lore:
+      - '#aaa8a8Items to be equipped on a mob.'
+      - ''
+      - '#ea3131&lWarning:'
+      - '#ea3131▪ #aaa8a8Boots → Legs → Chest → Head → Hand → Off Hand'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    MOB_CHANGE_STYLES:
+      Name: '#ead931&lMob Styles'
+      Lore:
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Navigate'
+    MOB_STYLE_OBJECT:
+      Name: '#ead931&lStyle Type: #aefd5e%mob_style_type%'
+      Lore:
+      - '#ead931&lCurrent:'
+      - '#ead931▪ #aaa8a8Value: #ead931%mob_style_value%'
+      - ''
+      - '#74ea31&lActions:'
+      - '#74ea31▪ #aaa8a8Left-Click: #74ea31Change'
+      - '#74ea31▪ #aaa8a8Right-Click: #74ea31Remove'
+Setup:
+  Arena:
+    Lobby:
+      Set: '&7Defined lobby location for &a%arena_id% &7arena!'
+    Leave:
+      Set: '&7Defined leave location for &a%arena_id% &7arena!'
+      Unset: '&7Undefined leave location for &a%arena_id% &7arena!'
+    Spectate:
+      Set: '&7Defined spectate location for &a%arena_id% &7arena!'
+  Region:
+    Error:
+      Enabled: '&cYou must disable region first!'
+      Outside: '&cLocation is outside of the editing region!'
+    Spawn:
+      Set: '&7Defined spawn location for &a%region_id% &7region!'
+    Spawner:
+      Add: '&7Added spawner to &a%region_id% &7region!'
+      Remove: '&7Removed spawner from &a%region_id% &7region!'
+    Cuboid:
+      Error:
+        Overlap: '&7This position is overlaps with &c%region_id% &7arena region!'
+      Set: '&7Set &a#%corner% &7corner for the &a%region_id% &7region!'
+  Spot:
+    Cuboid:
+      Set: '&7Set &a#%corner% &7corner for the &a%spot_id% &7spot!'
+      Error:
+        Overlap: '&cThis location overlaps with &e%spot_id% &cspot!'
+    State:
+      Error:
+        Outside: '&cLocation is outside of the editing spot!'
+GameState:
+  WAITING: Waiting
+  READY: Ready
+  INGAME: Ingame
+LockState:
+  UNLOCKED: Unlocked
+  LOCKED: Locked
+GameEventType:
+  GAME_START: Game Start
+  GAME_END_WIN: Game End Win
+  GAME_END_LOSE: Game End Lose
+  GAME_END_TIME: Game End Time
+  WAVE_START: Wave Start
+  WAVE_END: Wave End
+  SHOP_LOCKED: Shop Locked
+  SHOP_UNLOCKED: Shop Unlocked
+  SHOP_CATEGORY_LOCKED: Shop Category Locked
+  SHOP_CATEGORY_UNLOCKED: Shop Category Unlocked
+  SHOP_ITEM_UNLOCKED: Shop Item Unlocked
+  SHOP_ITEM_LOCKED: Shop Item Locked
+  PLAYER_JOIN: Player Join
+  PLAYER_LEAVE: Player Leave
+  PLAYER_DEATH: Player Death
+  MOB_KILLED: Mob Killed
+  REGION_LOCKED: Region Locked
+  REGION_UNLOCKED: Region Unlocked
+  SPOT_CHANGED: Spot Changed
+ArenaTargetType:
+  PLAYER_ALL: Player All
+  PLAYER_RANDOM: Player Random
+  GLOBAL: Global
+StatType:
+  MOB_KILLS: Mob Kills
+  GAMES_WON: Games Won
+  GAMES_LOST: Games Lost
+  GAMES_PLAYED: Games Played
+  DEATHS: Deaths
+  COINS_SPENT: Coins Spent
+  TNT_EXPLODED: Tnt Exploded
+  ARROWS_LAUNCHED: Arrows Launched
+  POTIONS_DRUNK: Potions Drunk
+  FOOD_EATEN: Food Eaten
+  EQUIPMENT_BROKEN: Equipment Broken
+  WAVES_PASSED: Waves Passed
+  BEST_KILL_STREAK: Best Kill Streak
+HologramType:
+  DEFAULT: Default
+  ARENA: Arena
+  ARENA_STATS: Arena Stats
+  REGION_UNLOCKED: Region Unlocked
+  REGION_LOCKED: Region Locked
+  KIT: Kit
+MobStyleType:
+  BABY: Baby
+  SHEEP_COLOR: Sheep Color
+  HORSE_COLOR: Horse Color
+  HORSE_STYLE: Horse Style
+  FOX_TYPE: Fox Type
+  CREEPER_CHARGE: Creeper Charge
+  SLIME_SIZE: Slime Size
+  PHANTOM_SIZE: Phantom Size
+  LLAMA_COLOR: Llama Color
+  PARROT_VARIANT: Parrot Variant
+  RABBIT_TYPE: Rabbit Type
+  CAT_TYPE: Cat Type
+  MUSHROOM_VARIANT: Mushroom Variant
+  VILLAGER_PROFESSION: Villager Profession
+  ZOMBIE_VILLAGER_PROFESSION: Zombie Villager Profession

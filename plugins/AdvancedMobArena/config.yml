@@ -1,0 +1,375 @@
+Plugin:
+  # Command names that will be registered as main plugin commands.
+  # Do not leave this empty. Split multiple names with a comma.
+  Command_Aliases: advancedmobarena,ama
+  # Localized plugin name. It's used in messages and with internal placeholders.
+  Name: AdvancedMobArena
+  # Plugin prefix. Used in messages.
+  # You can use %plugin_name_localized% placeholder for a plugin name.
+  Prefix: '#fdf35e%plugin_name%#d4d9d8 » '
+  # Sets the plugin language.
+  # It will use language config from the '/lang/' sub-folder for specified language code.
+  # By default uses your system's default locale.
+  Language: en
+
+Database:
+  # Table prefix to use when plugin create tables. Do not leave this empty.
+  Table_Prefix: advancedmobarena
+  # Sets database type.
+  # Available values: MYSQL,SQLITE
+  Type: SQLITE
+  # Defines how often (in minutes) user data of online players will be saved to the database.
+  # Set -1 to disable.
+  Auto_Save_Interval: 20
+  # Defines how often (in seconds) plugin data will be fetched and loaded from the remote database.
+  Sync_Interval: -1
+  MySQL:
+    # Database user name.
+    Username: root
+    # Database user password.
+    Password: root
+    # Database host address. Like http://127.0.0.1:3306/
+    Host: localhost:3306
+    # MySQL database name, where plugin tables will be created.
+    Database: minecraft
+  SQLite:
+    # File name for the database file.
+    # Actually it's a path to the file, so you can use directories here.
+    FileName: data.db
+  Purge:
+    # Enables/Disables purge feature.
+    # Purge will remove all records from the plugin tables that are 'old' enough.
+    Enabled: false
+    # Sets maximal 'age' for the database records before they will be purged.
+    # This option may have different behavior depends on the plugin.
+    # By default it's days of inactivity for the plugin users.
+    For_Period: 60
+Debug:
+  # Enable this setting if you're experiencing issues with mob spawn on arenas.
+  # Then send debug logs from the console to the developer.
+  Mob_Spawning: false
+Chat:
+  # When enabled, players in arenas will have their own chat.
+  Enabled: false
+  # Sets the chat format.
+  # You can use 'Arena', 'Arena Player' placeholders: https://github.com/nulli0n/AdvancedMobArena-spigot/wiki/Internal-Placeholders
+  # Default Placeholders:
+  # - %player_name% - Player name.
+  # - %message% - Message text.
+  # PlaceholderAPI is also supported.
+  Format: '&7(&6%player_kit_name%&7) &a%player_name%: &f%message%'
+Arena:
+  # Sets whether or not player's potion effects should be removed when join/leave arena.
+  Clear_Potion_Effects: true
+  End_Countdown:
+    # Sets how soon (in seconds) game on the arena will be stopped in case of defeat?
+    Defeat: 10
+    # Sets how soon (in seconds) game on the arena will be stopped in case of victory?
+    Victory: 10
+Lobby:
+  Ready_State:
+    # Instantly decreases lobby countdown timer to the specified value, if all players are ready to play.
+    # Set this to -1 to disable feature.
+    Drop_Timer_To: 15
+    # When enabled, lobby timer will be stopped, when someone changes his state as 'not ready'.
+    # This option will only have effect if lobby timer was already decreased by the setting above.
+    Freeze_Dropped_Timer_When_Not_Ready: false
+  # Lobby items settings.
+  # Disabled items won't be given to players and will have no effect.
+  # Slot is where lobby item will be added in player's inventory.
+  # For 'Item' option, please check: https://github.com/nulli0n/NexEngine-spigot/wiki/Configuration-Tips#item-sections
+  Items:
+    READY:
+      Enabled: true
+      Slot: 6
+      Item:
+        Material: LIME_DYE
+        Name: '&a&lReady State&7 (Right-Click)'
+        Lore:
+        - '&7Are you ready to play?'
+        Item_Flags:
+        - HIDE_ENCHANTS
+        - HIDE_ATTRIBUTES
+        - HIDE_UNBREAKABLE
+        - HIDE_DESTROYS
+        - HIDE_PLACED_ON
+        - HIDE_POTION_EFFECTS
+        - HIDE_DYE
+        - HIDE_ARMOR_TRIM
+    STATS:
+      Enabled: true
+      Slot: 0
+      Item:
+        Material: MAP
+        Name: '&b&lStatistics&7 (Right-Click)'
+        Lore:
+        - '&7Check your game stats!'
+        Item_Flags:
+        - HIDE_ENCHANTS
+        - HIDE_ATTRIBUTES
+        - HIDE_UNBREAKABLE
+        - HIDE_DESTROYS
+        - HIDE_PLACED_ON
+        - HIDE_POTION_EFFECTS
+        - HIDE_DYE
+        - HIDE_ARMOR_TRIM
+    EXIT:
+      Enabled: true
+      Slot: 8
+      Item:
+        Material: REDSTONE
+        Name: '&c&lExit&7 (Right-Click)'
+        Lore:
+        - '&7Leaving so soon?'
+        Item_Flags:
+        - HIDE_ENCHANTS
+        - HIDE_ATTRIBUTES
+        - HIDE_UNBREAKABLE
+        - HIDE_DESTROYS
+        - HIDE_PLACED_ON
+        - HIDE_POTION_EFFECTS
+        - HIDE_DYE
+        - HIDE_ARMOR_TRIM
+    KIT_SHOP:
+      Enabled: true
+      Slot: 2
+      Item:
+        Material: ENDER_CHEST
+        Name: '&d&lKit Shop&7 (Right-Click)'
+        Lore:
+        - '&7Purchase and try new kits!'
+        Item_Flags:
+        - HIDE_ENCHANTS
+        - HIDE_ATTRIBUTES
+        - HIDE_UNBREAKABLE
+        - HIDE_DESTROYS
+        - HIDE_PLACED_ON
+        - HIDE_POTION_EFFECTS
+        - HIDE_DYE
+        - HIDE_ARMOR_TRIM
+    KIT_SELECT:
+      Enabled: true
+      Slot: 4
+      Item:
+        Material: CHEST
+        Name: '&6&lKit Selector&7 (Right-Click)'
+        Lore:
+        - '&7Select your kit to fight with!'
+        Item_Flags:
+        - HIDE_ENCHANTS
+        - HIDE_ATTRIBUTES
+        - HIDE_UNBREAKABLE
+        - HIDE_DESTROYS
+        - HIDE_PLACED_ON
+        - HIDE_POTION_EFFECTS
+        - HIDE_DYE
+        - HIDE_ARMOR_TRIM
+Signs:
+  # Enables/Disables usable signs feature.
+  Enabled: true
+  # Makes the sign text glowing.
+  Glowing: true
+  # Text to dispay on arena signs.
+  # Depends on a Sign Type, you can use different placeholders: https://github.com/nulli0n/AdvancedMobArena-spigot/wiki/Internal-Placeholders
+  Format:
+    KIT_SELECTOR:
+    - '&8[&4Mob Arena&8]'
+    - -=*=-
+    - '&1&lKit Selector'
+    - -=*=-
+    ARENA_SHOP:
+    - '&8[&4Mob Arena&8]'
+    - -=*=-
+    - '&1&lArena Shop'
+    - -=*=-
+    ARENA_READY:
+    - '&8[&4Mob Arena&8]'
+    - -=*=-
+    - '&1&lClick to Ready'
+    - -=*=-
+    STATS:
+    - '&4[ &c%score_stat_type%&4 ]'
+    - '&5Top %score_position%'
+    - '&1&l%score_name%'
+    - '&6&l&n%score_amount%'
+    ARENA_JOIN:
+    - '&8[&4Mob Arena&8]'
+    - '&1&l%arena_name%'
+    - '&0- &4%arena_state% &0-'
+    - '&5%arena_players%&0/&5%arena_players_max%'
+    KIT_SHOP:
+    - '&8[&4Mob Arena&8]'
+    - -=*=-
+    - '&1&lKit Shop'
+    - -=*=-
+    KIT:
+    - '&8[&4Arena Kit&8]'
+    - '&1%kit_name%'
+    - '&8[&4Cost&8]'
+    - '&1%kit_cost%'
+    ARENA_LEAVE:
+    - '&8[&4Mob Arena&8]'
+    - -=*=-
+    - '&1&lLeave Arena'
+    - -=*=-
+    STATS_OPEN:
+    - '&8[&4Mob Arena&8]'
+    - -=*=-
+    - '&1&lStatistics'
+    - -=*=-
+  Locations: []
+Holograms:
+  # Enables the Holograms feature.
+  # Supported Plugins: HolographicDisplays, DecentHolograms
+  Enabled: true
+  # Text to dispay on arena holograms.
+  # Depends on a Hologram Type, you can use different placeholders: https://github.com/nulli0n/AdvancedMobArena-spigot/wiki/Internal-Placeholders
+  Format:
+    ARENA:
+    - 'ICON: SPAWNER'
+    - '&e&lArena: &f%arena_name%'
+    - '&7State: &f%arena_state%'
+    - '&7Players: &f%arena_players%&8/&f%arena_players_max%'
+    - '&7Current Wave: &f%arena_wave_number%'
+    - ''
+    - '&aClick to Join/Spectate!'
+    KIT:
+    - 'ICON: %kit_icon_material%'
+    - '&e&lKit: &f%kit_name%'
+    - '%kit_description%'
+    - '&7Cost: &c%kit_cost%'
+    - ''
+    - '&aClick to &fBuy/Select'
+    - '&aShift-Click to &fPreview'
+    ARENA_STATS:
+    - '&8[ &aBest Arena Results &7- &2%score_stat_type% &8]'
+    - '&c%arena_name%'
+    - '&8----=======----'
+    - '&a%score_position%. &2%score_name% &7- &a%score_amount% &7%score_stat_type%'
+    - '&8----=======----'
+    DEFAULT: []
+    REGION_UNLOCKED:
+    - '&e&lRegion: &f%region_name%'
+    - '&7State: &a%region_state%'
+    - ''
+    - '&aLet''s slay mobs there!'
+    REGION_LOCKED:
+    - '&e&lRegion: &f%region_name%'
+    - '&7State: &c%region_state%'
+    - ''
+    - '&cPlease, come back later!'
+# Here you can create your own scoreboard format(s) for different arenas.
+# To set the scoreboard format per arena, use in-game editor.
+# You can use 'Arena', 'Arena Player' placeholders: https://github.com/nulli0n/AdvancedMobArena-spigot/wiki/Internal-Placeholders
+# PlaceholderAPI is also supported here.
+Scoreboard:
+  default:
+    Title: '&c&lMOB ARENA'
+    List:
+    - '&c▸ &7Arena: &c%arena_name%'
+    - '&c▸ &7Current wave: &c%arena_wave_number%'
+    - '&c▸ &7Mobs: &a%arena_mobs_alive%&7/&e%arena_mobs_left%&7/&c%arena_mobs_total%'
+    - '&c▸ &7Players: &c%arena_alive_players%&7/&c%arena_players_max%'
+    - '&c▸ &7Timeleft: &c%arena_timeleft%'
+    - '&c▸ &7Next wave in: &c%arena_wave_next_in% sec.'
+    - '&7       &e&lYOUR STATS     &7'
+    - '&e▸ &6Score: &e%player_score%'
+    - '&e▸ &6Kills: &e%player_kills%'
+    - '&e▸ &6Streak: &ex%player_streak% &7(%player_streak_decay% sec.)'
+    - '&e▸ &6Coins: &e%ama_coins%'
+    - '&r'
+Currency:
+  coins:
+    Enabled: true
+    Name: Coins
+    Format: '%amount% %currency_name%'
+  vault:
+    Enabled: true
+    Name: Vault
+    Format: '%amount% %currency_name%'
+Mobs:
+  # Sets entity display name format for internal AMA mobs.
+  # Placeholders: %mob_name%, %mob_level%
+  DisplayName_Format: '#ffeea2%mob_name% #d4d9d8Lv. #fd5e5e%mob_level%'
+  # Sets BossBar title format for internal AMA mobs.
+  # Placeholders: %mob_name%, %mob_level%, %mob_health%, %mob_health_max%
+  BossBar_Format: '%mob_name% #fd5e5e%mob_health%❤'
+  # When enabled, completely ignores Armor Stands in entity spawn events, so they not restricted not counted as a part of arenas.
+  Ignore_Armor_Stands: false
+  # A list of mobs that will be marked as 'ally' mobs when spawned by Spawn Eggs on arenas.
+  # These mobs will fight together with players against the arena mobs.
+  Ally_From_Eggs:
+  - SNOWMAN
+  - IRON_GOLEM
+  - WOLF
+  # List of MythicMobs mob internal names that should not be counted as arena mobs.
+  # This option might be useful when you have plugins to summon MythicMobs that are allied with players.
+  Ally_Mythic_Mobs:
+  - SummonedMinion
+  Kill_Rewards:
+    # Enables/Disables the Mob Kill Rewards feature.
+    Enabled: true
+    Hologram:
+      # When enabled, creates a hologram displaying amount of given reward(s) at mob death location.
+      # Supported Plugins: HolographicDisplays, DecentHolograms
+      Enabled: true
+      # Sets how long (in seconds) reward hologram will stay there before disappear.
+      Lifetime: 3
+      Format:
+        # Sets the hologram line format for score amount.
+        # Placeholders:
+        # - %amount% - Formatted score amount.
+        Score: +%amount% Score
+        # Sets the hologram line format for currencies.
+        # Placeholders:
+        # - %amount% - Formatted currency amount.
+        Currency: +%amount%
+    # Here you can create custom rewards for mob kills on the arena.
+    # ===== Naming Info =====
+    # Format for mob names: '<Provider:MobId>'.
+    # * AMA Example: 'ama:zombie' - will give reward(s) for AMA Zombie mob (the one from /mobs/ folder).
+    # * MythicMobs Example: 'mythicmobs:skeletonking' - will give reward(s) for MythicMobs SkeletonKing mob.
+    # Also, you can use the 'default' keyword for all other mobs not listed here.
+    # ===== =====
+    # All available currency names you can see in plugin startup log or here: https://github.com/nulli0n/AdvancedMobArena-spigot/wiki/
+    # For commands, use '%player_name%' placehodler for a player name.
+    Table:
+      default:
+        Currency:
+          coins: 1.0
+          vault: 1.0
+        Commands: []
+        Score: 1
+      ama:ZOMBIE:
+        Currency:
+          coins: 1.0
+          vault: 1.0
+        Commands:
+        - give %player_name% apple 1
+        Score: 3
+  Kill_Streaks:
+    # Enables the Mob Kill Streak feature.
+    Enabled: true
+    # Sets for how long (in seconds) kill streak will retain before reset to zero.
+    Streak_Decay: 5
+    # Here you can create and customize mob kill streaks.
+    # For 'Message' you can use %amount% placeholder for a kills amount. Please check: https://github.com/nulli0n/NexEngine-spigot/wiki/Language-Config
+    # For 'Commands', please check https://github.com/nulli0n/NexEngine-spigot/wiki/Configuration-Tips#command-sections
+    Table:
+      '2':
+        Message: <! type:"titles:10:50:10" !>#fd5e5e&lDouble Kill!
+        Commands: []
+      '3':
+        Message: <! type:"titles:10:50:10" !>#fd5e5e&lTriple Kill!
+        Commands: []
+      '4':
+        Message: <! type:"titles:10:50:10" !>#5edefd&lQuadra Kill!
+        Commands: []
+      '5':
+        Message: <! type:"titles:10:50:10" !>#5edefd&lPenta Kill! \n &d(+10 Coins)
+        Commands:
+        - ama coins add %player_name% 10
+      '10':
+        Message: '<! type:"titles:10:50:10" !>#fdf35e&lx%amount% Kill! \n #aefd5e(Heal)'
+        Commands:
+        - heal %player_name%

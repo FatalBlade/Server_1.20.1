@@ -1,0 +1,16 @@
+#Name: Voting
+#Description: Keep players to determine various situations.
+#Author: SobkySK | Discord: Sobky#5528
+#Maintained by INNOUNIQ | Website: https://plugin.innouniq.com | Discord: https://discord.gg/vPHWEapDGR
+
+#Plugin is able to hold different localisations at the same time.
+#It’s up to player, which localisation wants to display.
+#One of these localisations has to be tagged as primary in case of secondary translation does not contain requested path.
+Locale:
+  Primary: EN
+
+#Plugin sends anonymous data such as version of this resource, your server version and addition data of configuration.
+#These data will help me in future development.
+#All requests are asynchronous, so it has no impact on server's performance.
+Analytics:
+  Active: true

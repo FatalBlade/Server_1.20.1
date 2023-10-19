@@ -1,0 +1,11 @@
+Allowed: true
+Color: '%GRAY%'
+MaxLevel: 3
+SlotCost: 1
+EnchantCost: 10
+Enchantable: true
+MinimumToolLevelRequirement: 1
+AmountDamageAsShield: 0.33
+DurationOfShieldPerLevel: 40
+Recipe:
+  Enabled: false
