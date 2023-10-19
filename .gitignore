@@ -154,3 +154,4 @@ plugins/XPBoost/lang/
 *.zip
 *.tar.gz
 *.rar
+plugins/dynmap/world.pending
