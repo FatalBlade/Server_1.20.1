@@ -84,7 +84,7 @@ Feedback:
 Skills:
     General:
         LimitBreak:
-            AllowPVE: false
+            AllowPVE: true
         StartingLevel: 0
         Ability:
             Length:
@@ -375,24 +375,24 @@ Skills:
         ArcaneForging:
             May_Lose_Enchants: true
             Keep_Enchants_Chance:
-                Rank_1: 10.0
-                Rank_2: 20.0
-                Rank_3: 30.0
-                Rank_4: 40.0
-                Rank_5: 50.0
-                Rank_6: 50.0
-                Rank_7: 60.0
-                Rank_8: 60.0
+                Rank_1: 45.0
+                Rank_2: 50.0
+                Rank_3: 57.0
+                Rank_4: 66.0
+                Rank_5: 76.0
+                Rank_6: 85.0
+                Rank_7: 98.0
+                Rank_8: 100.0
             Downgrades_Enabled: true
             Downgrades_Chance:
-                Rank_1: 75.0
+                Rank_1: 65.0
                 Rank_2: 50.0
                 Rank_3: 40.0
                 Rank_4: 30.0
                 Rank_5: 25.0
                 Rank_6: 20.0
                 Rank_7: 15.0
-                Rank_8: 10.0
+                Rank_8: 00.0
     #
     #  Settings for Salvage
     # ##
@@ -405,25 +405,25 @@ Skills:
             
             # ExtractFullEnchant: Chance to extract the full enchant at each ArcaneSalvage rank
             ExtractFullEnchant:
-                Rank_1: 2.5
-                Rank_2: 5.0
-                Rank_3: 7.5
-                Rank_4: 10.0
-                Rank_5: 12.5
-                Rank_6: 17.5
-                Rank_7: 25.0
-                Rank_8: 32.5
+                Rank_1: 10.5
+                Rank_2: 20.0
+                Rank_3: 35.5
+                Rank_4: 40.0
+                Rank_5: 45.5
+                Rank_6: 50.5
+                Rank_7: 75.0
+                Rank_8: 100.0
             
             # ExtractPartialEnchant: Chance to extract the partial enchant at each ArcaneSalvage rank
             ExtractPartialEnchant:
-                Rank_1: 2.0
-                Rank_2: 2.5
-                Rank_3: 5.0
-                Rank_4: 7.5
-                Rank_5: 10.0
-                Rank_6: 12.5
-                Rank_7: 15.0
-                Rank_8: 17.5
+                Rank_1: 45.0
+                Rank_2: 55.0
+                Rank_3: 65.0
+                Rank_4: 75.0
+                Rank_5: 85.0
+                Rank_6: 95.0
+                Rank_7: 100.0
+                Rank_8: 100.0
     #
     #  Settings for Smelting
     # ##
