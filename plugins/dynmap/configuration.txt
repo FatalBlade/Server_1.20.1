@@ -13,7 +13,7 @@
 #   The definitions of these templates are in normal-hi_boost_vhi.txt, nether-hi_boost_vhi.txt, and the_end-hi_boost_vhi.txt
 # To use the HDMap hi-res (16 ppb) map templates, with support for boosting resolution selectively to xhi-res (64 ppb), set value to hi_boost_xhi
 #   The definitions of these templates are in normal-hi_boost_xhi.txt, nether-hi_boost_xhi.txt, and the_end-hi_boost_xhi.txt
-deftemplatesuffix: hires
+deftemplatesuffix: hi_boost_xhi
 
 # Set default tile scale (0 = 128px x 128x, 1 = 256px x 256px, 2 = 512px x 512px, 3 = 1024px x 1024px, 4 = 2048px x 2048px) - 0 is default
 # Note: changing this value will result in all maps that use the default value being required to be fully rendered
@@ -27,9 +27,9 @@ deftemplatesuffix: hires
 #  postgres: PostgreSQL database, at hostname:port in database, accessed via userid with password
 storage:
   # Filetree storage (standard tree of image files for maps)
-  type: filetree
+  #type: filetree
   # SQLite db for map storage (uses dbfile as storage location)
-  #type: sqlite
+  type: sqlite
   #dbfile: dynmap.db
   # MySQL DB for map storage (at 'hostname':'port' with flags "flags" in database 'database' using user 'userid' password 'password' and table prefix 'prefix')
   #type: mysql
@@ -57,11 +57,11 @@ components:
     sendposition: true
     allowwebchat: true
     webchat-interval: 5
-    hidewebchatip: false
+    hidewebchatip: true
     trustclientname: false
     includehiddenplayers: false
     # (optional) if true, color codes in player display names are used
-    use-name-colors: false
+    use-name-colors: true
     # (optional) if true, player login IDs will be used for web chat when their IPs match
     use-player-login-ip: true
     # (optional) if use-player-login-ip is true, setting this to true will cause chat messages not matching a known player IP to be ignored
@@ -79,7 +79,7 @@ components:
   #  # Optional - make player hidden when they are under cover (#=sky light level,0=underground,15=open to sky)
   #  hideifundercover: 14
   #  # (Optional) if true, players that are crouching/sneaking will be hidden 
-    hideifsneaking: false
+    hideifsneaking: true
     # If true, player positions/status is protected (login with ID with dynmap.playermarkers.seeall permission required for info other than self)
     protected-player-info: false
     # If true, hide players with invisibility potion effects active
@@ -327,7 +327,7 @@ render-triggers:
   #- blockredstone
 
 # Title for the web page - if not specified, defaults to the server's name (unless it is the default of 'Unknown Server')
-#webpage-title: "My Awesome Server Map"
+webpage-title: "The map of SwordCraft"
 
 # The path where the tile-files are placed.
 tilespath: web/tiles
@@ -362,7 +362,7 @@ disable-webserver: false
 allow-symlinks: true
 
 # Enable login support
-login-enabled: false
+login-enabled: true
 # Require login to access website (requires login-enabled: true)
 login-required: false
 
@@ -407,7 +407,7 @@ player-sort-permission-nodes:
   - bukkit.command.op
   
 # Set sidebaropened: 'true' to pin menu sidebar opened permanently, 'pinned' to default the sidebar to pinned, but allow it to unpin
-#sidebaropened: true
+sidebaropened: pinned
 
 # Customized HTTP response headers - add 'id: value' pairs to all HTTP response headers (internal web server only)
 #http-response-headers:
