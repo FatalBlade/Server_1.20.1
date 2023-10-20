@@ -155,5 +155,6 @@ plugins/XPBoost/lang/
 *.tar.gz
 *.rar
 plugins/dynmap/world.pending
-plugins/ProtocolLib/lastupdate
+plugins/ProtocolLib
 .INNOUNIQ/.data
+.INNOUNIQ
