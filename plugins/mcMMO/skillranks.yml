@@ -14,22 +14,22 @@ Alchemy:
     Concoctions:
         Standard:
             Rank_1: 0
-            Rank_2: 10
-            Rank_3: 20
-            Rank_4: 35
+            Rank_2: 12
+            Rank_3: 25
+            Rank_4: 37
             Rank_5: 50
-            Rank_6: 75
-            Rank_7: 90
-            Rank_8: 100
+            Rank_6: 62
+            Rank_7: 75
+            Rank_8: 87
         RetroMode:
             Rank_1: 0
-            Rank_2: 100
-            Rank_3: 200
-            Rank_4: 350
+            Rank_2: 125
+            Rank_3: 250
+            Rank_4: 375
             Rank_5: 500
-            Rank_6: 750
-            Rank_7: 900
-            Rank_8: 1000
+            Rank_6: 625
+            Rank_7: 750
+            Rank_8: 875
 Archery:
     ArcheryLimitBreak:
         Standard:
@@ -692,19 +692,19 @@ Repair:
     ArcaneForging:
         Standard:
             Rank_1: 10
-            Rank_2: 25
-            Rank_3: 35
-            Rank_4: 50
-            Rank_5: 65
-            Rank_6: 75
-            Rank_7: 85
-            Rank_8: 100
+            Rank_2: 15
+            Rank_3: 20
+            Rank_4: 25
+            Rank_5: 30
+            Rank_6: 40
+            Rank_7: 50
+            Rank_8: 70
         RetroMode:
             Rank_1: 100
-            Rank_2: 250
-            Rank_3: 350
-            Rank_4: 500
-            Rank_5: 650
-            Rank_6: 750
-            Rank_7: 850
-            Rank_8: 1000
+            Rank_2: 150
+            Rank_3: 200
+            Rank_4: 250
+            Rank_5: 300
+            Rank_6: 400
+            Rank_7: 500
+            Rank_8: 700

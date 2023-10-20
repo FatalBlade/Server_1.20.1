@@ -162,19 +162,19 @@ Repairables:
     # Tools
     DIAMOND_SWORD:
         MinimumLevel: 0
-        XpMultiplier: 0.5
+        XpMultiplier: 5
     DIAMOND_SHOVEL:
         MinimumLevel: 0
-        XpMultiplier: 0.3
+        XpMultiplier: 3
     DIAMOND_PICKAXE:
         MinimumLevel: 0
-        XpMultiplier: 1
+        XpMultiplier: 5
     DIAMOND_AXE:
         MinimumLevel: 0
-        XpMultiplier: 1
+        XpMultiplier: 5
     DIAMOND_HOE:
         MinimumLevel: 0
-        XpMultiplier: 0.5
+        XpMultiplier: 3
     # Armor
     DIAMOND_HELMET:
         MinimumLevel: 0
@@ -195,19 +195,19 @@ Repairables:
     # Tools
     NETHERITE_SWORD:
         MinimumLevel: 0
-        XpMultiplier: 0.6
+        XpMultiplier: 6
     NETHERITE_SHOVEL:
         MinimumLevel: 0
-        XpMultiplier: 0.4
+        XpMultiplier: 4
     NETHERITE_PICKAXE:
         MinimumLevel: 0
-        XpMultiplier: 1.1
+        XpMultiplier: 6
     NETHERITE_AXE:
         MinimumLevel: 0
-        XpMultiplier: 1.1
+        XpMultiplier: 6
     NETHERITE_HOE:
         MinimumLevel: 0
-        XpMultiplier: 0.75
+        XpMultiplier: 1
     # Armor
     NETHERITE_HELMET:
         MinimumLevel: 0
