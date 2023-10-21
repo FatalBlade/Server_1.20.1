@@ -36,7 +36,7 @@ minSilkTouchLevel: 1
 noDropsCreative: true
 
 # If a spawner is destroyed, should the egg be dropped
-destroyDropEgg: false
+destroyDropEgg: true
 
 # If a spawner is destroyed, should XP be dropped
 destroyDropXP: 0
@@ -54,10 +54,10 @@ preventXPFarming: true
 dropXPOnlyOnDestroy: false
 
 # If a spawner is destroyed, should iron bars be dropped
-destroyDropBars: 0
+destroyDropBars: 3
 
 # Should the player be able to craft spawners
-craftableSpawners: false
+craftableSpawners: true
 
 # Leave a slot empty (null/air)? Just make a space then, example 'A A' -> middle is free
 # X is always the egg
