@@ -13,7 +13,7 @@ canopeninbarrels: true        #false will prevent users from opening shulkerboxe
 canplaceshulker: true         #false will prevent users from placing shulkerboxes by accident
 
 #true will prevent users from opening shulkerboxes within 7 seconds of being hit by a player
-disable-in-combat: false
+disable-in-combat: true
 
 defaultname: "&9Shulker Pack"
 shiftclicktoopen: false
