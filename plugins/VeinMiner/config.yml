@@ -25,7 +25,7 @@ DisabledGameModes:
 - CREATIVE
 - SPECTATOR
 DisabledWorlds:
-- WorldName
+- eternal
 
 Hunger:
   HungerModifier: 4.0
