@@ -7,8 +7,8 @@ Options:
       Aliases:
       - votadmin
   Economy:
-    Active: false
-    Type: NONE
+    Active: true
+    Type: VAULT_WRAPPER
   Round:
     Duration: 60
     Pause:
@@ -18,7 +18,7 @@ Options:
       Personal:
         Active: true
         Duration: 300
-    MinPlayers: 2
+    MinPlayers: 0
     TimeChangeAnimation:
       Active: true
       Speed: 100
