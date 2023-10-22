@@ -95,6 +95,7 @@ plugins/Multiverse-Inventories/players/
 plugins/MyPet/locale/
 plugins/MyPet/logs/
 plugins/NexEngine/
+plugins/Plan/Analysis Results/
 plugins/Plan/cached_json/
 plugins/Plan/dep_chache/
 plugins/Plan/logs/
@@ -158,3 +159,11 @@ plugins/dynmap/world.pending
 plugins/ProtocolLib
 .INNOUNIQ/.data
 .INNOUNIQ
+plugins/SkinsRestorer/Skins/swordm1993.skin
+plugins/Plan/Analysis Results/
+plugins/ProtocolLib/lastupdate/
+plugins/$Old Jars&Folders/
+plugins/Plan/PlanCert.jks
+plugins/ProtocolLib/lastupdate
+plugins/LuckPerms/yaml-storage/actions.txt
+plugins/Plan/ServerInfoFile.yml

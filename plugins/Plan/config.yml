@@ -12,6 +12,7 @@ Plugin:
         # https://github.com/plan-player-analytics/Plan/wiki/Localization
         Locale: default
         Create_new_locale_file_on_next_enable: false
+        Log_untranslated_locale_keys: false
         Dev: false
         Delete_logs_after_days: 7
     Update_notifications:
@@ -20,7 +21,6 @@ Plugin:
         Notify_about_DEV_releases: false
     Configuration:
         Allow_proxy_to_manage_settings: true
-    Use_Legacy_Frontend: false
 # -----------------------------------------------------
 # Supported databases: SQLite, MySQL
 # -----------------------------------------------------
@@ -57,7 +57,7 @@ Webserver:
     Public_html_directory: "public_html"
     Security:
         SSL_certificate:
-            KeyStore_path: Cert.keystore
+            KeyStore_path: PlanCert.jks
             Key_pass: MnD3bU5HpmPXag0e
             Store_pass: wDwwf663NLTm73gL
             Alias: DefaultPlanCert
@@ -230,9 +230,6 @@ World_aliases:
     # Automatically generated, if regex matches world will not be added here.
     List:
         world: world
-        world_nether: world_nether
-        EternalPlane: EternalPlane
-        world_the_end: world_the_end
     # List of - "alias:regex" rules, Set alias of multiple worlds that match regex to group them
     Regex:
       - "Alias for world:^abc$"
@@ -297,7 +294,9 @@ Plugins:
           - ExampleTown
     mcMMO:
         Enabled: true
+# The files are placed in /Plan/web/ if the setting is 'true' when accessed.
 Customized_files:
     Path: "web"
-    # Web dev mode enables all customized files and disables webserver resource cache for instant changes on browser refresh.
-    Enable_web_dev_mode: false
+    Plan:
+        error,html: false
+        index,html: false
