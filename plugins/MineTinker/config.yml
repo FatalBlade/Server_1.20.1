@@ -81,7 +81,7 @@ Grindstone:
 UseSmithingTable: false
 AllowEnchanting: true
 EnchantingCostsSlots: true
-AllowCrafting: true
+AllowCrafting: false
 AllowConverting: true
 BlockToEnchantModifiers: BOOKSHELF
 HideEnchants: true
