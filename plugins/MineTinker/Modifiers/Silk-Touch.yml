@@ -2,7 +2,7 @@ Allowed: true
 Color: '%WHITE%'
 MaxLevel: 1
 SlotCost: 1
-EnchantCost: 10
+EnchantCost: 20
 Enchantable: true
 MinimumToolLevelRequirement: 1
 Recipe:

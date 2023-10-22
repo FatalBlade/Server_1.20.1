@@ -1,14 +1,20 @@
 Allowed: true
 Color: '%GREEN%'
-Lv1Vertical: false
+Lv1Vertical: true
 Toggleable: true
-MaxLevel: 2
+MaxLevel: 3
 SlotCost: 2
-EnchantCost: 15
-Enchantable: true
+EnchantCost: 35
+Enchantable: false
 MinimumToolLevelRequirement: 1
-Recipe:
-  Enabled: false
+  Recipe:
+    Enabled: true
+    Top: EEE
+    Middle: ERE
+    Bottom: EEE
+    Materials:
+      E: EMERALD
+      R: REDSTONE_BLOCK
 Blacklist:
 - AIR
 - BEDROCK

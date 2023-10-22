@@ -3,7 +3,13 @@ MaxLevel: 3
 SlotCost: 2
 Color: '%WHITE%'
 EnchantCost: 15
-Enchantable: true
+Enchantable: false
 MinimumToolLevelRequirement: 1
 Recipe:
-  Enabled: false
+  Enabled: true
+  Top: ADA
+  Middle: DAD
+  Bottom: ADA
+  Materials:
+    D: DIAMOND_BLOCK
+    A: ARROW
