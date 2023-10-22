@@ -79,7 +79,7 @@ Grindstone:
   ChanceToGetSlotsBack: 100 # Percentage; Should the tool get free slots back for every removed Modifier?
   ChanceToGetModifierItemBack: 100 # Percentage; Should the player get the possible used modification items back?
 UseSmithingTable: false
-AllowEnchanting: false
+AllowEnchanting: true
 EnchantingCostsSlots: true
 AllowCrafting: true
 AllowConverting: true
@@ -96,7 +96,7 @@ ArmorIdentifier: IdentifierArmor
 ChanceToFailModifierApply: 0
 ChanceToFailToolUpgrade: 0
 ItemBehaviour:
-  ConvertItemsOnUse: true # Converts items on use, only works if item supported by a plugin.
+  ConvertItemsOnUse: false # Converts items on use, only works if item supported by a plugin.
   TrackStatistics: true # Should MT track statistics for a item
   ShowName: true # Shows the name of the ItemStack (if has one) when on the ground
   SetGlowing: true # Item glowes on the ground
@@ -110,8 +110,8 @@ ItemBehaviour:
 ModifiersCanBeUsedForCrafting: false
 ConvertLoot:
   MobDrops: true # Should Mobdrops be converted to MineTinker
-  ChestLoot: true # Should Chestloot be converted to MineTinker
-  Chance: 100 # Not the real / actual chance as Modifier-Application can fail
+  ChestLoot: false # Should Chestloot be converted to MineTinker
+  Chance: 20 # Not the real / actual chance as Modifier-Application can fail
   ApplyModifiers: true
   MaximumNumberOfModifiers: 4 # Not the real / actual amount as Modifier-Application can fail
   AppliedModifiersConsiderSlots: true
@@ -123,7 +123,7 @@ MobDropModifierItems:
   MaximumAmount: 2 # Amount of possible different modifiers (Item will have amount of 1)
   ExcludeModifiers:
   - Extra-Modifier
-  ConsiderIncludedMobs: true
+  ConsiderIncludedMobs: false
   IncludedMobs:
   - ENDER_DRAGON
   - WITHER
