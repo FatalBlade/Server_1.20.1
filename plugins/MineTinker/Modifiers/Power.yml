@@ -7,14 +7,14 @@ SlotCost: 2
 EnchantCost: 35
 Enchantable: false
 MinimumToolLevelRequirement: 1
-  Recipe:
-    Enabled: true
-    Top: EEE
-    Middle: ERE
-    Bottom: EEE
-    Materials:
-      E: EMERALD
-      R: REDSTONE_BLOCK
+Recipe:
+  Enabled: true
+  Top: EEE
+  Middle: ERE
+  Bottom: EEE
+  Materials:
+    E: EMERALD
+    R: REDSTONE_BLOCK
 Blacklist:
 - AIR
 - BEDROCK
