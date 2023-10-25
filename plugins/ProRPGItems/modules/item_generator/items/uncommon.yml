@@ -19,29 +19,58 @@ lore:
 - '%GENERATOR_SOCKETS_GEM%'
 - '%GENERATOR_SOCKETS_ESSENCE%'
 - '%GENERATOR_SOCKETS_RUNE%'
+
+# [Optional] 
+# Adds random enchantment to make item glow.
+enchanted: false
+
+# [Optional]
+# Item color for Leather armor and Potions.
+# Syntax: R,G,B. -1 will define random color (0-255).
 color: -1,-1,-1
+
+# [Optional]
+# Makes item unbreakable.
 unbreakable: true
+
+# [Optional]
+# Item Flags. Use '*' to apply all flags.
+# See "Item Options" above for link to flags
 item-flags:
 - '*'
-tier: common
+
+# [Required]
+# Item Tier.
+# If item missed this setting, it will throw an console error and won't be loaded.
+tier: uncommon
+
+# [Required]
+# Item level.
 level:
   min: 1
   max: 100
+
+# Item Attribute Generator.
 generator:
+  # Chance to generate item prefix and suffix that depends on Tier, Type and Material.
   prefix-chance: 100.0
   suffix-chance: 100.0
+  # List of Materials that will be generated.
   materials:
+    # When true, ONLY materials from the list below will be used in generation.
+    # When false, all materials EXCEPT the materials from the list below will be used in generation.
     reverse: false
     black-list:
     - DIAMOND*
-    - IRON*
-    - CHAINMAIL*
     - NETHERITE*
-    - GOLD*
+    - LEATHER*
     - TRIDENT
     - FISHING_ROD
-    - CROSSBOW
     - ELYTRA
+    - WOODEN*
+    - STONE*
+    - SHEARS
+    # List of model data values that will be randomly applied to generated items.
     model-data:
       default:
       - 1
@@ -110,27 +139,71 @@ generator:
           fire: -100%
           water: -100%
           wind: -100% 
+  
+  # Player requirements depends on item level.
   user-requirements-by-level:
+    # Player level requirements.
+    # Item will always use the greatest key less than or equal to the item level.
+    # You can use math expressions here.
+    # Allowed syntaxes:
+    # - [value] - Exact level requirement.
+    # - [min]:[max] - Exact ranged level requirement.
+    # - [min~max] - Exact random level requirement.
+    # - [min1~min2]:[max1] - Ranged random of two min. and one max. levels requirement and vice versa.
+    # - [min1~min2]:[max1~max2] - Ranged random of two min. and two max. levels requirement.
+    # Allowed placeholders:
+    # - %ITEM_LEVEL% - Item level.
     level:
-      '1': '1:100'
-      '11': '11:100'
+      '1': 1:100
+      '11': 11:100
       '21': 0 + %ITEM_LEVEL%
+    # Player class requirements.
+    # Item will always use the greatest key less than or equal to the item level.
+    # Type class names separated by a comma.
     class: []
+  
+  # Item enchantments.
   enchantments:
+    # Minimum and maximum generated enchantments.
     minimum: 0
-    maximum: 0
-    safe-only: false
+    maximum: 1
+    # When true, prevents from generating enchants that are not suitable for that item or has a level higher than possible.
+    safe-only: true
+    # Enchantments list.
+    # Key = Enchantmnet, Value = Level Range.
     list:
-      sharpness: '1:2'
+      bane_of_arthropods: '1:1'
+      binding_curse: '1:1'
+      vanishing_curse: '1:1'
+      efficiency: '1:1'
+      feather_falling: '1:1'
+      knockback: '1:1'
+      lure: '1:1'
+      protection: '1:1'
+      power: '1:1'
+      punch: '1:1'
+      sharpness: '1:1'
+      smite: '1:1'
+      unbreaking: '1:1'
     safe-levels: true
+  
+  # Ammo Type generation chances.
   ammo-types:
     ARROW: 100.0
+  
+  # Hand Type generation chances.
   hand-types:
     ONE: 70.0
     TWO: 30.0
+  
+  # Damage Type generation.
   damage-types:
+    # Minimum and maximum generated damages.
     minimum: 1
     maximum: 1
+    # Here you can define damage lore order and add additional lines.
+    # This format will replace %GENERATOR_DAMAGE% placeholder.
+    # Damage placeholder format: %DAMAGE_[ID]%, where [ID] is damage identifier.
     lore-format:
     - '%DAMAGE_PHYSICAL%'
     - '%DAMAGE_MAGICAL%'
@@ -141,51 +214,61 @@ generator:
     - ''
     - '%DAMAGE__VANILLA_GENERIC%'
     list:
+      # Damage Type identifier.
       physical:
-        chance: 100.0
-        scale-by-level: 1.025
-        min: 2.6
-        max: 4.4
+        # Generation chance.
+        chance: 90.0
+        # Value scaling depends by item level.
+        # Formula is: value * ((scale * 100 - 100) * level / 100 + 1)
+        scale-by-level: 1.045
+        # Value range.
+        min: 5.8
+        max: 7.3
         flat-range: false
       _vanilla_generic:
         chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
+        scale-by-level: 1.075
+        min: 6.6
+        max: 9.8
         flat-range: false
       magical:
-        chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
+        chance: 2.0
+        scale-by-level: 1.075
+        min: 6.6
+        max: 9.8
         flat-range: false
       fire:
-        chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
+        chance: 2.0
+        scale-by-level: 1.075
+        min: 6.6
+        max: 9.8
         flat-range: false
       poison:
-        chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
+        chance: 2.0
+        scale-by-level: 1.075
+        min: 6.6
+        max: 9.8
         flat-range: false
       water:
-        chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
+        chance: 2.0
+        scale-by-level: 1.075
+        min: 6.6
+        max: 9.8
         flat-range: false
       wind:
-        chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
+        chance: 2.0
+        scale-by-level: 1.075
+        min: 6.6
+        max: 9.8
         flat-range: false
+  
+  # Defense generation.
   defense-types:
     minimum: 1
     maximum: 1
+    # Here you can define defense lore order and add additional lines.
+    # This format will replace %GENERATOR_DEFENSE% placeholder.
+    # Defense placeholder format: %DEFENSE_[ID]%, where [ID] is defense identifier.
     lore-format:
     - '%DEFENSE_PHYSICAL%'
     - '%DEFENSE_MAGICAL%'
@@ -195,11 +278,14 @@ generator:
     - '%DEFENSE_WIND%'
     - ''
     list:
+      # Defense Type identifier.
       physical:
         chance: 100.0
-        scale-by-level: 1.025
-        min: 3.25
-        max: 8.75
+        # Value scaling depends by item level.
+        # Formula is: value * ((scale * 100 - 100) * level / 100 + 1)
+        scale-by-level: 1.045
+        min: 8.25
+        max: 13.75
         flat-range: false
       magical:
         chance: 0.0
@@ -231,9 +317,14 @@ generator:
         min: '0'
         max: '0'
         flat-range: false
+  
+  # Item Stat generation.
   item-stats:
     minimum: 1
     maximum: 2
+    # Here you can define stat lore order and add additional lines.
+    # This format will replace %GENERATOR_STATS% placeholder.
+    # Item stat placeholder format: %ITEM_STAT_[TYPE]%, where [TYPE] is Item Stat type.
     lore-format:
     - '%ITEM_STAT_AOE_DAMAGE%'
     - '%ITEM_STAT_CRITICAL_RATE%'
@@ -263,11 +354,14 @@ generator:
     - '%ITEM_STAT_DURABILITY%'
     - ''
     list:
+      # Item Stat identifier.
       critical_rate:
-        chance: 10.0
+        chance: 20.0
+        # Value scaling depends by item level.
+        # Formula is: value * ((scale * 100 - 100) * level / 100 + 1)
         scale-by-level: 1.025
-        min: 1.0
-        max: 3.25
+        min: 3.0
+        max: 6.25
         flat-range: false
       critical_damage:
         chance: 20.0
@@ -276,36 +370,30 @@ generator:
         max: 1.25
         flat-range: false
       dodge_rate:
-        chance: 6.0
+        chance: 0.0
         scale-by-level: 1.025
         min: 2.5
         max: 4.0
         flat-range: false
       accuracy_rate:
-        chance: 10.0
+        chance: 0.0
         scale-by-level: 1.025
         min: 4.5
         max: 7.5
         flat-range: false
-      durability:
-        chance: 100.0
-        scale-by-level: 1.025
-        min: 150
-        max: 700
-        flat-range: false
-      movement_speed:
-        chance: 3.5
+      block_rate:
+        chance: 0.0
         scale-by-level: 1.025
         min: 1.5
-        max: 1.7
-        flat-range: false
-      aoe_damage:
-        chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
+        max: 7.0
         flat-range: false
       block_damage:
+        chance: 0.0
+        scale-by-level: 1.025
+        min: 3.0
+        max: 10.0
+        flat-range: false
+      aoe_damage:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
@@ -348,6 +436,12 @@ generator:
         max: '0'
         flat-range: false
       loot_rate:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+        flat-range: false
+      movement_speed:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
@@ -401,27 +495,34 @@ generator:
         min: '0'
         max: '0'
         flat-range: false
+      durability:
+        chance: 100.0
+        scale-by-level: 1.0
+        min: 500
+        max: 1050
+        flat-range: false
       disarm_rate:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
-      block_rate:
-        chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
-        flat-range: false
+  
+  # Socket generation.
   sockets:
+    # Must be a valid Socket Type.
     GEM:
       minimum: 0
-      maximum: 0
+      maximum: 2
+      # Here you can define socket lore order and add additional lines.
+      # This format will replace %GENERATOR_SOCKETS_[TYPE]% placeholder.
+      # Socket placeholder is: %SOCKET_[TYPE]_[CATEGORY]%, where [TYPE] is Socket Type, [CATEGORY] is Socket Category.
       lore-format:
       - '&8&m               &f  「 GEMS 」  &8&m               '
       - '%SOCKET_GEM_COMMON%'
       - '%SOCKET_GEM_RARE%'
       list:
+        # Socket Category.
         common:
           chance: 35.0
         rare:
@@ -444,13 +545,24 @@ generator:
       list:
         default:
           chance: 35.0
+  
+  # Ability generation.
+  abilities:
     minimum: 0
     maximum: 0
+    # List of mouse clicks that will be linked with abilities.
+    # Ability amount can not be greater than keys amount.
+    # Possible values: LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT.
     allowed-clicks:
     - RIGHT
     - LEFT
+    # Your custom variables depends on item level.
+    # Item will always use the greatest key less than or equal to the item level.
+    # Variable placeholder format: %var_[name]%.
     variables-by-level:
+      # Item level
       '1':
+        # Variable name: Value
         rad: 4.0
         dur: '&f10 &7seconds'
         durTick: 200
@@ -462,12 +574,23 @@ generator:
         rad: 10.0
         dur: '&f20 &7seconds'
         durTick: 400
+    # List of your custom abilities.
     list:
+      # Ability identifier. Must be unique.
       ability-1:
+        # Generation chance.
         chance: 0.0
+        # Usage cooldown.
         cooldown: 5.0
+        # Here you can define how the ability will look in item lore.
+        # It will replace the %GENERATOR_ABILITY% placeholder.
+        # Next abilities will be added under the first one.
+        # Placeholders:
+        # - %key% - Mouse key to use that ability.
         lore-format:
         - '&bSample Ability: &7[&f%key%&7]'
+        # Custom Actions that will be executed when ability is activated.
+        # You can use ability variables here.
         actions:
           default:
             target-selectors:
@@ -488,4 +611,6 @@ generator:
               radius; ~delay: 23;'
             - '[BURN] ~duration: %var_durtick%; ~target: radius; ~delay: 23;'
             - '[SOUND] ~name: BLOCK_FIRE_EXTINGUISH; ~target: self; ~delay: 23;'
+
+# This section is useless.
 target-requirements: {}

@@ -23,10 +23,10 @@ color: -1,-1,-1
 unbreakable: true
 item-flags:
 - '*'
-tier: common
+tier: junk
 level:
   min: 1
-  max: 100
+  max: 3
 generator:
   prefix-chance: 100.0
   suffix-chance: 100.0
@@ -38,10 +38,12 @@ generator:
     - CHAINMAIL*
     - NETHERITE*
     - GOLD*
-    - TRIDENT
-    - FISHING_ROD
-    - CROSSBOW
     - ELYTRA
+    - TRIDENT
+    - SHIELD
+    - CROSSBOW
+    - FISHING_ROD
+    - SHEARS
     model-data:
       default:
       - 1
@@ -93,7 +95,7 @@ generator:
           water: -100%
           wind: -100%
         defense-types:
-          physical: -100% 
+          physical: -100%
       fishing_rod:
         damage-types:
           physical: -100%
@@ -122,30 +124,34 @@ generator:
     safe-only: false
     list:
       sharpness: '1:2'
+      knockback: '1:2'
+      efficiency: '1:2'
+      silk_touch: 0:1
+      smite: '1:2'
     safe-levels: true
   ammo-types:
     ARROW: 100.0
   hand-types:
-    ONE: 70.0
-    TWO: 30.0
+    ONE: 99.0
+    TWO: 1.0
   damage-types:
     minimum: 1
     maximum: 1
     lore-format:
     - '%DAMAGE_PHYSICAL%'
-    - '%DAMAGE_MAGICAL%'
-    - '%DAMAGE_POISON%'
-    - '%DAMAGE_FIRE%'
-    - '%DAMAGE_WATER%'
-    - '%DAMAGE_WIND%'
     - ''
     - '%DAMAGE__VANILLA_GENERIC%'
+    - '%DAMAGE_MAGICAL%'
+    - '%DAMAGE_FIRE%'
+    - '%DAMAGE_POISON%'
+    - '%DAMAGE_WATER%'
+    - '%DAMAGE_WIND%'
     list:
       physical:
         chance: 100.0
-        scale-by-level: 1.025
-        min: 2.6
-        max: 4.4
+        scale-by-level: 0.005
+        min: 0.6
+        max: 1.8
         flat-range: false
       _vanilla_generic:
         chance: 0.0
@@ -188,18 +194,18 @@ generator:
     maximum: 1
     lore-format:
     - '%DEFENSE_PHYSICAL%'
+    - ''
     - '%DEFENSE_MAGICAL%'
-    - '%DEFENSE_POISON%'
     - '%DEFENSE_FIRE%'
+    - '%DEFENSE_POISON%'
     - '%DEFENSE_WATER%'
     - '%DEFENSE_WIND%'
-    - ''
     list:
       physical:
         chance: 100.0
-        scale-by-level: 1.025
-        min: 3.25
-        max: 8.75
+        scale-by-level: 0.005
+        min: 0.25
+        max: 1.75
         flat-range: false
       magical:
         chance: 0.0
@@ -233,7 +239,7 @@ generator:
         flat-range: false
   item-stats:
     minimum: 1
-    maximum: 2
+    maximum: 1
     lore-format:
     - '%ITEM_STAT_AOE_DAMAGE%'
     - '%ITEM_STAT_CRITICAL_RATE%'
@@ -264,78 +270,101 @@ generator:
     - ''
     list:
       critical_rate:
-        chance: 10.0
+        chance: 0.0
         scale-by-level: 1.025
-        min: 1.0
-        max: 3.25
+        min: 3.0
+        max: 6.25
         flat-range: false
       critical_damage:
-        chance: 20.0
+        chance: 0.0
         scale-by-level: 1.025
         min: 1.1
         max: 1.25
         flat-range: false
       dodge_rate:
-        chance: 6.0
+        chance: 0.0
         scale-by-level: 1.025
         min: 2.5
         max: 4.0
         flat-range: false
       accuracy_rate:
-        chance: 10.0
+        chance: 0.0
         scale-by-level: 1.025
         min: 4.5
         max: 7.5
         flat-range: false
-      durability:
-        chance: 100.0
-        scale-by-level: 1.025
-        min: 150
-        max: 700
-        flat-range: false
-      movement_speed:
-        chance: 3.5
+      block_rate:
+        chance: 0.0
         scale-by-level: 1.025
         min: 1.5
-        max: 1.7
-        flat-range: false
-      aoe_damage:
-        chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
+        max: 7.0
         flat-range: false
       block_damage:
         chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
+        scale-by-level: 1.025
+        min: 3.0
+        max: 10.0
         flat-range: false
-      sale_price:
+      vampirism:
         chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
-        flat-range: false
-      pve_defense:
-        chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
+        scale-by-level: 1.025
+        min: 1.5
+        max: 4.5
         flat-range: false
       burn_rate:
         chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
+        scale-by-level: 1.025
+        min: 4.5
+        max: 12.5
         flat-range: false
-      pvp_defense:
+      durability:
+        chance: 100.0
+        scale-by-level: 1.025
+        min: 15
+        max: 45
+        flat-range: false
+      penetration:
         chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
+        scale-by-level: 1.025
+        min: 4.5
+        max: 10.0
         flat-range: false
-      pvp_damage:
+      loot_rate:
+        chance: 0.0
+        scale-by-level: 1.025
+        min: 2.0
+        max: 10.0
+        flat-range: false
+      movement_speed:
+        chance: 0.0
+        scale-by-level: 1.025
+        min: 7.5
+        max: 15.0
+        flat-range: false
+      attack_speed:
+        chance: 0.0
+        scale-by-level: 1.025
+        min: 5.0
+        max: 10.0
+        flat-range: false
+      max_health:
+        chance: -1
+        scale-by-level: 1.025
+        min: 5.0
+        max: 10.0
+        flat-range: false
+      aoe_damage:
+        chance: 0
+        scale-by-level: 1.025
+        min: 5.0
+        max: 10.0
+        flat-range: false
+      range:
+        chance: 0.0
+        scale-by-level: 1.025
+        min: 5.0
+        max: 25.0
+      health_regen:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
@@ -347,55 +376,19 @@ generator:
         min: '0'
         max: '0'
         flat-range: false
-      loot_rate:
-        chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
-        flat-range: false
-      health_regen:
-        chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
-        flat-range: false
-      thornmail:
-        chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
-        flat-range: false
-      max_health:
-        chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
-        flat-range: false
-      attack_speed:
-        chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
-        flat-range: false
-      penetration:
-        chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
-        flat-range: false
-      bleed_rate:
-        chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
-        flat-range: false
-      vampirism:
-        chance: 0.0
-        scale-by-level: 1.0
-        min: '0'
-        max: '0'
-        flat-range: false
       mana_regen:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+        flat-range: false
+      pvp_defense:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+        flat-range: false
+      pve_defense:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
@@ -407,7 +400,25 @@ generator:
         min: '0'
         max: '0'
         flat-range: false
-      block_rate:
+      sale_price:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+        flat-range: false
+      bleed_rate:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+        flat-range: false
+      thornmail:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+        flat-range: false
+      pvp_damage:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
@@ -444,6 +455,7 @@ generator:
       list:
         default:
           chance: 35.0
+  abilities:
     minimum: 0
     maximum: 0
     allowed-clicks:

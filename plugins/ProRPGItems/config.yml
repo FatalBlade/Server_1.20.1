@@ -17,31 +17,27 @@ data:
   instant-save: false
 
 tiers:
-  default:
-    color: '&7'
-    name: '%TIER_COLOR%Default'
   cursed:
-    color: '&4'
+    color: '&c'
     name: '%TIER_COLOR%Cursed'
+  junk:
+    color: '&d'
+    name: '%TIER_COLOR%Junk'
   common:
-    color: '&r&f'
+    color: '&7'
     name: '%TIER_COLOR%Common'
-  rare:
-    color: '&a'
-    name: '%TIER_COLOR%Rare'
-  superior:
-    color: '&9'
-    name: '%TIER_COLOR%Superior'
-  fabled:
+  uncommon:
     color: '&e'
-    name: '%TIER_COLOR%Fabled'
-  eternal:
+    name: '%TIER_COLOR%Uncommon'
+  rare:
+    color: '&1'
+    name: '%TIER_COLOR%Rare'
+  legendary:
     color: '&6'
-    name: '%TIER_COLOR%Eternal'
+    name: '%TIER_COLOR%Legendary'
   mythic:
-    color: '&5'
+    color: '&4'
     name: '%TIER_COLOR%Mythic'
-
 modules:
   item_hints:
     enabled: true

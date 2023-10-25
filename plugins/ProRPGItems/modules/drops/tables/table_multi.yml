@@ -14,7 +14,7 @@ biome-whitelist:
 region-blacklist: []
 items:
   tier-random:
-    chance: 1.0
+    chance: 100.0
     item-id: 'random'
     module-id: item_generator
     min-level: '%mob_lvl% + 1'
