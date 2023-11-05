@@ -194,6 +194,18 @@ worth-calculator:
     item_generator:
       common:
         '1': 102
+      common_old:
+        '1': 196
+      junk:
+        '1': 104
+      legendary:
+        '1': 124
+      mythic:
+        '1': 152
+      rare:
+        '1': 194
+      uncommon:
+        '1': 186
     custom_items:
       basic:
         '1': 116

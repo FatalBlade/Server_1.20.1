@@ -146,7 +146,7 @@ generator:
           water: -100%
           wind: -100%
         defense-types:
-          physical: -100% 
+          physical: -100%
       fishing_rod:
         damage-types:
           physical: -100%
@@ -154,7 +154,7 @@ generator:
           poison: -100%
           fire: -100%
           water: -100%
-          wind: -100% 
+          wind: -100%
       elytra:
         damage-types:
           physical: -100%
@@ -162,7 +162,7 @@ generator:
           poison: -100%
           fire: -100%
           water: -100%
-          wind: -100% 
+          wind: -100%
   # Player requirements depends on item level.
   user-requirements-by-level:
     # Player level requirements.
@@ -260,42 +260,49 @@ generator:
         min: 8.2
         max: 10.5
         flat-range: false
+        round: false
       _vanilla_generic:
         chance: 0.0
         scale-by-level: 1.075
         min: 9.6
         max: 11.8
         flat-range: false
+        round: false
       magical:
         chance: 2.0
         scale-by-level: 1.075
         min: 9.6
         max: 11.8
         flat-range: false
+        round: false
       fire:
         chance: 2.0
         scale-by-level: 1.075
         min: 9.6
         max: 11.8
         flat-range: false
+        round: false
       poison:
         chance: 2.0
         scale-by-level: 1.075
         min: 9.6
         max: 11.8
         flat-range: false
+        round: false
       water:
         chance: 2.0
         scale-by-level: 1.075
         min: 9.6
         max: 11.8
         flat-range: false
+        round: false
       wind:
         chance: 2.0
         scale-by-level: 1.075
         min: 9.6
         max: 11.8
         flat-range: false
+        round: false
   
   # Defense generation.
   defense-types:
@@ -322,36 +329,42 @@ generator:
         min: 13.25
         max: 18.75
         flat-range: false
+        round: false
       magical:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       fire:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       poison:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       water:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       wind:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
   
   # Item Stat generation.
   item-stats:
@@ -390,6 +403,7 @@ generator:
     - ''
     - '%ITEM_STAT_DURABILITY%'
     - ''
+    - '%ITEM_STAT_BASE_ATTACK_SPEED%'
     list:
       # Item Stat identifier.
       critical_rate:
@@ -400,150 +414,182 @@ generator:
         min: 3.0
         max: 6.25
         flat-range: false
+        round: false
       critical_damage:
         chance: 20.0
         scale-by-level: 1.025
         min: 1.1
         max: 1.25
         flat-range: false
+        round: false
       dodge_rate:
         chance: 10.0
         scale-by-level: 1.025
         min: 2.5
         max: 4.0
         flat-range: false
+        round: false
       accuracy_rate:
         chance: 10.0
         scale-by-level: 1.025
         min: 4.5
         max: 7.5
         flat-range: false
+        round: false
       block_rate:
         chance: 10.0
         scale-by-level: 1.025
         min: 1.5
         max: 7.0
         flat-range: false
+        round: false
       block_damage:
         chance: 10.0
         scale-by-level: 1.025
         min: 3.0
         max: 10.0
         flat-range: false
+        round: false
       aoe_damage:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       sale_price:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       pve_defense:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       burn_rate:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       pvp_defense:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       pvp_damage:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       pve_damage:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       loot_rate:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       movement_speed:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       health_regen:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       thornmail:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       max_health:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       attack_speed:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       penetration:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       bleed_rate:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       vampirism:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       mana_regen:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
       durability:
         chance: 100.0
         scale-by-level: 1.0
         min: 1150
         max: 1600
         flat-range: false
+        round: false
       disarm_rate:
         chance: 0.0
         scale-by-level: 1.0
         min: '0'
         max: '0'
         flat-range: false
+        round: false
+      base_attack_speed:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: 0
+        max: 0
+        flat-range: false
+        round: false
   
   # Socket generation.
   sockets:

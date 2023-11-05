@@ -1,2 +1,4 @@
 # LuckPerms UUID lookup cache
+89ad0f34-7405-3f09-a0f1-b3032ea29a47:Swordm1993
 03dbe9b9-5b99-3b50-b3a3-46f49ed9715d:notarealadmin
+616253f0-79a6-392a-b04a-ee849e2bf752:arealadmin

@@ -26,5 +26,17 @@ permissions:
 - residence.flag.hidden
 - residence.group.Master
 - weight.45
+- silkspawners.explodedrop
+- silkspawners.info
+- silkspawners.viewtype
+- silkspawners.silkdrop.*
+- silkspawners.destroydrop.*
+- silkspawners.place.*
+- silkspawners.craft.*
+- silkspawners.changetypewithegg.*
+- plan.webgroup.player
+- plan.access.players
+- plan.access.player
+- plan.player.other
 parents:
 - expert
