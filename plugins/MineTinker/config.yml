@@ -98,8 +98,8 @@ ChanceToFailToolUpgrade: 0
 ItemBehaviour:
   ConvertItemsOnUse: false # Converts items on use, only works if item supported by a plugin.
   TrackStatistics: true # Should MT track statistics for a item
-  ShowName: true # Shows the name of the ItemStack (if has one) when on the ground
-  SetGlowing: true # Item glowes on the ground
+  ShowName: false # Shows the name of the ItemStack (if has one) when on the ground
+  SetGlowing: false # Item glowes on the ground
   SetInvulnerable: true # Item can not be damaged or destroyed
   SetPersistent: false # Item will not despawn
   ForModItems: true # Settings apply also for Modifier-Items
