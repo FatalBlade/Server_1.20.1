@@ -7,17 +7,15 @@ lore:
 - '%ITEM_HAND%'
 - '%ENCHANTS%'
 - ''
-- '%USER_CLASS%'
-- '%USER_LEVEL%'
-- ''
 - '%ITEM_SET%'
 - ''
-- '%GENERATOR_ABILITY%'
+- '%GENERATOR_SKILLS%'
 - '%GENERATOR_DEFENSE%'
 - '%GENERATOR_DAMAGE%'
 - '%GENERATOR_STATS%'
 - '%GENERATOR_SOCKETS_GEM%'
 - '%GENERATOR_SOCKETS_ESSENCE%'
+- '%GENERATOR_SOCKETS_RUNE%'
 - '%GENERATOR_SOCKETS_RUNE%'
 color: -1,-1,-1
 unbreakable: true
@@ -42,8 +40,8 @@ generator:
     - TRIDENT
     - SHIELD
     - CROSSBOW
-    - FISHING_ROD
-    - SHEARS
+    - TURTLE_SHELL
+    - WOODEN_HOE
     model-data:
       default:
       - 1
@@ -113,10 +111,7 @@ generator:
           water: -100%
           wind: -100%
   user-requirements-by-level:
-    level:
-      '1': 1:100
-      '11': 11:100
-      '21': 0 + %ITEM_LEVEL%
+    level: []
     class: []
   enchantments:
     minimum: 0
@@ -282,6 +277,7 @@ generator:
     - '%ITEM_STAT_DURABILITY%'
     - ''
     - '%ITEM_STAT_BASE_ATTACK_SPEED%'
+    - ''
     list:
       critical_rate:
         chance: 0.0

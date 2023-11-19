@@ -7,12 +7,9 @@ lore:
 - '%ITEM_HAND%'
 - '%ENCHANTS%'
 - ''
-- '%USER_CLASS%'
-- '%USER_LEVEL%'
-- ''
 - '%ITEM_SET%'
 - ''
-- '%GENERATOR_ABILITY%'
+- '%GENERATOR_SKILLS%'
 - '%GENERATOR_DEFENSE%'
 - '%GENERATOR_DAMAGE%'
 - '%GENERATOR_STATS%'
@@ -153,10 +150,7 @@ generator:
     # - [min1~min2]:[max1~max2] - Ranged random of two min. and two max. levels requirement.
     # Allowed placeholders:
     # - %ITEM_LEVEL% - Item level.
-    level:
-      '1': 1:100
-      '11': 11:100
-      '21': 0 + %ITEM_LEVEL%
+    level: []
     # Player class requirements.
     # Item will always use the greatest key less than or equal to the item level.
     # Type class names separated by a comma.
@@ -367,6 +361,7 @@ generator:
     - '%ITEM_STAT_DURABILITY%'
     - ''
     - '%ITEM_STAT_BASE_ATTACK_SPEED%'
+    - ''
     list:
       # Item Stat identifier.
       critical_rate:

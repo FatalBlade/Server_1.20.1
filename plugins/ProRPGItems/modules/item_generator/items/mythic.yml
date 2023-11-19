@@ -33,12 +33,9 @@ lore:
 - '%ITEM_HAND%'
 - '%ENCHANTS%'
 - ''
-- '%USER_CLASS%'
-- '%USER_LEVEL%'
-- ''
 - '%ITEM_SET%'
 - ''
-- '%GENERATOR_ABILITY%'
+- '%GENERATOR_SKILLS%'
 - '%GENERATOR_DEFENSE%'
 - '%GENERATOR_DAMAGE%'
 - '%GENERATOR_STATS%'
@@ -111,9 +108,22 @@ generator:
     # When false, all materials EXCEPT the materials from the list below will be used in generation.
     reverse: false
     black-list:
-    - DIAMOND*
     - IRON*
     - CHAINMAIL*
+    - GOLD*
+    - TRIDENT
+    - FISHING_ROD
+    - CROSSBOW
+    - ELYTRA
+    - SHEARS
+    - HOE*
+    - SHOVEL*
+    - LEATHER*
+    - PICKAXE*
+    - WOODEN*
+    - STONE*
+    - TURTLE_SHELL
+    
     # List of model data values that will be randomly applied to generated items.
     model-data:
       default:
@@ -197,10 +207,7 @@ generator:
     # - [min1~min2]:[max1~max2] - Ranged random of two min. and two max. levels requirement.
     # Allowed placeholders:
     # - %ITEM_LEVEL% - Item level.
-    level:
-      '1': 1:100
-      '11': 11:100
-      '21': 0 + %ITEM_LEVEL%
+    level: []
     # Player class requirements.
     # Item will always use the greatest key less than or equal to the item level.
     # Type class names separated by a comma.
@@ -410,7 +417,6 @@ generator:
     # This format will replace %GENERATOR_STATS% placeholder.
     # Item stat placeholder format: %ITEM_STAT_[TYPE]%, where [TYPE] is Item Stat type.
     lore-format:
-    - '%ITEM_STAT_DIRECT_DAMAGE%'
     - '%ITEM_STAT_AOE_DAMAGE%'
     - '%ITEM_STAT_CRITICAL_RATE%'
     - '%ITEM_STAT_CRITICAL_DAMAGE%'
@@ -429,7 +435,6 @@ generator:
     - '%ITEM_STAT_THORNMAIL%'
     - '%ITEM_STAT_MANA_REGEN%'
     - '%ITEM_STAT_BLEED_RATE%'
-    - '%ITEM_STAT_RANGE%'
     - '%ITEM_STAT_HEALTH_REGEN%'
     - '%ITEM_STAT_SALE_PRICE%'
     - '%ITEM_STAT_DISARM_RATE%'
@@ -440,6 +445,7 @@ generator:
     - '%ITEM_STAT_DURABILITY%'
     - ''
     - '%ITEM_STAT_BASE_ATTACK_SPEED%'
+    - ''
     list:
       # Item Stat identifier.
       critical_rate:

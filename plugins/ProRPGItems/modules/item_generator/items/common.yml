@@ -7,12 +7,9 @@ lore:
 - '%ITEM_HAND%'
 - '%ENCHANTS%'
 - ''
-- '%USER_CLASS%'
-- '%USER_LEVEL%'
-- ''
 - '%ITEM_SET%'
 - ''
-- '%GENERATOR_ABILITY%'
+- '%GENERATOR_SKILLS%'
 - '%GENERATOR_DEFENSE%'
 - '%GENERATOR_DAMAGE%'
 - '%GENERATOR_STATS%'
@@ -42,6 +39,8 @@ generator:
     - FISHING_ROD
     - CROSSBOW
     - ELYTRA
+    - TURTLE_SHELL
+    - WOODEN_HOE
     model-data:
       default:
       - 1
@@ -111,10 +110,7 @@ generator:
           water: -100%
           wind: -100%
   user-requirements-by-level:
-    level:
-      '1': 1:100
-      '11': 11:100
-      '21': 0 + %ITEM_LEVEL%
+    level: []
     class: []
   enchantments:
     minimum: 0
@@ -276,6 +272,7 @@ generator:
     - '%ITEM_STAT_DURABILITY%'
     - ''
     - '%ITEM_STAT_BASE_ATTACK_SPEED%'
+    - ''
     list:
       critical_rate:
         chance: 10.0
