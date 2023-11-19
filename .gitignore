@@ -326,3 +326,5 @@ plugins/InsaneAnnouncer/Languages/InsaneAnnouncer_Taiwan.lang
 plugins/Plan/unsaved-sessions.csv
 plugins/ProtocolLib/lastupdate
 *.schem
+*.lock
+*.lock

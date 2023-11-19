@@ -1,5 +1,12 @@
 New worlds spawn structures: true
 Valid worlds:
+  em_adventurers_guild: true
+  em_sewer_maze: true
+  em_fireworks: true
+  em_hallosseum: true
+  em_north_pole: true
+  em_knight_castle: true
+  em_steamworks_lair: true
   world: true
   world_nether: true
   world_the_end: true
