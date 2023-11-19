@@ -18,3 +18,4 @@ regionLeaveMessage: '&8[EM] &eYou''ve left the party!'
 teleportLocation: em_fireworks,3,62,-20,17,-5
 contentType: OPEN_DUNGEON
 dungeonConfigFolderName: the_fireworks
+dungeonVersion: 6

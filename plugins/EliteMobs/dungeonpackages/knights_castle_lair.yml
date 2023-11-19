@@ -17,3 +17,4 @@ regionLeaveMessage: '&fNow leaving the castle!'
 teleportLocation: em_knight_castle,-24.5,5.0,54.5,-117,0
 contentType: OPEN_DUNGEON
 dungeonConfigFolderName: the_knight_castle
+dungeonVersion: 4

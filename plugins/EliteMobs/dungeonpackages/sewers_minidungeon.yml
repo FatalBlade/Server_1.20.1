@@ -20,3 +20,4 @@ regionLeaveMessage: '&8[EM] &5You managed to stay above water. &dMaybe next time
 teleportLocation: em_sewer_maze,-24,167,-173,90,0
 contentType: OPEN_DUNGEON
 dungeonConfigFolderName: the_sewers
+dungeonVersion: 6

@@ -19,7 +19,12 @@ powers:
 - attack_poison.yml
 - ground_pound.yml
 - bonus_loot.yml
-- summonable:summonType=ON_HIT:filename=wild_wolf.yml:spawnNearby=true:inheritAggro=true:inheritLevel=true:chance=0.2
+- summonType: ON_HIT
+  inheritAggro: true
+  filename: wild_wolf.yml
+  chance: 0.2
+  inheritLevel: true
+  spawnNearby: true
 locationMessage: '&cBeast Master: $distance blocks away!'
 spawnMessage: '&cThe Beast Master has been sighted!'
 deathMessage: '&aThe Best Master has been slain by $players!'

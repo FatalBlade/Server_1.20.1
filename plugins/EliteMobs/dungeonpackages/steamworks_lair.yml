@@ -17,3 +17,4 @@ regionLeaveMessage: '&6Now leaving the clockwork dominion!'
 teleportLocation: em_steamworks_lair,-48,-49,-108,0,0
 contentType: OPEN_DUNGEON
 dungeonConfigFolderName: the_steamworks
+dungeonVersion: 3

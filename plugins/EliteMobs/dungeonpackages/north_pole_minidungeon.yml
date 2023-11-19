@@ -20,3 +20,4 @@ regionLeaveMessage: '&8[EM] &7Come back and visit. &fThere are plenty of sweets 
 teleportLocation: em_north_pole,-265,42,-504,44,0
 contentType: OPEN_DUNGEON
 dungeonConfigFolderName: the_north_pole
+dungeonVersion: 5

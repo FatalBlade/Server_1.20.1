@@ -325,3 +325,4 @@ plugins/InsaneAnnouncer/Languages/InsaneAnnouncer_Spanish.lang
 plugins/InsaneAnnouncer/Languages/InsaneAnnouncer_Taiwan.lang
 plugins/Plan/unsaved-sessions.csv
 plugins/ProtocolLib/lastupdate
+*.schem

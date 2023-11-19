@@ -24,3 +24,4 @@ regionLeaveMessage: '&8[EM] &8Now leaving the Dark Cathedral. &4It awaits your r
 teleportLocationOffset: 0,0,0,0,0
 contentType: SCHEMATIC_DUNGEON
 dungeonConfigFolderName: the_dark_cathedral
+dungeonVersion: 7
